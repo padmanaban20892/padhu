@@ -152,9 +152,10 @@ Upload project into HitHub (fresh) poject
 -------------
 
 git init
-git add -a
+Initialized empty Git repository in D:/CodingAssement/Personal_Interview/.git/
 
 
 
 git remote add origin https://github.com/padmanaban20892/padhu.git
 
+$ git remote -v 
