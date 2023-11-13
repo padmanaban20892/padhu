@@ -1,0 +1,850 @@
+
+
+
+loading, linking & initialized in java
+-----------------------------------------
+The Java Virtual Machine dynamically loads, links and initializes classes and interfaces. 
+Loading is the process of finding the binary representation of a class or interface type with a particular name 
+and creating a class or interface from that binary representation. 
+Linking is the process of taking a class or interface and combining it into the run-time state of the Java Virtual Machine 
+so that it can be executed. 
+Initialization of a class or interface consists of executing the class or interface initialization method
+
+ Loading Using the Bootstrap Class Loader :
+	
+Linking	
+---	
+Linking a class or interface involves verifying and preparing that class or interface, its direct superclass, 
+its direct superinterfaces, and its element type (if it is an array type), if necessary. 
+Resolution of symbolic references in the class or interface is an optional part of linking.
+
+This specification allows an implementation flexibility as to when linking activities
+ (and, because of recursion, loading) take place, provided that all of the following properties are maintained:
+
+A class or interface is completely loaded before it is linked.
+
+A class or interface is completely verified and prepared before it is initialized.
+
+Errors detected during linkage are thrown at a point in the program where some action is taken by the program that might, 
+directly or indirectly, require linkage to the class or interface involved in the error.
+"Because linking involves the allocation of new data structures, it may fail with an OutOfMemoryError."
+
+Class Loader:
+------------
+Java ClassLoader is a part of the Java Runtime Environment that dynamically loads Java classes into the Java Virtual Machine. 
+The Java run time system does not need to know about files and file systems because of classloaders. 
+Java classes aren’t loaded into memory all at once, but when required by an application. At this point, 
+the Java ClassLoader is called by the JRE and these ClassLoaders load classes into memory dynamically.
+
+All classes are loaded based on their names and if any of these classes are not found then it returns a 
+NoClassDefFoundError or ClassNotFoundException.
+
+1.BootStrap ClassLoader: A Bootstrap Classloader is a Machine code which kickstarts the operation when the JVM calls it. 
+It is not a java class. Its job is to load the first pure Java ClassLoader. Bootstrap ClassLoader loads classes from the 
+location rt.jar. Bootstrap ClassLoader doesn’t have any parent ClassLoaders. It is also called as the Primordial ClassLoader.
+
+2.Extension ClassLoader: The Extension ClassLoader is a child of Bootstrap ClassLoader and loads the extensions of core 
+java classes from the respective JDK Extension library. It loads files from jre/lib/ext directory or any other directory 
+pointed by the system property java.ext.dirs.
+
+3. System ClassLoader: An Application ClassLoader is also known as a System ClassLoader. 
+It loads the Application type classes found in the environment variable CLASSPATH, -classpath or -cp command line option. 
+The Application ClassLoader is a child class of Extension ClassLoader.
+
+Note: The ClassLoader Delegation Hierarchy Model always functions in the order Application
+ ClassLoader->Extension ClassLoader->Bootstrap ClassLoader. 
+ 
+ 
+Methods of Java.lang.ClassLoader
+-------------
+loadClass(String name, boolean resolve): This method is used to load the classes which are referenced by the JVM. 
+It takes the name of the class as a parameter. This is of type loadClass(String, boolean).
+
+defineClass(): The defineClass() method is a final method and cannot be overridden. This method is used to define 
+a array of bytes as an instance of class. If the class is invalid then it throws ClassFormatError.
+
+findClass(String name): This method is used to find a specified class. This method only finds but doesn’t load the class.
+
+findLoadedClass(String name): This method is used to verify whether the Class referenced by the JVM was previously loaded or not.
+
+Class.forName(String name, boolean initialize, ClassLoader loader): This method is used to load the class as well as initialize 
+the class. This method also gives the option to choose any one of the ClassLoaders. If the ClassLoader parameter is NULL then 
+Bootstrap ClassLoader is used.
+
+
+
+Object Class in Java
+---------------------
+Object class is present in java.lang package. Every class in Java is directly or indirectly derived from the Object class. 
+If a class does not extend any other class then it is a direct child class of Object and if extends another class then it is indirectly derived. 
+Therefore the Object class methods are available to all Java classes.
+
+tostring() method
+hashCode() method
+equals(Object obj) method
+finalize() method
+getClass() method
+clone() method
+wait(), notify() notifyAll() methods
+
+
+ toString() method = provides a String representation of an object and is used to convert an object to a String
+ hashCode() method = JVM generates a unique number which is a hashcode. It returns distinct integers for distinct objects.
+ equals(Object obj) method = It compares the given object to “this” object (the object on which the method is called). It gives a generic way to compare objects for equality. It is recommended to override the equals(Object obj) method to get our own equality condition on Objects. 
+ getClass() method = It returns the class object of “this” object and is used to get the actual runtime class of the object. It can also be used to get metadata of this class. The returned Class object is the object that is locked by static synchronized methods of the represented class. 
+ finalize() method = This method is called just before an object is garbage collected. It is called the Garbage Collector on an object when the garbage collector determines that there are no more references to the object. We should override finalize() method to dispose of system resources,
+ perform clean-up activities and minimize memory leaks.
+ 
+
+jit compiler vs interpreter in java
+--------------------------------------
+Is JIT a compiler or interpreter in Java?
+
+The Just-In-Time (JIT) compiler is a component of the runtime environment that improves the performance of Java™ 
+applications by compiling bytecodes to native machine code at run time.
+
+Interpreter: Reads your source code or some intermediate representation (bytecode) of it, and executes it directly.
+
+JIT compiler: Reads your source code, or more typically some intermediate representation (bytecode) of it, 
+compiles that on the fly and executes native code.
+
+
+Can we override a static method?
+----------------------------------
+No, we cannot override static methods because method overriding is based on dynamic binding at runtime and the static methods are 
+bonded using static binding at compile time. So, we cannot override static methods.
+
+
+Java does not support overriding static methods. The parent class method is not actually overridden when a subclass defines a static method with the 
+same name and signature as a static method in the parent class.
+Can static methods throw exception?
+Its perfectly legal in java to throw exceptions from static methods.
+
+Stack vs Heap Memory Allocation
+-----------------------------
+
+Stack Allocation 
+	It’s a temporary memory allocation scheme where the data members are accessible only if the method( ) that contained them is currently running.
+It allocates or de-allocates the memory automatically as soon as the corresponding method completes its execution.
+We receive the corresponding error Java. lang. StackOverFlowError by JVM, If the stack memory is filled completely.
+Stack memory allocation is considered safer as compared to heap memory allocation because the data stored can only be accessed by the owner thread.
+Memory allocation and de-allocation are faster as compared to Heap-memory allocation.
+Stack memory has less storage space as compared to Heap-memory.
+
+Heap Memory
+We receive the corresponding error message if Heap-space is entirely full,  java. lang.OutOfMemoryError by JVM.
+This memory allocation scheme is different from the Stack-space allocation, here no automatic de-allocation feature is provided. We need to use a Garbage collector to remove the old unused objects in order to use the memory efficiently.
+The processing time(Accessing time) of this memory is quite slow as compared to Stack-memory.
+"Heap memory is also not as threaded-safe as Stack-memory because data stored in Heap-memory are visible to all threads.
+The size of the Heap-memory is quite larger as compared to the Stack-memory.
+Heap memory is accessible or exists as long as the whole application(or java program) runs.
+
+
+which is one memory is threadsafe? Stack or Heap
+----------------
+Heap memory is also not as threaded-safe as Stack-memory because data stored in Heap-memory are visible to all threads.
+The stack is threadsafe (each thread will have its own stack) but the heap is not threadsafe unless guarded with synchronisation through your code.
+
+
+String to StringBuffer  why?
+------------------
+Java does not support the casting of String to StringBuffer since String is an immutable object
+
+
+String to StringBuffer : 
+	String to StringBuffer using append() method
+		StringBuffer sb = new StringBuffer();
+		 sb.append(str1);
+		 System.out.println("Ex: String to StringBuffer"
+                + " using append() method : \n\n" + sb);
+		 
+	StringBuffer to String using toString() method
+		StringBuffer sb = new StringBuffer();
+		sb.append("Google is top search-engine. ");
+		sb.append("To get latest topics on Core Java.");
+		sb.append("\nAnd it can search contents in real-time.");
+		String str = sb.toString();
+
+how to create immutable class in java
+-----------------------
+	The instance variable of the class is final i.e. we cannot change the value of it after creating an object.
+	The class is final so we cannot create the subclass.
+	There is no setter methods i.e. we have no option to change the value of the instance variable.
+	
+	final class Record {
+
+  private final long id;
+  private final String name;
+  private final List<String> tokens;
+
+  public Record(long id, String name, List<String> tokens) {
+    this.id = id;
+    this.name = name;
+    this.tokens = tokens;
+  }
+
+  public long getId() {
+    return id;
+  }
+
+  public String getName() {
+    return name;
+  }
+
+  public List<String> getTokens() {
+    return new ArrayList<>(tokens);
+  }
+
+  @Override
+  public String toString() {
+    return "Record{" +
+        "id=" + id +
+        ", name='" + name + '\'' +
+        ", tokens=" + tokens +
+        '}';
+  }
+}
+
+StringBuffer vs StringBuilder, why need ?
+---------------------
+
+String is immutable whereas StringBuffer and StringBuilder are mutable classes. 
+StringBuffer is thread-safe and synchronized whereas StringBuilder is not. That's why StringBuilder is faster than StringBuffer. 
+String concatenation operator (+) internally uses StringBuffer or StringBuilder class
+
+For String manipulations in a non-multi threaded environment, we should use StringBuilder else use StringBuffer class.
+
+
+Errors V/s Exceptions In Java
+------------------------------
+errors and exceptions are both types of throwable objects,
+
+Errors are usually caused by serious problems that are outside the control of the program, such as running out of memory or a 
+system crash. Errors are represented by the Error class and its subclasses. 
+
+OutOfMemoryError: Thrown when the Java Virtual Machine (JVM) runs out of memory.
+StackOverflowError: Thrown when the call stack overflows due to too many method invocations.
+NoClassDefFoundError: Thrown when a required class cannot be found.
+
+Exceptions, on the other hand, are used to handle errors that can be recovered from within the program. 
+Exceptions are represented by the Exception class and its subclasses. 
+
+NullPointerException: Thrown when a null reference is accessed.
+IllegalArgumentException: Thrown when an illegal argument is passed to a method.
+IOException: Thrown when an I/O operation fails.
+
+both Errors and Exceptions are the subclasses of java.lang.Throwable class
+
+
+
+
+how to create custom runtimeexception in java
+----------------------------------
+
+To catch and provide specific treatment to a subset of existing Java exceptions.
+Business logic exceptions: These are the exceptions related to business logic and workflow. 
+It is useful for the application users or the developers to understand the exact problem.
+
+public class MyCustomException extends RuntimeException {
+   public MyCustomException(String message) {
+      super(message);
+   }
+}
+
+
+public class CustomExceptionDemo {
+
+    private static final Map&lt;Integer, String&gt; products = new HashMap<>();
+
+    static {
+        products.put(100, "Coke");
+        products.put(101, "KitKat");
+        products.put(102, "Bisuits");
+        products.put(103, "Toast");
+    }
+
+    public static void main(String args[]) {
+        CustomExceptionDemo t = new CustomExceptionDemo();
+        t.getProduct(1000);
+    }
+
+    public String getProduct(int id) {
+        if (products.get(id) == null) {
+            throw new NoSuchProductException("No such product exists", id);
+        }
+        return products.get(id);
+    }
+}
+
+class NoSuchProductException extends RuntimeException {
+
+    private int productId;
+
+    public NoSuchProductException() {
+        super();
+    }
+
+    public NoSuchProductException(String message, int productId) {
+        super(message);
+        this.productId = productId;
+    }
+
+    public NoSuchProductException(String message, int productId, Throwable cause) {
+        super(message, cause);
+        this.productId = productId;
+    }
+
+    @Override
+    public String toString() {
+        return super.toString();
+    }
+
+    @Override
+    public String getMessage() {
+        return super.getMessage() + " for productId :" + productId;
+    }
+
+    public int getProductId() {
+        return productId;
+    }
+}
+
+
+HashMap Key-EmployeeId, Value-EmployeeNmae using Stream api Java 8
+--------------------------------------------------
+Get Keys from Value using Stream :
+	1. Using keySet() method of Map interface using Stream
+		
+		Map.keySet() method provides Set of Keys
+		Map.keySet().stream() method provides stream of Map keys to iterate and apply multiple intermediate operations like filter, map, etc.
+		Finally collecting to a Set using terminal operation like collect passing Collectors.toSet() as method–argumen
+		Example :
+		private static Set<Integer> getKeysByValue(Map<Integer, String> map, String value) {
+ 
+        // return Set of Keys
+        return map
+                .keySet()
+                .stream()
+                .filter(key -> Objects.equals(map.get(key), value))
+                .map(key -> key)
+                .collect(Collectors.toSet());
+    }
+	
+	2. Using entrySet() method of Map interface using Stream
+		Map.entrySet() method provides Set of Map entries in the form of Key–Value pairs
+		Map.entrySet().stream() method provides stream of Map entries to iterate and apply multiple intermediate operations like filter, map, etc.
+		Finally collecting to a Set using terminal operation like collect passing Collectors.toSet() as method–argument
+		
+		private static Set<Integer> getKeysByValue(Map<Integer, String> map, String value) {
+ 
+        // return Set of Keys
+        return map
+                .entrySet()
+                .stream()
+                .filter(entry -> Objects.equals(entry.getValue(), value))
+                .map(Map.Entry::getKey)
+                .collect(Collectors.toSet());
+    }
+	
+	How to make HashMap synchronized ?
+	HashMap can be easily converted into synchronized HashMap
+		Using utility method synchronizedMap(hm); of java.util.Collections class
+		
+		Map map = Collections.synchronizedMap(hm);
+		
+		
+		
+primary in spring boot
+------------------------
+@Primary indicates that a bean should be given preference when multiple candidates are qualified to autowire a single-valued dependency.
+
+@Qualifier indicates specific bean should be autowired when there are multiple candidates.
+
+public interface BeanInterface {
+
+    String getName();
+}
+
+
+public class Bean1 implements BeanInterface {
+    @Override
+    public String getName() {
+        return "bean 1";
+    }
+}
+
+
+public class Bean2 implements BeanInterface {
+    @Override
+    public String getName() {
+        return "bean2";
+    }
+}
+Here is our service.
+
+@Service
+public class BeanService {
+
+    @Autowired
+	@Qualifier("bean1")
+    private BeanInterface bean;
+	@PostConstruct
+    public void test() {
+        String name = bean.getName();
+        System.out.println(name);
+    }
+}
+And our configuration.
+
+@Configuration
+public class Config {
+
+    @Bean("bean1")
+	@Primary
+    public BeanInterface bean1() {
+        return new Bean1();
+    }
+
+    @Bean("bean2")
+    public BeanInterface bean2() {
+        return new Bean2();
+    }
+	
+	
+Stereotype Annotations in Spring boot application:
+------------------------
+@Service
+@Repository
+@Controller
+
+
+@Service: We specify a class with @Service to indicate that they’re holding the business logic. 
+Besides being used in the service layer, there isn’t any other special use for this annotation. 
+The utility classes can be marked as Service classes.
+
+@Repository: We specify a class with @Repository to indicate that they’re dealing with CRUD operations, 
+usually, it’s used with DAO (Data Access Object) or Repository implementations that deal with database tables.
+
+@Component is good enough but we can use a more suitable annotation that provides additional benefits specifically for 
+In addition to importing the DAOs into the DI container, it also makes the unchecked exceptions (thrown from DAO methods) eligible for translation into 
+Spring DataAccessException.DAOs i.e. @Repository annotation.
+
+@Controller: We specify a class with @Controller to indicate that they’re front controllers and responsible 
+to handle user requests and return the appropriate response. It is mostly used with REST Web Services.
+Spring Controller annotation is typically used in combination with annotated handler methods based on the @RequestMapping annotation. 
+It can be applied to classes only
+
+@RequestMapping: This is used to map to the Spring MVC controller method.
+@ResponseBody: Used to bind the HTTP response body with a domain object in the return type.
+
+So the stereotype annotations in spring are @Component, @Service, @Repository, and @Controller
+
+Component is a class-level annotation. It is used to denote a class as a Component. We can use 
+@Component across the application to mark the beans as Spring’s managed components. A component is responsible for some operations
+
+
+Difference between @Component and @Bean Annotations
+----------------
+@Component is used to auto-detect and auto-configure beans using classpath scanning. There’s an implicit one-to-one mapping between the annotated class and the bean (i.e. one bean per class).
+
+@Bean is used to declare a single bean, rather than automatically letting Spring do it for us.
+
+ @Component is a class-level annotation whereas @Bean is a method-level annotation and, by default, the name of the method serves as the bean name.
+ 
+ 
+ @componentscan in spring boot application
+ -------------------------------------------
+ 
+ 
+@ComponentScan which is used along with the @Configuration annotation to specify the packages that we want to be scanned.
+ @ComponentScan without arguments tells Spring to scan the current package and all of its sub-packages.
+
+@ComponentScan is an annotation used in the Spring Framework for auto-detecting and registering Spring-managed components
+ (e.g. beans, controllers, services, repositories, etc.) within a specified package or set of packages.
+
+When you use @ComponentScan, Spring will scan the specified package(s) for classes annotated with @Component 
+(or any of its specialisations, such as @Controller, @Service, or @Repository) and automatically create instances of these classes as beans in the Spring container. These beans can then be injected into other beans or components using dependency injection.
+
+Spring Boot @SpringBootApplication annotation is used to mark a configuration class that declares one or 
+more @Bean methods and also triggers auto-configuration and component scanning. It's same as declaring a class with @Configuration,
+ @EnableAutoConfiguration and @ComponentScan annotations
+
+@SpringBootApplication is a higher-level annotation that includes @EnableAutoConfiguration along with other annotations,
+ while @EnableAutoConfiguration is used specifically to enable the auto-configuration feature of Spring Boot.
+
+
+
+
+@SpringBootApplication: Combines @Configuration, @EnableAutoConfiguration, and @ComponentScan, marking the main class as the entry point for a Spring Boot application.
+
+ @EnableAutoConfiguration: Enables auto-configuration of the Spring application context, based on the classpath and defined dependencies. 
+
+@ConfigurationProperties: Binds and validates externalized configuration properties to a configuration class. 
+
+@ConditionalOnProperty: Configures beans based on the presence or absence of specified properties. 
+
+@ConditionalOnClass: Configures beans based on the presence or absence of specified classes. 
+
+@ConditionalOnBean: Configures beans based on the presence or absence of specified beans. 
+
+@ConditionalOnMissingBean: Configures beans only if the specified beans are not present. 
+
+@ConditionalOnExpression: Configures beans based on a SpEL expression. 
+
+@Conditional: Specifies custom conditions for bean configuration. 
+
+@EnableConfigurationProperties: Enables support for @ConfigurationProperties annotated classes. 
+put vs patch rest api
+-------------
+PATCH is used to apply partial updates to a resource, meaning that only the fields that need to be changed are sent in the request body.
+ PUT is used to replace the entire resource with a new representation, meaning that all the fields of the resource are sent in the request body,
+ even if they are not modified.
+
+
+What are 12 factors of microservices?
+==================
+I. Codebase
+One codebase tracked in revision control, many deploys
+II. Dependencies
+Explicitly declare and isolate dependencies
+III. Config
+Store config in the environment
+IV. Backing services
+Treat backing services as attached resources
+V. Build, release, run
+Strictly separate build and run stages
+VI. Processes
+Execute the app as one or more stateless processes
+VII. Port binding
+Export services via port binding
+VIII. Concurrency
+Scale out via the process model
+IX. Disposability
+Maximize robustness with fast startup and graceful shutdown
+X. Dev/prod parity
+Keep development, staging, and production as similar as possible
+XI. Logs
+Treat logs as event streams
+XII. Admin processes
+Run admin/management tasks as one-off processes
+
+-------------------------
+-------------------------
+-------------------------
+
+What are Microservices?
+
+Microservices, aka microservice architecture, is an architectural style that structures an application as a 
+collection of small autonomous services, modeled around a business domain. In a Microservice Architecture, 
+each service is self-contained and implements a single business capability.
+
+Principles Used to Design Microservice Architecture
+--
+--
+--
+The principles used to design Microservices are as follows:
+
+Independent & Autonomous Services
+Scalability
+Decentralization
+Resilient Services
+Real-Time Load Balancing
+Availability
+Continuous delivery through DevOps Integration
+Seamless API Integration and Continuous Monitoring
+Isolation from Failures
+Auto -Provisioning
+
+Design Patterns of Microservices
+--
+
+Aggregator
+API Gateway
+Chained or Chain of Responsibility
+Asynchronous Messaging
+Database or Shared Data
+Event Sourcing
+Branch
+Command Query Responsibility Segregator
+Circuit Breaker
+Decomposition
+
+
+
+--------------------------
+Spring container “injects” objects into other objects or “dependencies”.
+
+
+1.Remove all duplicate adjacent characters from a string using stack (Coding question):
+--------------------------------------------------------------------------------------
+package program;
+
+import java.util.*;
+public class RemoveDuplicate {
+//Remove all duplicate adjacent characters from a string using stack (Coding question)
+	
+	static String ShortenString(String str) {
+		Stack<Character> stack=new Stack<Character>();
+		int i=0;
+		
+		while(i<str.length()) {
+			if(stack.isEmpty() || str.charAt(i)!=stack.peek()) {
+				stack.add(str.charAt(i));
+				i++;
+			}else {
+				stack.pop();
+				i++;
+			}
+			
+		}
+		String shortString="";
+		if(stack.isEmpty()) {
+			System.out.println("Empty String");
+		}else {
+			
+			while(!stack.isEmpty()) {
+				shortString=stack.peek()+shortString;
+				stack.pop();
+			}
+			
+		}
+		return (shortString);
+		//return str;
+	}
+	
+	public static void main(String args[]) {
+		System.out.println(ShortenString("abbacf"));
+	}
+}
+
+2. Java 8 features :
+
+Lambda expressions, 
+Method references,
+Functional interfaces,
+Stream API,
+Default methods,
+Static methods in interface,
+Optional class,
+Collectors class,
+ForEach() method,
+JDBC Enhancements etc.
+
+3. Lambda expressions
+
+	A lambda expression is a short block of code which takes in parameters and returns a value
+	provide a clear and concise way to represent one method interface using an expression
+	->
+	
+	Adv:
+		improve code readability and do not require interpretation.
+		It encourages the use of functional programming. It simplifies variable scope and encourages code reusability.
+		
+4. Method reference in java 8 vs Java 6
+
+ method references can only be used to replace a single method of the lambda expression
+ 
+ Syntax:
+
+ContainingClass::staticMethodName
+
+5. Java 8 Stream Intermediate And Terminal Operations :
+
+1) The main difference between intermediate and terminal operations is that intermediate operations return a stream as a result 
+and terminal operations return non-stream values like primitive or object or collection or may not return anything.
+
+2) As intermediate operations return another stream as a result, they can be chained together to form a pipeline of operations. 
+Terminal operations can not be chained together.
+
+3) Pipeline of operations may contain any number of intermediate operations, but there has to be only one terminal operation, 
+that too at the end of pipeline.
+4) Intermediate operations are lazily loaded. When you call intermediate operations, they are actually not executed. They are 
+just stored in the memory and executed when the terminal operation is called on the stream.
+
+5) As the names suggest, intermediate operations doesn’t give end result. They just transform one stream to another stream. 
+On the other hand, terminal operations give end result.
+
+6) Intermediate Operations :
+
+map(), filter(), distinct(), sorted(), limit(), skip()
+
+Terminal Operations :
+
+forEach(), toArray(), reduce(), collect(), min(), max(), count(), anyMatch(), allMatch(), noneMatch(), findFirst(), findAny()
+
+
+6. Java 11 features:
+
+Running Java File with single command
+New utility methods in String class
+Local-Variable Syntax for Lambda Parameters
+Nested Based Access Control
+JEP 321: HTTP Client
+Reading/Writing Strings to and from the Files
+JEP 328: Flight Recorder
+
+
+7. spring boot vs spring
+
+Spring:
+	Spring framework is a java EE framework that is used to build applications.
+
+	Spring Boot framework is mainly used to develop REST API’s
+	
+
+The primary or most important feature of the Spring framework is dependency injection(Dependency Injection (DI) is a design technique 
+that removes dependencies from computer code, making the application easier to maintain and test).
+
+
+Spring boot as  primary features is Autoconfiguration (Spring Boot autoconfiguration is a method of automatically configuring a 
+Spring application based on the dependencies found on the classpath)
+
+
+Spring goal is to make Java EE (Enterprise Edition) development easier, allowing developers to be more productive.
+Spring Boot provides the RAD(Rapid Application Development) feature to the Spring framework for faster application development.
+
+Spring framework helps to create a loosely coupled application.
+Spring Boot helps to create a stand-alone application.
+
+In the Spring framework to test the Spring Project, we need to set up the servers explicitly.
+Spring Boot offers built-in or embedded servers such as Tomcat and jetty.
+
+To run a Spring application a deployment descriptor is required.
+In Spring Boot there is no need for the Deployment descriptor.
+
+In-memory database support => Spring framework does not provide support for the in-memory database.
+Spring Boot provides support for the in-memory database such as H2.
+
+Testing -> Testing in Spring Boot is difficult in comparison to Spring Boot due to a large amount of source code.
+Testing in Spring Boot is easier due to the reduced amount of source code.
+	
+	
+Plugins => Spring framework does not provide any plugin for maven, Gradle, etc. like Spring Boot.
+Spring Boot provides build tool plugins for Maven and Gradle. The Plugins offer a variety of features, including the packaging of executable jars.
+
+
+
+8. Actuator in spring boot
+
+Actuator is mainly used to expose operational information about the running application — health, metrics, info, dump, env, etc.
+ It uses HTTP endpoints or JMX beans to enable us to interact with it. 
+ Once this dependency is on the classpath, several endpoints are available for us out of the box.
+ 
+ <dependency>  
+    <groupId>org.springframework.boot</groupId>  
+    <artifactId>spring-boot-starter-actuator</artifactId>  
+    <version>2.2.2.RELEASE</version>  
+</dependency>  
+
+
+Spring Boot Annotation
+
+@Required: It applies to the bean setter method. It indicates that the annotated bean must be populated at configuration time 
+with the required property, else it throws an exception BeanInitilizationException.
+
+@Autowired: Spring provides annotation-based auto-wiring by providing @Autowired annotation. 
+It is used to autowire spring bean on setter methods, instance variable, and constructor. 
+When we use @Autowired annotation, the spring container auto-wires the bean by matching data-type.
+
+@Configuration: It is a class-level annotation. The class annotated with @Configuration used by 
+Spring Containers as a source of bean definitions.
+
+@ComponentScan: It is used when we want to scan a package for beans. It is used with the annotation @Configuration.
+ We can also specify the base packages to scan for Spring Components.
+ 
+ 
+ @Controller: The @Controller is a class-level annotation. It is a specialization of @Component. 
+ It marks a class as a web request handler. It is often used to serve web pages. By default, 
+ it returns a string that indicates which route to redirect. It is mostly used with @RequestMapping annotation.
+ 
+ 
+ @Service: It is also used at class level. It tells the Spring that class contains the business logic.
+ 
+ @Repository: It is a class-level annotation. The repository is a DAOs (Data Access Object) that access the database directly. 
+ The repository does all the operations related to the database.
+ 
+ @EnableAutoConfiguration: It auto-configures the bean that is present in the classpath and configures it to run the methods.
+ The use of this annotation is reduced in Spring Boot 1.2.0 release because developers provided an alternative of the annotation, 
+ i.e. @SpringBootApplication.
+ 
+ @SpringBootApplication: It is a combination of three annotations @EnableAutoConfiguration, @ComponentScan, and @Configuration.
+ 
+ @RequestMapping: It is used to map the web requests. It has many optional elements like consumes, header, method, name, params, path, produces, and value.
+ We use it with the class as well as the method.
+ 
+ @RestController: It can be considered as a combination of @Controller and @ResponseBody annotations. 
+ The @RestController annotation is itself annotated with the @ResponseBody annotation. 
+ It eliminates the need for annotating each method with @ResponseBody.
+ 
+ @RequestAttribute: It binds a method parameter to request attribute. 
+ It provides convenient access to the request attributes from a controller method. 
+ With the help of @RequestAttribute annotation, we can access objects that are populated on the server-side.
+ 
+ 
+ 
+ auto configuration in spring boot
+ 
+ Spring Boot auto-configuration attempts to automatically configure your Spring application based on the jar dependencies that you have added.
+ 
+ In Spring Boot, you can disable specific auto-configuration properties by using the spring. autoconfigure. exclude property. This property can be set in the application.
+ 
+ @SpringBootApplication(exclude = { *......?}}
+ 
+ 
+ 
+ Profiles in Spring Boot are a way to define different sets of configurations for your application depending on the environment it is being run.
+ @Profile annotation — we are mapping the bean to that particular profile;
+ 
+ 
+Exception handling in completableFuture - 3 methods to handle exception :
+ 
+A CompletableFuture is used for asynchronous programming which was introduced as an improvement of the java Future API in Java 8. 
+ If you are familiar with the Java’s Future API, you will be pretty much able to relate the this API. 
+ It offers composibility on different stages of computations
+ 
+ 
+CompletableFuture is a class in Java. It belongs to java.util.cocurrent package. It implements CompletionStage and Future interface.
+
+This is the most basic completable future we have by using no arg constructor
+
+CompletableFuture<String> CompletableFuture = new CompletableFuture<String>();
+
+Using different exception Handling Methods
+There are three main method to handle an exception offered by the API as shown below. Let us go through them one by one.
+
+public CompletableFuture <T> exceptionally(Function <Throwable, ? extends T> function);  
+
+
+public <U> CompletableFuture<U> hadle(BiFunction<? super T, Throwable, ? extends U> bifunction);  
+public CompletableFuture<T> whenComplete(BiConsumer<? super T, ? super Throwable> action);  
+ 
+ 
+Functional interface:
+ 
+ A functional interface in Java is an interface that contains only a single abstract (unimplemented) method. 
+ A functional interface can contain default and static methods which do have an implementation,
+ in addition to the single unimplemented method.
+ 
+ What are default methods?
+ Before Java 8, we could only declare abstract methods in an interface. 
+ However, Java 8 introduced the concept of default methods. 
+ Default methods are methods that can have a body. The most important use of default methods in interfaces is to provide additional 
+ functionality to a given type without breaking down the implementing classes.
+
+ Before Java 8, if a new method was introduced in an interface then all the implementing classes used to break. 
+ 
+
+Multithreading in Java
+Multithreading in Java is a process of executing multiple threads simultaneously.
+
+
+A thread is a lightweight sub-process, the smallest unit of processing. Multiprocessing and multithreading, both are used to achieve multitasking.
+
+we use multithreading than multiprocessing because threads use a shared memory area. They don't allocate separate memory area so saves memory,
+ and context-switching between the threads takes less time than process.
+ 
+ Java Multithreading is mostly used in games, animation, etc.
+ 
+ A thread is a lightweight subprocess, the smallest unit of processing. It is a separate path of execution.
+
+Threads are independent. If there occurs exception in one thread, it doesn't affect other threads. It uses a shared memory area.

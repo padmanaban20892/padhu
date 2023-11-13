@@ -1,0 +1,43 @@
+
+
+Java Program:
+https://rohithv63.medium.com/32-longest-valid-parentheses-leetcode-dynamic-programming-7f70fc8b32a2
+
+
+
+
+
+Rest API
+-----------------
+
+https://www.smashingmagazine.com/2018/01/understanding-using-rest-api/
+https://codingnconcepts.com/spring-boot/custom-api-request-response-logging/#:~:text=When%20we%20create%20RESTFul%20APIs,common%20id%20to%20relate%20them.
+https://codingnconcepts.com/
+https://www.smashingmagazine.com/2018/01/understanding-using-rest-api/
+https://www.twilio.com/blog/create-rest-apis-java-spring-boot
+
+https://www.twilio.com/blog/create-rest-apis-java-spring-boot (Clearly Step-by-steps)
+
+https://www.javaguides.net/2022/04/search-rest-api-using-spring-boot.html
+https://www.toptal.com/java/spring-boot-rest-api-error-handling
+
+https://medium.com/@kousikpaul/microservice-global-exception-handling-and-field-validations-3fc955a80692
+https://auth0.com/blog/get-started-with-custom-error-handling-in-spring-boot-java/
+https://medium.com/nerd-for-tech/how-i-developed-a-microservice-orchestrating-service-in-java-starting-from-zero-knowledge-of-spring-a7cea7f23547
+
+https://medium.com/@ankithahjpgowda/api-gateway-in-spring-boot-3ea804003021
+
+https://medium.com/@ankithahjpgowda/api-code-generation-using-swagger-in-springboot-e6b2fafc583c
+https://medium.com/@ankithahjpgowda/ways-to-log-database-queries-in-spring-jdbc-d8a800910807
+
+
+
+
+Internal : Test : 
+-------------------------------------------
+you are given an array a consisting of n integers within the range 1..n, in one move you can increase or decrease the value of  
+any element by 1 after each all numbers should remain within the range 1...N using java 8
+
+Solution :
+https://www.chegg.com/homework-help/questions-and-answers/given-array-consisting-n-integers-within-range-1n--one-move-increase-decrease-value-elemen-q121018756
+

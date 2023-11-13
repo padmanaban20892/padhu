@@ -1,0 +1,160 @@
+https://api.github.com/search/respositories
+
+
+
+https://github.com/gomathivig/springBootExer/tree/gomathiran
+
+IN RestAPI : (Using Postman)
+	https://api.github.com/users/
+	
+	Pwd: Padhu@123456
+	UserName : padmanaban20892
+	
+	
+	
+Coding Assment 
+------------------------
+https://bitbucket.org/c967784/spring-boot-coding-exercise
+
+
+
+Below Details -> Rest API 
+	
+	
+	
+	
+	
+Search repositories 
+
+https://api.github.com/search/repositories?q=tetris+language:assembly&sort=stars&order=desc
+
+Search repositories with createDate
+
+>'date -v-7d +%Y-%m-%d'
+https://api.github.com/search/repositories?q=created:2023-10-20..2023-10-17&sort=stars&order=desc
+
+
+
+ Find the hottest repositories created in the last week
+Final API (Last week Date) : Custom API
+https://api.github.com/search/repositories?q=created:2023-10-12..2023-10-20&sort=stars&order=desc
+
+html_url
+  watchers_count
+  language
+  description
+  name
+
+Find the oldest user accounts with zero followers
+
+
+https://api.github.com/search/users?q=followers:0&sort=joined&order=asc
+
+
+
+http://localhost:8080/gitSearchRepos-Lastweek
+
+
+
+
+https://github.com/padmanaban20892/Springboot-Coding-Assement-wipro.git
+
+
+
+git commit : //proecdure in GitHub
+-------------------------------
+https://www.digitalocean.com/community/tutorials/how-to-push-an-existing-project-to-github
+
+
+git init
+git add -a
+
+
+
+git remote add origin https://github.com/padmanaban20892/Springboot-Coding-Assement-wipro.git
+
+
+
+git push -u -f origin main
+
+
+git init
+git add -A
+git commit -m 'Added my project'
+git remote add origin git@github.com:padmanaban20892/Springboot-Coding-Assement-wipro.git
+git push -u -f origin main
+
+$ git push -u -f origin main
+error: src refspec main does not match any
+error: failed to push some refs to 'https://github.com/padmanaban20892/Springboot-Coding-Assement-wipro.git'
+PA20303803@L-158041152 MINGW64 /d/CodingAssement/Telstra_SpringBootMicroservices_CodingAssement/SpringbootProject (master)
+$ git push -u -f origin master
+fatal: unable to access 'https://github.com/padmanaban20892/Springboot-Coding-Assement-wipro.git/': SSL certificate problem: unable to get local issuer certificate
+
+
+https://stackoverflow.com/questions/23885449/unable-to-resolve-unable-to-get-local-issuer-certificate-using-git-on-windows
+
+ git config --global http.sslbackend schannel
+
+
+
+o obtain only the remote URL:
+
+git config --get remote.origin.url
+
+
+
+git remote -v
+# View existing remotes
+# origin  https://github.com/user/repo.git (fetch)
+# origin  https://github.com/user/repo.git (push)
+======
+Change Origin URL 
+
+$ git remote -v
+origin  https://bitbucket.org/c967784/spring-boot-coding-exercise.git (fetch)
+origin  https://bitbucket.org/c967784/spring-boot-coding-exercise.git (push)
+
+PA20303803@L-158041152 MINGW64 /d/CodingAssement/Telstra_SpringBootMicroservices_CodingAssement/SpringbootProject/spring-boot-coding-assement (master)
+$ git remote set-url origin https://github.com/padmanaban20892/Springboot-Coding-Assement-wipro.git
+
+PA20303803@L-158041152 MINGW64 /d/CodingAssement/Telstra_SpringBootMicroservices_CodingAssement/SpringbootProject/spring-boot-coding-assement (master)
+$ git remote -v
+origin  https://github.com/padmanaban20892/Springboot-Coding-Assement-wipro.git (fetch)
+origin  https://github.com/padmanaban20892/Springboot-Coding-Assement-wipro.git (push)
+
+PA20303803@L-158041152 MINGW64 /d/CodingAssement/Telstra_SpringBootMicroservices_CodingAssement/SpringbootProject/spring-boot-coding-assement (master)
+$ git push -u -f origin master
+Enumerating objects: 233, done.
+Counting objects: 100% (233/233), done.
+Delta compression using up to 8 threads
+Compressing objects: 100% (126/126), done.
+Writing objects: 100% (233/233), 32.22 KiB | 2.01 MiB/s, done.
+Total 233 (delta 61), reused 211 (delta 53), pack-reused 0
+remote: Resolving deltas: 100% (61/61), done.
+To https://github.com/padmanaban20892/Springboot-Coding-Assement-wipro.git
+ + f8571fe...005fa34 master -> master (forced update)
+branch 'master' set up to track 'origin/master'.
+
+PA20303803@L-158041152 MINGW64 /d/CodingAssement/Telstra_SpringBootMicroservices_CodingAssement/SpringbootProject/spring-boot-coding-assement (master)
+$
+
+
+
+
+
+===========================================================
+
+1. git clone https://github.com/padmanaban20892/padhu.git
+
+
+Upload project into HitHub (fresh) poject
+-------------
+
+git init
+git add -a
+
+
+
+git remote add origin https://github.com/padmanaban20892/padhu.git
+

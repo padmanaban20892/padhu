@@ -1,0 +1,1756 @@
+
+
+HCL : 13/11/2023
+-------------------------------
+1. FunctionalInterface 
+2. Funtional Interface to add another abstract method - how to avoid?
+3. Funtional Interface vs interface 
+4. List of Array List<Interger> , {340, 456,200,348) 
+	Start with '3' in given List of interger using Stream API Java 8 & filter()
+	
+5. Filter() return type 
+6. Hibernate vs JPA  , Hibenrate Vs jdbc advantage ?
+7. Dependecy Injection in spring, Which objects to create where store object >
+8. PUT vs POST
+
+
+
+
+
+
+
+
+
+
+
+
+Internal : Test : 
+-------------------------------------------
+you are given an array a consisting of n integers within the range 1..n, in one move you can increase or decrease the value of  
+any element by 1 after each all numbers should remain within the range 1...N using java 8
+
+Solution :
+https://www.chegg.com/homework-help/questions-and-answers/given-array-consisting-n-integers-within-range-1n--one-move-increase-decrease-value-elemen-q121018756
+
+
+
+
+HP Account : 2nd Round
+---------------------------------
+1. maven bulid lifecycle
+2. final vs finalize vs finally
+3. Exception Handling
+4. what is parent exception
+5. Static method, inner class, block
+6. Spring boot vs spring mvc
+7. AOP in Spring boot
+8. Spring boot compounds
+9. Actuator
+10.Spring boot Application compounds
+11. Spring core?
+12. Spring rest api compound
+13. Cluster apache tomcat?
+14. Microservices 
+15. Multithread ? type? Excute servce , comparableFuture
+16. Try with resourcce
+17. ArrayList vs linkedlist
+18. is Voalitic 
+19. Web server vs application server
+20. Cluster Index vs non-cluster indexed
+21. ACID in properties
+22. storedProcdure ?  vs functional
+23. AWS log management service
+24. AWS s3 vs EBS
+25. AWS VPC
+26. SOAP Protocol
+29.sessionFactory
+30. Updagrade AWS
+31. AWS cloud bendfits
+32. SOAP Webservies ?
+33. SOAP Webservices compuonds
+34. SOAP Request & Resonse
+35. SOAPUI Test
+
+
+1st Around : HP
+------------------------------
+1. @queryParam Vs PathParam
+2. @Service
+3. @Compound
+4. Aggregate() function in SQL
+5. Spring batch
+6.Hibernate :  one to many how to works
+7. Microservice archieture
+8.Json -> Covert TO JSON to Java Object : Java Object to Json : Annotation
+9. POST vs PUT : HTTP
+10.Spring boot vs spriing
+11. Spring boot vs spring webflux
+12. Query param vs PathParam
+13. restController vs controller
+14. hashMap vs hashtable
+15. IOC in spring
+16. Types of autowried, @autowired
+17. Array vs arraylist
+18. Comparable vs comparator
+19. Error vs Exception
+20.throw vs throws 
+21. Serization vs deserialized
+22.Collection Hirachy
+23. ArrayList vslinkedlist
+24.Array vs collection
+25. Java 8 features
+26. finallyvs final vs finalize
+27.StringBuffer vs Stringbulider
+28.String -in details, Hep, String constant pool, immutable
+29.OOPS COncepts, Abstract vs interface & java 8
+30.Constrctor chainging 
+31. constrctor vs destrotor 
+
+
+
+bestbuy account : 10/11/2023
+-------------------------
+1. /*
+		 * "123","abc" = "1a2b3c" "12345","abc" = "1a2b3c45"
+		 * "123","abcde" = "1a2b3cde"
+		 */
+2. Mulithread Excuteservice in details
+3.Cache Advantages & disAdvantage
+4.ehat cache
+5. Spring Bean Scope
+6. Spring Requst also Singeton connect, which contains spring application
+7.Spring change scope bean
+8.Singelton Create?
+9.FInaal working internal?
+10.
+
+
+
+
+Intellect : 10/11/2023 
+-------------------------------------
+1. kafka 
+2. Resful api method Catching 
+3. Restfull api
+4. Hibernate call Stored procedure with mulitple out parameter 
+5. procedure Call in 
+6. PL/SQL - Procedure call ?
+7.Excute , ExcuteUpdate, ExcuteQuery in JBDC
+8.. Procedure call in hibernate , Storeproudce call through hibernate
+9. hibernate ORM Advantages
+10. how to handle outofMemory error
+11. Avaoid outofMemory in Codeing  -> Unsed to object removed , Garage Collector.gc()
+12. Exception Vs error
+13. Synchronized 
+14. How many thread excute on time 
+15.Iterator vs listIterator
+16. HashMap ?, Internal working , in Java 8
+17.Abstract class vs interface
+18. Singelton Design Pattern
+19. Design patten
+20. Construct vs method
+21. OOPs Concepts
+22. Polymoshism
+23. Struct2 into SPringboot Intergration
+
+
+
+
+
+
+UHG: 10/11/2023 
+----------------------------------------------------
+
+Write a query to print a list of departments, and number of employees in each department in descending order of empCount.
+Table - Emp(empID, empName, empSalary, depID)
+Table - Dept(depID, depName)
+ 
+Output - 
+depName	empCount
+Dev	15
+Test	10
+IT	9
+
+
+
+select d.depName, count(*) as empCount from Emp e, Dept d 
+where e.depID=d.depID group by depName order by empCount DESC 
+
+
+
+[5:47 PM] Sandip Gunjal
+List - Emp(empId, empName, salary, depName)
+
+Find the  departmentwise max salary using Java8
+
+
+		employeeList.stream().collect(Collectors.groupingBy(e->e.department,
+		collectingAndThen(maxBy(comparingInt(e->e.getSalary())), Optional::get)));
+
+
+ 
+ public static void main(String args[]) 
+{
+	List<String> list = new ArrayList<>();
+	list.add("IBM");
+	list.add("WIPRO");
+	list.add("HCL");
+	list.add("JIO");
+	for(int i=0; i<list.size(); i++) {
+		list.remove(i);
+	}
+	System.out.println(list.size());//What is expected Output?
+	System.out.println(list);//What is expected Output?
+}
+
+
+
+List = {3,2,6,5,4}, 
+find the second highest number from the list.
+Do not use inbuild methods or Collection framework methods.
+O/P => 5
+
+
+	int largest=list.get(0);
+	int Secondlargest=list.get(0);
+	
+	for(int i=1;i<list.size();i++){
+		if(list.get(i) > largest){
+			Secondlargest=largest;
+			largest=list.get(i);
+			}else if(list.get(i) > Secondlargest){
+			Secondlargest=list.get(i);
+			}
+		}
+	syso(Secondlargest);
+
+1. @queryParam Vs PathParam
+2. Singelton class ? How to make Final Singelton Class
+3. Object class methods used the funcitonal interface
+4. funcitonal interface methods ? list iterface
+5. Session vs sessionFactory
+6. why spring boot starter ?
+7. your service microserivce down for network latency how to resolve
+8. artferid & groud maven ?
+9.	
+
+Mphais Date: 9/11/2023
+------------------------------
+   //array ={5,0,1,0,2,0,3,0,4,0}
+      //descending order output = 1,2,3,4,5,0,0,0,0,0
+	  
+      //array ={5,0,1,0,2,0,3,0,4,0}
+      //descending order output = 1,2,3,4,5,0,0,0,0,0
+      
+      int[] array=new int[]{5,0,1,0,2,0,3,0,4,0};
+      int zeroCount=1;
+      /*Arrays.sort(array);
+       
+       for(int i=0;i<array.length;i++){
+           if(array[i]==0){
+               zeroCount++;
+               break;
+           }
+           System.out.println(array[i]);
+       }
+       */
+       
+       int temp=0;
+       for(int i=0;i<array.length;i++){
+           for(int j=i+1;j<array.length;j++){
+               if(array[i]<array[j]){
+                   temp= array[i];
+                   array[i]=array[j];
+                   array[j]=temp;
+               }
+           }
+       }
+       int[] zeroarray=new
+       for(int i=0;i<array.length;i++){
+           if()
+           
+           System.out.println(array[i]);}
+       
+      
+      
+      
+	  
+
+Internal : 08/11/2023
+---------------------
+1. Get Vs POST
+2.Query Param vs Path Param
+3. SpringBootApplition@?
+4.JPA
+5.Maven 
+6.Design API
+7. How to implemation Design Rest API in Spring boot
+8. Search => Which Rest Endpoint use & Which Connect repository API ? which Mehod retried the data ?
+
+
+
+
+Persistent  : 08/11/2023
+----------------------------------
+1. Hashtable vs hasmap  ? perfromance ?
+2. CurrentModification Exception ? Why ? How to resolve ?
+3. Memory leak in java
+4. Design Pattern ?
+5. Singleton Class, Create Singelton class ?, how to make threadsafe, mulipe user access same time =?
+6. Abstract vs interface in java 8 ?
+7.JWT Token ?, how to implement JWT, Timeout 
+8. Given String "abcdgliwndafhgjkog" find the first occurenc & last occurence in a character 
+9. TimeComplexitiy & Space COmplex
+
+for(i=0i<n;i++){
+for(j=0;j<n;j++){
+}}  Which Time COmplexity & Space COmplexity?
+
+
+
+Inspirisys Date: 8/11/2023
+-------------------------------------------
+1. what is protocols ?which types of protocols   => VPD protocol -> (TCP, telnet protocol , SMNP - Simple Network Management Protocol (old)) & Network Management 
+2. Fincitonal Interface ? Example
+3. Method Reference ? Example
+4.Stream ? Vs collection
+5. HashMap internal working
+6. Hasmap - how to make threadsafe ?, which manitnace order in hasmap ?
+7. Hasmap Dafault size
+8. hash collection
+9. Dependecy injction in spring boot ? types?
+10.applicationContext ?, CompountScan in Spring boot ? & how to disable compoundScan 
+11. 
+
+
+
+
+capimni Date: 8/11/2023
+------------------------------------
+1. Class Loader & Types 
+2. FlatMap ? Example ?
+3. Solid principle ? Example?
+4. Stream API : 
+	String S="My name padmanaban my native place is chennai";
+	howmany time present "My" word given string using Stream APi
+	
+	int[] a={1,2,3,4,9,8,7}; => find the 3rd highrest value given string
+	
+List<Student>  => find the male & female count using stream APi
+
+4. Functional Interace ? & example & create
+6.Garage collect & Types
+7. OutofMenmory ? How to Resolve the ?
+8. try with resource 
+9. shallow copy & deep copy 
+10. @Springboot application .run - return type?
+11. add extrnal tomcat server in spring boot application -> steps ?
+12. optioal Class ? Example ?
+
+
+
+
+
+
+
+
+
+
+RNTBCI - 6/11/2023
+-----------------------------------
+List<Integer> oddNumbers=numberList.stream().filter(number -> number % 2 ! =0)
+							.collect(collectors.toList());
+							
+							
+
+[1,2,3,4,5,6,7,8,9,10]
+
+[1,2,2,3,3,3]  => 2
+			
+				list.stream.anyMatch(i->i ==2);
+
+
+
+Employee{
+salary
+companyName
+employeId}
+List<Emploues>
+
+group by Companyname 
+
+
+	Map<String,List<emloyee>>	employeeMap=emloyeeList.stream().collect(collectors.groupingby(Employee:getCompanyName));
+
+
+
+------------------
+1. Implemation of Profile in Spring boot
+2. Implemation of acturator in spring boot
+3. Implemation Optimzation of Spring boot API
+
+
+
+
+
+
+Apple Accout:
+----------------------------------------
+1. Java 8 - Program Questions
+2. microservices - basic 
+3. logic questions 
+
+
+
+
+
+
+Persistent  : 03/11/2023
+-------------------------------------
+1. how to connect the protocol through Java & Protocol
+2. how to connect the APache cassendra db in Java Which api
+3. Multithread COncepts & your Project 
+4. Maven, Mockito, Kafka, Jekins, 
+5. Communicate data from which Protocol your project / RestAPi-
+6. Kubernetes cluster data , how to visually data ?x
+7. no of occurenc character given String using Regular Exception
+8. which api used to handle multi thread concept in your project
+9. FastFail & FailSafe ? 
+10.ConcurrentHashMap & why used this ? SynchronizedHashmap ?
+
+
+
+
+-------------------------------------
+1.oops Concepts
+2. 
+
+try{
+int i=10/0;
+System.out.println(i);
+}
+catch(ArithmeticException e)
+{
+System.out.println("ArthmeticException");
+}
+catch(Exception e)
+{
+System.out.println("Exception");
+}
+
+Set s1= new Hashset();
+s1.add(1);
+s1.add(2);
+s1.add(null);
+s1.add(3);
+s1.add(null);
+
+
+
+
+//CreateTable
+
+CREATE TABLE Employee ( EmpID int, 
+EMPFname Varchar(200),
+EMPnname Varchar(200),
+EMPSalary Varchar(200),
+EMPDepart Varchar(20),
+EMPAddress Varchar(255));
+
+
+
+
+
+//Write a Query to display the third max salary of an employee?
+
+
+
+select salary from (select salary from employee order by salary desc limit 3) as A 
+order by salary limit 1;
+
+
+Write a Query to display the total salary of all employees based on a city whose average salary >= 23000?
+
+  select SUM(Salary) from ( 
+  select AVG(Salary)  as avgsalary from employee  group by city) where avgsalary>=23000
+  
+
+
+
+
+
+
+8K Miles Software Services: External : 27/10/23
+----------------------------------
+1. repeat character using java given string 
+2. How to deploy spring boot application in tomcat
+3. JVM vs JRE vs JDK
+4. Cre Java Features
+5. Last project flow 
+6. Java * features
+7. How to provie the security your project 
+
+
+
+
+
+
+
+
+
+cITI BANK : iNTERNAL : 25/10/2023
+---------------
+1. solID Principle
+2. WHAT lISKOV SUBSTITUTION Principle
+3. JVM MEMEMORY 
+4. excute Framework WHAT? & tyPE
+5. RESPONSE 400 ?
+6. HOW wil you communicate to another communicate in micorservices based & steps
+7. parallerly communication between service(5 microsevice) in microserivce, how to can do
+8.Concurrent collection? & type
+9. Concurrent Hashmap 
+10. circultBreaker ? & what steps do setup ? & Puropse & use ,  what need do , what do dependceny & annonation in microservices 
+11. Inheriance jPA & Type
+
+
+
+
+Apple Account:  INTERNAL : 25/10/2023
+------------------------
+1.employeelist and departmentlist
+o/p: single List of employee and departement based on condition is the emoploye id should be there in deparment
+using Java Stream API
+2. Each Deparment , howmany Employee?
+3. Intemediate vs terminal
+4. Spring boot puropse
+5. 5t highest salary in sql
+6. rEST END POINT FOR eMPLOYEE lIST FOR cREATE , annonation
+
+
+
+
+
+
+
+
+
+Apple Account :[Internal] : 16/10/2023
+----------------------
+1. Data Encapulsion
+2. Construct vs method , constrctor is return type?
+3. why main method is static, which resaon 
+4. String vs stringBuffer 
+5. Min & Max in Java with TimeComplexitiyt
+6. Find the factorial number using recussion
+7.Swap space in linux
+8.System health check command
+9. File permission command ?
+10. why 777 in linx
+11.Varaible traffice which best services implemation in AWS
+12. auto scaling in AWS
+
+Digital Currency Group : Extenal : 16/10/2023
+----------------------------------------
+1. what are AWS services?
+2. Spring boot feaaturess
+3. How to create your project Architcute ? Explain
+4. Primeface Lifecycle?
+5. Spring boot-RestAPi- Create Application -> Architcute
+
+
+
+
+
+
+
+Credit One : US Shift : Internal] : 16/10/2023
+----------------------------------
+1. what are categories the Design pattern in microservices
+2. 12 factories of micorservices
+3. put vs patch
+4. how to create Custom RuntimeExceptio
+5. Error vs Exception
+6. HashMap Key-EmployeeId, Value-EmployeeNmae using Stream api Java 8
+7. StringBuffer vs StringBulider, why need ?
+8. String to StringBuffer & StringBulider
+9. How to create immutable clsss
+10. which is one memory is threadsafe? Stack or Heap
+11. loading, linking & initialized in java
+12. what are loader different types?
+13.what is linking java
+14. jit compiler vs Interpreter
+15.Object class methods 
+16. Static can be overriding ? why? - its what error ? whoch types
+17. dependent on vs primary in spring boot
+18. how to inject without autowired in spring boot
+19. stereotype annotations in spring boot
+20. CompoundScan in spring boot
+21. 
+
+
+
+
+[Internal] : 13/10/2023
+----------------------
+1. What spring cloud use?
+2. RestController vs controller
+3. 2 difference database connect in spring boot, how to manage configuration 
+4. How to maange session n hibernate
+5. Hibernate vs JPA
+6. 
+
+
+tagit : [External} 12/10/2023
+-----------
+1. Concurrent API, excute Service
+2. restful request allowed restful web services
+
+
+
+HPI [Internal] : 11/10/2023
+------------------------------------------
+1. Singeton Class  Creaate
+2. Find the repeate string in given words
+3. Expaln Lambda Expression
+4. why use the stream API ?
+5. Arraylist , inkedlist which prepated?
+6. Spring boot - How to connect database steps
+7. SpringbootApplication
+8. How to Call restAPI endpoints, database , end to end design
+9.how to call microserivce toa another micorservices
+10. how to communicate microservice to another microserivce
+11. Spring webclient vs resttemplates
+12. how to performance backed to front maange services ?
+13. Database conncetion in spring boot, rest api 
+14.Why are this design patterns in Java? & Can you explain one of the design patterns?
+15. explain that how we can achieve Singleton pattern in Java?
+16.  how this work in a multithreaded environment?
+17. 	 threads are accessing this object at the same type, & Will it create two object or it will be sharing the same?
+18.	explain how it works when we provide the synchronized keyword? ,  not accessing the instance also it will be blocked, Whoever is accessing this get instant will always be blocked,
+19. 	which are, uh, Java features you work with or you know?, what is stream API?
+20. Advantages in using stream compared to the uh, the conventional traversing?
+21.  show me an example of Lambda expression?  , What are you going to do with Lambda?
+22. need to find it first repeated character using stream.
+23.  frequent addition of numbers to a particular scenario where we need a frequent addition of something => whether we prefer the array list or a link list in that situation
+24. Spring boot & Microserivce
+, if we need to, there is A and a backend application which is a spring boot application and there is a database attached to it.
+o if there is a friend and application also, it's a microservice, so you need to access some data from the database.
+So what will be the changes you are making to get some data like there is an employee details.
+So in order to display the employee details in the front end, you need to get the front end need to get the data from the database.
+So how this will be?
+How we will be designing this?
+how we'll be creating the endpoint which the friend and need to call and or
+what are the annotations you will be using
+what is the difference between a path variable and request Param
+annotation which is composing the spring boot application annotatio
+we need to connect your particular database
+ how will be defining the properties which baby to connect, which driver to be used and?
+ while I'm accessing some data so some of the datas are, uh always the friend and is asking the same data.
+Mohasina Musthafa 35 minutes 34 seconds
+So in that case, how we can improve the performance of the system and reduce the frequent DB cores
+re you familiar with cashing?
+
+We'll things you know about microservice and what all features of this are using in your project.
+ you have a 2 microservices
+ how will how they will be communicating will be how communicating with each other
+ What are the different ways in they can communicate each other?
+ I have 1A microservice and it need to call another microservice API so how it can be done
+ How will how will you be making the risk call?
+ what is the difference of using uh compared to the rest template?
+  how is it different from web client
+  Do you hear about rest template?
+-----
+So actually, uh yeah, that is a microservice springboot application and I need to uh it depending on another microservice and another different to microservices.
+So I need to get data from 1 microservice and also from the other microservice also.
+So both both these data are independent of each other so they have arrested pay at their end 1 microservice and another arrest API.
+So this need to be called from this springboot but these errors tapis are independent of each other.
+So and, but from the front and it will be a single call from the back end.
+It will be a series of calls, so how those series of calls are independent of each other?
+So how this can be executed?
+With high performance
+--
+t need to call some C, uh, some different microservices using the rest API.
+This rest APIs are independent of each other.
+Either they can execute sequentially, so instead of executing sequentially, how this can be done?
+  
+I have a rest API, how this can be protected?
+Like uh from the unwatered access?
+can you explain how this works
+
+explain again how this is working?
+It is so security.
+
+
+
+
+
+photon infotech : [Extenal] 10/10/2023
+--------------------
+1. Divide by 3 , given an list [{10,3,4,6,8,20,4,9,20}] - output : 3,6,9
+2. Find no of occurence & maximum occurence using java 8 stream 
+aaabbbbbcccc
+b 5
+aabbbccce
+b3
+c 3
+3. HashMap Internal working
+4. Collection
+
+
+
+UHG : [Internal] 10/10/2023
+----------------------------------
+1. 	 interger 1 t0o 31
+ 
+	print odd number 
+	fillter - odd number
+	Sorting - descending 
+	print - last 3 digit
+
+2. Singleton cless - write
+3. Java 8 features
+4. Spring boot annonation
+5. auto-wired
+6.ReactJs
+
+ 
+
+
+
+
+
+
+LBG : [Internal] 09/10/2023
+---------------------
+1.Spring boot advantage & spring boot
+2. Dependecy injection
+3. design pattern
+4. SIngleton - how to create rule?
+5. abstract design factory
+6. Java 8 features
+7. Microserivce
+8. apache camel
+9. apache karfa 
+
+
+
+
+Altimetrik: [External] 06/10/2023
+--------------------------------
+1. Method reference in java 8
+2. Lambda Experssion
+3. Functional	Interface
+4. Steam api in java 8
+5. stream methods
+6. Arraylist print value in stream api
+7. Hashmap in java 
+
+
+
+
+
+Credit One Account :[WIpro-Internal]
+--------------------------
+1. Object 0-John,20 
+02 - John,20    ---> Hashset what happed
+
+2. Guven arry Min& Max : without inbulid funitction in java
+3. Actuator in spring boot
+4. Spring End to End -> using annonation explain
+5. how to connect database in application
+6. drop vs truncate
+7.Serization in java
+8.Singeton Class ? Custom singleton
+9.Singeton vs prototype 
+
+
+Quest Global Engineering Services :[external] 05/10/2023-
+------------------------------------------
+1. abstract class vs funcitonal interface
+2. functional interface in java 8
+3. map vs filiter()
+4.HashMap, 
+	Internal working
+	how to store value through linked list why?
+	Duplicate Key wwhat happed?
+
+5. Spring boot annotation
+6. @crossOrigin
+7. @SpringBootApplication
+8.Procedure vs functions
+9.SubQuery
+10.View
+11. String immutable, why ?
+
+
+
+
+
+10Decoders : [External] 05/10/2023
+----------------------------------
+1. Java 8 features 
+	Funtional Interface - why?
+		Default and Static interface - details
+		why default & static methods in java 8
+		Funtional Interface vs normal interface
+		
+	LocatDate what is difference Java 7 & java 8
+	Terminal Operator
+		collectiontoList ? operator 
+		foreach ? operator
+	
+2. apache karaf 
+3. interface vs abstract class
+4. String immutable why? Example, Where to store the object ?
+5. Arraylist vs linkedlist
+	whhat is performance wise best ?
+	
+6. RestController vs controlller
+
+
+
+
+Apple Project : [Wipro-Internal] 05/10/2023
+--------------------------------
+1. given Number find the prime or not
+2. List L = {"HOLLOW","YELLOW"} 
+	I want you to write a program in such a way that whenever I need two strings or any three or four, 
+		whatever list of strings are given, I want you to give me the repetition or the common part in the strings
+3.Rest Controller vs Controller
+4. Program :
+	1.	we have an employee object
+		I want you to come up with a request mapping which would insert a new employee into my database.
+		because we have employee ID, name and what the salary
+		want you to write a post mapping which would accept the employee object and then insert it.
+		I want you to just write the signature and show.
+		We have an employee pojo.
+	2. I have a requirement where I would definitely want the salary expected to be sent in the body
+	I don't want you to go inside the service class, then check if salary is another or not.
+	If it is null null pointer no, I don't want that.
+	 don't want to move into service class at all within this, only
+	 How do you how can you manage that check?
+5.what are the springboot annotations that you've used in your projects?
+	all these right autowired component
+	
+6. let's assume you were returning API OK
+It is fetching some data from the back end from few tables
+OK, so the data that you are rendering is on a UI, so let's assume tomorrow someone says that no, the load time is very high.
+Shruti Holagundi 22 minutes 59 seconds
+We don't want that much time as a back end developer.
+Shruti Holagundi 23 minutes 2 seconds
+What are the steps that you would take to correct your code so that the rendering time reduces?
+
+7. Builder tool is used to.
+How about gradle?
+8.  any knowledge on multi threading?
+9.how do you secure your rest API's?
+10.theoretical knowledge on spring security
+11.all configured in your process project
+12. 4th highest salary in employee SQL
+
+
+	
+	
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Apple Account: {Quick Reference Questions}
+-------------------------------------
+
+Please prepare on the below questions.
+
+Very Important:
+ 
+Remove all duplicate adjacent characters from a string using stack (Coding question)-
+ 
+abbacf --> output cf (edited) 
+ 
+Example:
+ 
+abbacf
+ 
+Output should be cf
+ 
+ 
+Java 8 basics - Features
+stream - why stream is used, difference b/w collections and stream, stream can be applied over hashmap, why stream is lazy loading.
+Lambda expression - Usage and syntax.
+Stream API - Intemediate and terminal operations, built in methods availble.
+Method Reference - 3 ways of method reference, used to implement the functional interface
+Date Handling in java 8 - New date-time API is introduced and its futures
+Exception handling in completableFuture - 3 methods to handle exception
+Óptional - Usage and few methods
+Functional Interface - Usage, purpose of default and stastic methods
+Supplier,consumer,predicate - usage, its default methods, package
+MultiThreading - syncronization, thread group, thread local, thread life cycle
+Executor Framework - usage, ways to create thread pool
+CompletableFuture - usage
+Design patterns - Creational, structural and behaviroal pattern
+SOLID Principle - 5 princliples
+ACID Property - 4 pricincle
+Monolithic and Microservice Architecture - What is it, advantages and disadvantagescreate Sample microservice API for POST,PUT,DELETE
+Annotation in microservices
+Annotation in Spring & SpringBoot
+How to upload file using microservice API(Multipart request)
+How to create Docker file for microservice
+Learn about kubernetes and its command
+create deployment script to deploy your microservice as Kubernetes pod
+How to configure redis cache
+How to store value in redis cache
+how to retrieve value in redis cache
+Handle exception in completableFuture
+transaction in spring
+springboot security-->how will you do Authentication
+Transaction-->Isolation types
+CI & CD -->how will you do it in your project
+microservice communication using resttemplate
+how to read value from property file in spring boot
+(edited) 
+Tech Discussion:
+ 
+A billing application performing bill calculation, payment processing and send mail to business. This microservice application is installed in six instances in cloud with scheduler activation.
+ 
+In this case whether the mail triggers from six instances? how can we control it to drop only one mail notification to business?
+ 
+What is Singleton bean and what is Prototype bean?
+I have a singleton class "S". Inside that I have a Class "Hello" which is auto-wired and annotated for prototype bean.
+ 
+Six threads are trying to get the object of Singleton class. So, how many objects will be created for class "S" and how many objects will be created for class "Hello".
+ 
+What is the difference between Runnable and Callable?
+Can we run two run methods from Thread? Can we execute run method from method invocation?
+There are 3 threads A, B, C started parallelly, but after completion of threads A & B only Thread C should start. What we have to do for that?
+string needs to be reversed
+ 
+ex : how are you
+ 
+output you are how
+product except self
+input array [ 1,2,3,4]
+ 
+output [24,12,8,6]
+print distinct elements
+3question input [1,2,1,1,4,5,6,4,2]
+ 
+output [1,2,4,5,6]
+(edited)
+
+
+Please find the Below Questions.
+1.	Advantages and Disadvantages of Microservice Architecture.
+2.	How you can provide security to your Service.
+3.	Design patterns in Micro Service.
+4.	Annotations in Spring Boot.
+5.	What happens in background when we start the Spring boot application.
+6.	What is Functional Interface.
+7.	What are the Java 8 features?
+8.	What is immutable class in java?
+9.	Why String is immutable.
+10.	What are actuators in Spring boot.
+11.	Finally, a program
+Given Array is {5,10,20,15} output should be 20, since 20 is > 10 and 20>15 and not 10 because, 10>5 , but 10 < 20.
+Find the number which is greater than its adjacent number or numbers.
+
+
+
+
+
+
+
+
+
+
+
+PGS: [Internal - wipro] 29/09/2023
+-------------------------
+1. Java 11 vs 17
+2. please list down new features which got added in 17 when we compare with 11.
+3. Array to arraylist , arraylist to array => what is the method which you used to convert array to an array list
+4. System.out.println(100 + 100 +“test");   
+
+       System.out.println(“test" + 100 + 100); 
+5.Public static void main(String strgs[]) ? , without static running method ?
+6. what happens in the main method is not declared as static
+7. what do you mean by dependency injection in Spring
+8. please write logical code to reverse the string without using the that reverse method?
+9.do you have knowledge in EJB?
+10. how you handle exception?
+11. Can you tell me the code how you're handling the exception? & multiple catch block for a single try block?
+12.what is the use of finally block?
+13.what is the use of at autowired annotation?
+14.what is classloader?
+15.difference between stack memory and heap memory?
+16.
+
+
+
+
+
+
+
+
+
+Cognizant :[Extenal] 29/09/2023
+-------------------------------
+1. Self Introduction
+2. Java 8 features
+3. Lambda Experession
+4. Method reference in java 8 vs Java 6
+5. Intermediate operation in Java 8 - realtime sceanrioes 
+6. Java 11 features
+7. Spring boot vs Spring
+8.Actuator in spring boot
+9. External Confirguration in spring boot for interface
+10. autoConfiruration
+11. change port in embbeed server spring boot, where
+12. Which Envoirment variable why?
+13. Custom port in Embeed server spring boot
+14. Swagger Spring boot
+15. Hot swapping spring boot
+16. docker spring boot
+17.microservices
+18. microservices facing isssue real time, disadvantage
+19. microservices componets 
+20. microservice archieture 
+21. restful services
+
+Feedback : Imporove the Java 8 features & Java 11 features
+		Improve microservice realtime sceanrioes & knowledge 
+
+
+
+
+Hapag-Lloyd :[Extenal] 28/09/2023
+------------------------
+1. 
+Map<String,String> country = new HashMap();
+country.put("IN","India")
+country.put("JP","Japan") 
+Map<String,String> countryNew = country
+
+System.out.println(country==countryNew)
+System.out.println(country.equals(countryNew))
+
+---------------------------------------------
+Program : aaabbccc => a3b2c3
+
+2. Junit Testing - > How to write thre Function/Methods
+3. Many to one Relationship 
+4. Primary & forigen key Relationship which Enity
+5. Many to one Relationship : Entity Parent & child assoicate -> get parent object only, avoid child object in assoication 
+6. equals vs ==
+
+
+
+
+
+Aspire Systems: [Extenal] 28/09/2023
+-----------------------------------------
+1. Spring boot embeed server ? - add anoter server - what are configuration
+2. Spring boot - deafult deault design pattern ? why?
+3. Spring boout autowired alternative @? 
+4. @Qulafied 
+
+Coding :
+
+1. Below methods Correct or Not
+
+method() {
+String name = "Padmanaban";
+List<String> names = new ArrayList<>();
+names.add("name1");
+names.add("name2");
+names.add("name3");
+names.forEach(element -> {
+	name = name + element;
+});
+}
+
+
+2. n of words -> space sperate & first letter each word capital using stream 
+
+
+String name="";
+
+
+Arrays.Stream(name.split("\\s")).map(str->str.subString(0,1).toUpperCase()+str.subString(1)).collect(Collectors.joining(" "));
+
+
+3. 
+
+nums = {5,2,7,6,2,5,6,2,1,6,2,6,1,9};
+
+
+List of any given array USING STREAM, 
+	i. maximum of number repeat number , 
+	ii. IF 2 no of maximum repeat set , find minmium value - print. Example : 2,6 -> maximum repeat count , final output : 2 
+
+
+
+
+Map<Integer,Integer> hashMap=new HashMap<>();
+
+//find maximum repeat count 
+for(int i=0;i<nums.length;i++){
+	if(hashMap.containsKey(nums[i]){
+	hashMap.put(nums[i], hashMap.get(nums[i])+1);
+}else{
+	hashMap.put(nums[i], 1);
+}}
+
+
+
+Iterator entriess=hashMap.entryset().iterator();
+int maxcount=0;
+int element=nums[0];
+
+while(entriess.hasNext()){
+
+Map.Entry entry=entriess.next();
+int count = entry.getValue();
+
+if(maxcount<count){
+maxcount=count;
+element=entry.getKey();
+}
+}
+
+s.o.p("Maximum no of times"+element+" Maximum count :" +maxcount);
+
+
+
+
+
+
+
+
+
+
+NMS -> 27/09/2023
+--------------------------------
+1. list of employee objects - Name,address sorting based lamba
+2. Arraylist vs Linkedlist
+3. Hibernate - Connection pool
+4. Hibernate - @manytoMany - howmany table assocoate
+5. Application server, which deployed platform enviorement.
+6. @controlladvice & customException
+7. Hibernate stages
+8.Spring boot - Architcute priceple in API design
+9.Hibenrate Store procdure tigger
+10. Comparable vs compartor
+11. market interface
+12. Rest APi which authenation used, Swagger or openAPi
+13. Spring boot - advantage, dependceny injction. Solid principle 
+14 spring boot -  2 database - how to manage trancation
+	1 - database is sccessfull
+	2 - database is not failure, how manage the rollback.
+
+6. (somnath.dutta1@wipro.com ) - Given Feedback
+	1. all answer not clear, which you know the cleared answer, clear shot quick answar
+	2. Example - Spring boot - why used there, which puropse, why need this 
+	3. one point clear to answer,
+
+
+
+
+
+
+=========================================
+UHG:  -> 29/08/2023
+
+-----
+1. how to mock jpa repository using mockito
+2. Spring @Bean When use, Which layer
+3. @transactional when use, why not use Businness layer
+4. Arraylist of 1 to 10, Print each number, remove Odd number Program
+5. ConcurrentModificationException its Occurs?
+
+
+
+
+
+
+============================================= 
+LBG --> 25/08/2023
+
+1, an you create an integer array, difference between int and integer, you know, wrapper classes?
+7. convert this array to a stream and using the stream can you print uh, the odd numbers or can you find the first even number in this array?
+2. String concat Method in java 8,11
+3. how can we handle exceptions in Java?,  try catch inside a catch block?
+4. can you just design a rest controller with a rest endpoint to find a customer by ID ,  roughly design the rest controller  -> program 
+	Can you invoke a service layer
+	we allowed to invoke a uh DAO layer from controller class
+	connect to our service class and then from service class let's connect to repository.
+	what kind of autowiring 
+What is the context path?
+5. What does functional programming mean? => Functional interface
+6. create 2 string literals
+8.executor services in in Java 8 to handle multi threading?
+9. what are the keywords final, finally and finalize in Java?
+10. single Singleton design pattern same as creating a static class?
+11.  what are web services => many?
+12. 
+Do you have experience working with or building soap API?
+13. Restful Web services as stateless.?
+14. different ways you can inject a bean.
+15. difference between at the rate service and at the rate component and springboot?
+16. springboot we have something called as a startup parent
+17.  what is the dependency?
+18. difference between me and install and package?
+19. I mean, what's your experience with microservices and microservices architecture?
+20. Have you have you built any microservice?
+21  GIT stash and pop  & git checkout vs Pull
+22. What is the purpose of writing a J unit?
+23. scrum methodologies
+24.
+
+
+
+
+
+
+
+
+=======================
+Apple Project  - 25/08/2023
+----------------
+
+
+1. Intermediate & Termal operation java8
+2. ShortCricut 
+3. Java 8 - Default interface & static interface why intrdoce?
+4. City, Salary in Employee sort -> Java 8 stream 
+5. Spring beean -> SIngleton &Prorotype
+6. Hibenrate Session vs Sessionfactory  -> both enable deafult ?  where enable?
+7. 3rd highest Salary in sql 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+===================
+
+
+1. Abstraction vs encapusaltion
+2. Abstact Method & class in java 8 ? how to achieve
+3. Singleton class 
+4. why String is immutable & create ?
+5. Exception hernachy ? throw vs throws
+6. How to call service to anoteher service in Rest call Expalin
+7. Hibernate vs JPA
+8. Session Factory vs Session
+9. Array vs ArrayList, ArrayList vs Linkedlist
+10. Arrays => ArrayList
+11. comparator vs comparable
+12. how to handle exception in Spring boot & rest call
+13. hashMap internally
+14. Avaoid Duplicate String in java
+15.marker interface
+16. serializtion
+
+
+
+
+
+
+
+
+
+
+
+========================
+
+JAVA Questions
+
+ 
+
+1) About the project
+
+ 
+
+2) Java 8 related questions
+
+ 
+
+3) Count Duplicates in the string program
+
+ 
+
+4) Sort the data using java8 program
+
+ 
+
+5) Spring Boot annotations
+https://www.bacancytechnology.com/blog/spring-boot-annotations
+ 
+
+6) Microservices how to create server & client
+
+ 
+
+7) Spring Boot profiles
+
+ 
+
+8) SQL join queries
+
+
+
+
+
+Interview Questions :
+==========================================
+below are the Client interview question asked me for SPGI/S&P account 
+---------------------
+•    What is AOP in spring? Do we modify our application code where we  login or we do something different in this?
+•    For what you have used AOP in you projects
+•    Do you know collections, what all collections you know about
+•    Custom collection classes and handling the keys of hashmap of these classes
+•    Do you know hash table – diff between hash table and hash map
+•    What benefit and draw back it has if synchronized 
+•    How map internally works
+•    What is diff between synchronize vs lock?
+•    Do you inner classes? What are the types of inner classes
+•    What is Deep cloning and shadow cloning?
+•    How we can do deep cloning object
+•    How can we achieve deep cloning - write code for this
+•    Do you know Serial version UID -is it necessary to provide? If you do not provide how it works?
+•    In database what is diff between trunket and delete command?
+•    Is there any performance different between delete and trunket?
+•    Do you know database indexed? Why do we create?
+•    Do you know what is volatile?
+•    What are daemon threads?
+•    What is diff between daemon thread and non-daemon threads?
+•    Do you know what is completable future?
+•    Do you work on multithreading? – what is diff between runnable and callable
+•    What are the different modes of auto wiring incase of string
+•    So @autowired , if we have to use auto wiring , then what are the ways of using auto wiring . I have a class and want to do autowiring how will you do it. 
+•    What is difference between dependencies and plugins.
+•    Do you know design  patterns ? what all design patterns you have worked on?
+•    Types of class loaders
+•    What is Reflection APIs and where to use
+•    Find the closet combination of 0 in given array {-9,-3,1,4,7,10}
+•    How to make immutable class - write code
+•    How to make Singleton class and how can we break and its solution. - write code
+
+
+Mohan Bench
+----------------------
+
+1. what do you mean by try with resource statements?  there are some still serialized and deserialized and we need to do so in those scenarios.
+    how file wirte and close when exceptiion happen?
+2. basic differences with like normal exception handling and try with resource handling. So what do you feel like? What it actually helping you out?
+3. which interface is try resource using?
+4.  what is internally? It is using the library, what it is actually internally doing.?
+5. What is auto closable?
+
+ 
+
+6. the use case for which you have used that multi threading?
+7. you have 5 threads and you are using one thread means parallely if we're processing the five five student data but one of the data 
+    is getting altered so will it be able to fit the latest data at that time for the one which is?
+8. So how do we regret that you? You will not be definitely using in multithreaded will not do concurrent processing. 
+    You will do parallel processing right?
+9. want to execute that particular thread from the instance where it is lived out. So how how do you go? How do you how do we can process that? 
+10. one thread modifying the data same time another thread try to modify hen that will be a conflicting situation and you may get in a situation get into a situation like deadlock situation, right?
+    how do advert those the deadlock situations? thread safe.
+
+ 
+
+11. what are the design patterns? What are the design patterns you have implemented so far?
+
+ 
+
+12. what is the basic difference between spring and spring boot?
+13. difference between controller and rest controller? That will also give you the answer for the spring and spring boot difference right?
+14. what is the return type of rest controller, what is the return type of the method stand up for the controller? What can be the return type?
+15. what is the return for spring MVC controller methods?
+
+ 
+
+16. have you done any casting technique used? Any casting (cacheing) technique in hibernate? firdt level cache and second level cache?
+17.  what is the phase type eager and of face type eager and face type lazy?
+18. when do you need the eager fetch right? It will definitely.Uh performance is right. So when when do you think are eager face will be used then?
+
+ 
+
+19. how do you handle the security part of a rest service? any kind of pattern or any kind of protocol that you have used for securing your developed services 
+    so that nobody's so that any any of the external user cannot access just right away access your service right?
+20. new controller again has to be wrapped with the security part, otherwise it will not be. It will be again accessed as a separate thing.
+    So again some configuration or something you will be doing for your service to be make it secure right? - how new controller or api checked in security
+21. hat kind of uh authentication you have used? There are several authentication types you can use protocol we say like basic, then JWT, 
+    then what? Right? So any of this have you used in your service cart? -(frame work)
+22. what type test suit used to testing? test tool
+23. what are the deployement tool are you used?
+24. hat kind of version control system you have used like we have so many so many right. 
+    So which one you have used for committing the code and checking the versions like which commit version?
+25. What is optional that is used in Java 8? Why? Why do we use that?
+26. one value inside an optional optional or something then what? What it returns it gives what kind of object? - optional object
+27. have you used default methods of Java 8 features? Means have you have you created in default methods?
+28. There is a Class A and there is a interface B. There is a Class A and there is an interface B class is abstract class OK 
+    and Class A is having a default having a method which is having a concrete method we can have concrete method in the abstract class as well right? 
+    We can have abstract method we can have concrete method. So I have in class abstract class AI have a method which is a concrete method. 
+    Then I will go to the interface. B, which is having a default method and both the.
+    Uh, after Class E and interface B is having the same name for the method that is there in the default method. I have created one method,
+    right that is the same name and providing here in the abstract class I will be same. So now I will have a this one. 
+    I have Class C I'll extend this Class A and I'll implement this Class B interface D. 
+    Then I will call that method Then which uh which which method implementation? It will take Class A or interface B? 
+    I'm calling that method from Class C I'm calling, I can call that method definitely because I'm extending abstract Class A 
+    and even I'm implementing class interface B, so definitely I will have an instance of that particular method in my class, right? 
+    Like I'll call it. So when I'll call it then which implementation it will execute? 
+    So when I'm calling I will give you a little bit more hint. 
+    When I'm calling definitely I'm assigning that value to whichever I want, like I can assign that value to the interface instance. 
+    Even I can assign that value to the abstract instance, right?
+     answer - which instance you are using that method it taking-
+    question  then here the concept of overriding is not working properly right? What do you think?
+
+29.    So have you used a predicate?
+
+ 
+
+30. I have one just small use case. I have some list of employees, right. 
+Every employee is having a name having a name and a salary OK and I want to get the employee name which is having the highest salary? using Java 8?
+
+ 
+
+ 
+
+---new
+31. what is the use of Date time API, difference between noraml date and java 8 date time api. can you give me the ping me the quote for Florida time?
+    What is the main advantages?
+32. What is a draw back in the old day time API? Is it thread safe?
+33. I have a class.The glass should be run every one hour.That last having one method. 
+    The glass should run every one hour inside the method. What do you do? What do you will do using Spring? What is the annotation?
+34.  I have a 5 tables OK, want to update the five tables one by one based on the business condition.First table I'm updating,
+    Such a business condition I can Updated. Second table while updating the business condition is not matching or 
+    something through the excess from something up. translation annotation What is the propagation? How would it how you are rollback it?
+    I need the annotation with the param.What parameter you are sending to at transactional?
+35. If you have a class.inside you have a method. When the server starts, you are putting into that method Basic variables and the basic 
+    Attributes are basic params something throwt the application. That will work. 
+    example pie value. You can configure it because many places you can use π value or anything else standard, something something, color something. 
+    You can put it in. The thing that entire application is using the, No change at all. So when the server startup 
+    it will it will the class will assign everything. How you can do that? -- How does server startup it will work. 
+    I am talking about when the server start up not application start up in the server startup it it should pick and assign it.
+    I don't want what is the final? How the value is assigned it OK whether it's a it can be changed or not.Doesn't matter, OK, but I need that 
+    I have a class I am having such a variables which is across the application we are going to use it so it is one time it should be loaded. 
+    So when the server startup it should work. Either after the server startup or before the application startup, 
+    or during the application startup once the application is up, then the variables are very. That's it.
+
+ 
+
+---new
+36. scope of spring
+37. singleton class
+38. String s=" new String(" welcome");String s1="welcome";String s3=s.concat("wipro");
+39. spring and springboot
+40. what annotation used to call custom expection
+41. difference throw and throws
+
+
+
+Apple Account
+================================
+1. Given String, Find the maximum of occurence String characters.
+
+/**
+ * 
+ */
+package Java;
+
+import java.util.HashMap;
+import java.util.List;
+import java.util.Map;
+import java.util.Map.Entry;
+import java.util.Set;
+import java.util.stream.Collector;
+import java.util.stream.Collectors;
+
+/**
+ * @author ArunachalamP
+ *
+ */
+public class Occurence {
+
+	/**
+	 * @param args
+	 */
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		
+		String a="ABCCCDDD";
+	
+		Map<Character,Integer> occurence=new HashMap<Character, Integer>();
+		
+		for(int i=0;i<a.length();i++) {
+			if(occurence.containsKey(a.charAt(i))) {
+				occurence.put(a.charAt(i), occurence.get(a.charAt(i))+1);
+			}else {
+				occurence.put(a.charAt(i), 1);
+			}
+		}
+		
+		
+		System.out.println("occurence Map:"+occurence.entrySet());
+		
+		Set<Entry<Character,Integer>> entitySet=occurence.entrySet();
+		
+		int maxCount=0;
+		char maxChar=0;
+		
+		
+		for(Entry<Character, Integer> entry:entitySet) {
+			
+			if(entry.getValue()>maxCount) {
+				maxCount=entry.getValue();
+				maxChar=entry.getKey();
+			}
+		}
+		
+		System.out.println("Maxium Occurence : "+maxChar);
+		
+		
+	//Java 8 
+		long max=maxCount;
+		
+	List<Character>	maxiumOcc= occurence.entrySet().stream().filter(e->e.getValue() == max)
+		.map(Map.Entry::getKey).collect(Collectors.toList());
+	
+	System.out.println("Maxium Occurence : "+maxiumOcc);
+		
+		
+		
+	
+
+	}
+
+}
+
+2. Find the integer , palindrome, Java 8 Streams
+
+
+Citi Account 
+--------------------
+1. Rest Controller vs Controller
+2. Thread Life cycle
+3. volatile keyword vs synchronized
+4. comparable interface vs comparator
+5. Program => list of employee, Department wise calculate sum of salary 
+6. why Sun System Introduced the String Pool and constant
+7. Expain Deep Cloning vs Shawdow cloning
+8. In avoid deadlock occurenc -> MultiThread Env 
+9. why Singleton object reqied ? how to achequie
+10. reentrantlock in java
+11. object level lock and class level lock 
+
+
+=============================
+
+
+1)Capgemini -> Video Call Date: 18.04.2023
+-----------------------------------------
+1. Java 8 features
+2. what is optional - where implemation in your project
+3. what is flatmap
+4. Spring boot configuration
+5. spring boot integration websphere/webflux configuration
+6. spring boot swagger configuration
+7. swagger , implantation swagger spring boot, what use of swagger 
+8. metaspace 
+9. spring actuator and actuator configuration
+10. Spring boot disavantage & advantages 
+Spring Boot Advantages
+1.Simplified & version conflict free dependency management through the starter POMs.
+2.We can quickly setup and run standalone, web applications and micro services at very less time.
+3.You can just assemble the jar artifact which comes with an embedded Tomact, Jetty or Undertow application server and you are ready to go.
+4.Spring Boot provides HTTP endpoints to access application internals like detailed metrics, application inner working, health status, etc.
+5.No XML based configurations at all. Very much simplified properties. The beans are initialized, configured and wired automatically.
+6.The Spring Initializer provides a project generator to make you productive with the certain technology stack from the beginning. You can create a skeleton project with web, data access (relational and NoSQL datastores), cloud, or messaging support.
+
+Disadvantages:
+1.Spring boot may unnecessarily increase the deployment binary size with unused dependencies.
+2.If you are a control freak, I doubt Spring Boot would fit your needs.
+3.	Spring Boot sticks good with micro services. The Spring Boot artifacts can be deployed directly into Docker containers. In a large and monolithic based applications, I would not encourage you to use Spring Boot
+
+
+
+------------------------------------------------
+2)Experis IT -> 1st Level Date: 25.04.2023
+----------------------------------------
+1. Java 8,11 to 15
+2. Spring, Spring boot
+3. Cache many
+4. constrctor & Construct reutrn values?
+5. inner class
+6. Whats are API working?
+7. Batch ?
+8. 
+
+
+----------------------------------------------
+3) DXC  -> Video Call Date:27.04.2023
+-----------------------------------
+1. Hashmap Internal working, hashing collision, methods 
+2. Program 
+
+int[] arryInt = {1,2,1,3,4,1,4,1}
+Output: 
+1  is repeated >> True
+2 is repeated >> False
+3 is repeated >> False
+4 is repeated >> True
+
+Repeated is true, Non - repeated is false
+
+a. Without Collections
+b. Time COmplex 
+c. if using Collections & Sequence order Collection
+
+3. Concurrent API
+4, fail fast and fail safe 
+5. Hash map vs Concurrent Hashmap 
+6.Java 8 fateatures
+	a. default methods
+	b. deafult method dimand problem
+	
+7. Exception hireachy
+	a. try with resource use ?
+	b. custom exception - try with resource 
+	
+8. Immutable object 
+	a. how to create immutable object
+	b. which is immutable object in java
+	
+9. thread Pool
+10. synchronization
+11. Mulithread race condtion
+12. JVM
+	a. Memory type 
+	b. stack memory 
+	c. class loader type
+	d. gc
+	e. gc type
+13.Solid Priciple
+14. Design patten
+	a. Abstact factory pattern
+	
+15. Spring
+	a. Spring bean scope
+	3. Spring core and mvc 
+	c. Spring security
+	4. Depency injection:
+	5. autowired & types
+	
+16. Spring boot
+	a. @AutoConfiguration details 
+	b. actuator 
+	
+17.Microservice(ms) -> Commication one ms to inner ms
+18. SQL :
+	a.Index
+	b. join
+19. Hibernate
+	a. Hibernate entity state
+	b. Assoication
+	c. Caching
+20. Cloud - basic
+21. JMS, acitve MQ, IBM Quuew, Kafka
+22. Linux commands 
+
+
+	
+=======================interview prepations=====
+
+https://workat.tech/
+https://leetcode.com/problemset/all/
+https://www.interviewbit.com/technical-interview-questions/
+https://grow.google/intl/en_in/learn-skills/
+
+
+==========================================
+Infosys Date:06/05/2023  Video call
+
+Two number sum
+Given an array of integers, return thetwo numbers whose sum is equal to a given target
+For example: array [7, 9, 5, 2, 4, 6]. Target = 15
+Output – 9 , 6
+Note:-
+
+1.You can create your own array in main method with a set of values.
+1. Hightest 2nd salary in employee table
+2. SPRINGG BOOT APPLICATION Explain
+3. HOW TO WORK SORING BOOT APPLICATION
+4. HOW TO CREATE SPRING BOOT
+5. GIT , JEKINDS INTEGRATED
+6. Spring boot vs spring MVC
+7. Depency injection
+8.ioc
+9. Microserivce , why?
+10. How to communicate different microserivce
+11. Different language microserive communication
+12. Functional & logic microservice
+13. Rest controller vs controller
+14. Patch method in rest
+15. Rest method
+16. Rest intergeration method
+17. Spring boot database intergeration
+18. Rest swagger api integration
+19. Rest testing how?
+20. Singeton
+21. Immutable class
+22. Array vs ArrayList
+23. Hashmap
+24. Ploymorphism
+25. Abstract & Interface
+
+
+==========================================
+ZemosoLabs Date:10/06/2023  video call
+
+
+/ # // // Given an array of positive integers nums and a positive integer target,
+
+// # // * return the minimal length of a contiguous * subarray
+
+// # // [numsl, numsl+1, ..., numsr-1, numsr] of which the sum is greater than or equal to the target.
+
+// # // If there is no such subarray, return 0 instead.
+
+// # // Input: target = 7, nums = [2,3,1,2,4,3]
+
+// # // Output: 2
+
+// # // Explanation: The subarray [4,3] has the minimal length
+
+
+2. Loops Conepts Example of Code
+3. Microserivce
+4. Solid Priciple
+5. Spring boot vs SPring
+6. Design patten
+7. Depency injection
+
+
+
+
