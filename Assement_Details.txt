@@ -176,5 +176,174 @@ git branch
 
 $ git push -u -f origin master
 
+--------------------------------------------
+
+PA20303803@L-158041152 MINGW64 /d/CodingAssement/Personal_Interview (master)
+$ git remote add origin https://github.com/padmanaban20892/padhu.git
+error: remote origin already exists.
+
+PA20303803@L-158041152 MINGW64 /d/CodingAssement/Personal_Interview (master)
+$ git add .
+
+PA20303803@L-158041152 MINGW64 /d/CodingAssement/Personal_Interview (master)
+$ git status
+On branch master
+nothing to commit, working tree clean
+
+PA20303803@L-158041152 MINGW64 /d/CodingAssement/Personal_Interview (master)
+$ git status
+On branch master
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+        modified:   Assement Details.txt
+
+no changes added to commit (use "git add" and/or "git commit -a")
+
+PA20303803@L-158041152 MINGW64 /d/CodingAssement/Personal_Interview (master)
+$ git add .
+
+PA20303803@L-158041152 MINGW64 /d/CodingAssement/Personal_Interview (master)
+$ git status
+On branch master
+Changes to be committed:
+  (use "git restore --staged <file>..." to unstage)
+        modified:   Assement Details.txt
+
+
+PA20303803@L-158041152 MINGW64 /d/CodingAssement/Personal_Interview (master)
+$ git commit -m "testproject1"
+[master 9f30a74] testproject1
+ Committer: Padmanaban A <PA20303803@wipro.com>
+Your name and email address were configured automatically based
+on your username and hostname. Please check that they are accurate.
+You can suppress this message by setting them explicitly:
+
+    git config --global user.name "Your Name"
+    git config --global user.email you@example.com
+
+After doing this, you may fix the identity used for this commit with:
+
+    git commit --amend --reset-author
+
+ 1 file changed, 2 insertions(+), 1 deletion(-)
+
+PA20303803@L-158041152 MINGW64 /d/CodingAssement/Personal_Interview (master)
+$ git push -u origin master
+To https://github.com/padmanaban20892/padhu.git
+ ! [rejected]        master -> master (non-fast-forward)
+error: failed to push some refs to 'https://github.com/padmanaban20892/padhu.git'
+hint: Updates were rejected because the tip of your current branch is behind
+hint: its remote counterpart. Integrate the remote changes (e.g.
+hint: 'git pull ...') before pushing again.
+hint: See the 'Note about fast-forwards' in 'git push --help' for details.
+
+PA20303803@L-158041152 MINGW64 /d/CodingAssement/Personal_Interview (master)
+$ git checkout -b master
+fatal: a branch named 'master' already exists
+
+PA20303803@L-158041152 MINGW64 /d/CodingAssement/Personal_Interview (master)
+$ git push origin master
+To https://github.com/padmanaban20892/padhu.git
+ ! [rejected]        master -> master (non-fast-forward)
+error: failed to push some refs to 'https://github.com/padmanaban20892/padhu.git'
+hint: Updates were rejected because the tip of your current branch is behind
+hint: its remote counterpart. Integrate the remote changes (e.g.
+hint: 'git pull ...') before pushing again.
+hint: See the 'Note about fast-forwards' in 'git push --help' for details.
+
+PA20303803@L-158041152 MINGW64 /d/CodingAssement/Personal_Interview (master)
+$ git push -u -f origin master
+Enumerating objects: 9, done.
+Counting objects: 100% (9/9), done.
+Delta compression using up to 8 threads
+Compressing objects: 100% (9/9), done.
+Writing objects: 100% (9/9), 34.06 KiB | 1.79 MiB/s, done.
+Total 9 (delta 2), reused 0 (delta 0), pack-reused 0
+remote: Resolving deltas: 100% (2/2), done.
+To https://github.com/padmanaban20892/padhu.git
+ + cf11e93...9f30a74 master -> master (forced update)
+branch 'master' set up to track 'origin/master'.
+
+PA20303803@L-158041152 MINGW64 /d/CodingAssement/Personal_Interview (master)
+$ git status
+On branch master
+Your branch is up to date with 'origin/master'.
+
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+        modified:   Assement Details.txt
+
+no changes added to commit (use "git add" and/or "git commit -a")
+
+PA20303803@L-158041152 MINGW64 /d/CodingAssement/Personal_Interview (master)
+$ git status
+On branch master
+Your branch is up to date with 'origin/master'.
+
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+        modified:   Assement Details.txt
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+        Assement_Details.txt
+
+no changes added to commit (use "git add" and/or "git commit -a")
+
+PA20303803@L-158041152 MINGW64 /d/CodingAssement/Personal_Interview (master)
+$ git add Assement_Details.txt
+
+PA20303803@L-158041152 MINGW64 /d/CodingAssement/Personal_Interview (master)
+$ git status
+On branch master
+Your branch is up to date with 'origin/master'.
+
+Changes to be committed:
+  (use "git restore --staged <file>..." to unstage)
+        new file:   Assement_Details.txt
+
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+        modified:   Assement Details.txt
+
+
+PA20303803@L-158041152 MINGW64 /d/CodingAssement/Personal_Interview (master)
+$ git commit -m "test git comments"
+[master 3c36a44] test git comments
+ Committer: Padmanaban A <PA20303803@wipro.com>
+Your name and email address were configured automatically based
+on your username and hostname. Please check that they are accurate.
+You can suppress this message by setting them explicitly:
+
+    git config --global user.name "Your Name"
+    git config --global user.email you@example.com
+
+After doing this, you may fix the identity used for this commit with:
+
+    git commit --amend --reset-author
+
+ 1 file changed, 180 insertions(+)
+ create mode 100644 Assement_Details.txt
+
+PA20303803@L-158041152 MINGW64 /d/CodingAssement/Personal_Interview (master)
+$ git push -u -f origin master
+Enumerating objects: 4, done.
+Counting objects: 100% (4/4), done.
+Delta compression using up to 8 threads
+Compressing objects: 100% (3/3), done.
+Writing objects: 100% (3/3), 1.71 KiB | 195.00 KiB/s, done.
+Total 3 (delta 1), reused 0 (delta 0), pack-reused 0
+remote: Resolving deltas: 100% (1/1), completed with 1 local object.
+To https://github.com/padmanaban20892/padhu.git
+   9f30a74..3c36a44  master -> master
+branch 'master' set up to track 'origin/master'.
+
+PA20303803@L-158041152 MINGW64 /d/CodingAssement/Personal_Interview (master)
+
+
 
 

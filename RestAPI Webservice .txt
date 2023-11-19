@@ -1,0 +1,347 @@
+
+
+1. RequestMapping vs GetMapping
+
+
+
+Spring Boot Annonation:
+@Autowired
+@Component
+
+RestAPI:
+@RestController
+@RequestMapping(method=RequestMethod.GET, path="hello-word")
+@GetMapping(path="hello-word-get")
+@RequestBody
+@DeleteMapping("/users/{id}")
+
+@PostMapping("/users")
+	public ResponseEntity<Object> createUser(@RequestBody User user){
+		 User savedUser=userService.save(user);
+		 ///users/{id} -> /users, user.getUserId
+		 URI location = ServletUriComponentsBuilder
+				 .fromCurrentRequest().path("/{id}")
+				 .buildAndExpand(savedUser.getUserId()).toUri();
+		 
+		return ResponseEntity.created(location).build();
+	}
+
+
+Exception for RestAPI
+----
+ResponseEntityExceptionHandler ->(org.springframework.web.servlet.mvc.method.annotation.ResponseEntityExceptionHandler;)
+@ControllerAdvice
+@ExceptionHandler(Exception.class)
+
+
+Example:
+
+import java.time.LocalDate;
+
+import org.springframework.http.HttpStatus;
+import org.springframework.http.ResponseEntity;
+import org.springframework.web.bind.annotation.ControllerAdvice;
+import org.springframework.web.bind.annotation.ExceptionHandler;
+import org.springframework.web.context.request.WebRequest;
+import org.springframework.web.servlet.mvc.method.annotation.ResponseEntityExceptionHandler;
+
+import com.padhu.rest.webservices.restfulwebservice.ErrorDetails;
+
+@ControllerAdvice
+public class CustomizedResponseEntityExceptionHandler  extends ResponseEntityExceptionHandler{
+
+	@ExceptionHandler(Exception.class)
+	public final ResponseEntity<Object> handleAllException(Exception ex, WebRequest request) throws Exception {
+		ErrorDetails errorDetail=new ErrorDetails(LocalDate.now(),
+				ex.getMessage(), request.getDescription(false));
+		return new ResponseEntity(errorDetail,HttpStatus.INTERNAL_SERVER_ERROR);
+	}
+	
+	@ExceptionHandler(UserNotFoundException.class)
+	public final ResponseEntity<Object> handleUserNotFoundException(Exception ex, WebRequest request) throws Exception {
+		ErrorDetails errorDetail=new ErrorDetails(LocalDate.now(),
+				ex.getMessage(), request.getDescription(false));
+		return new ResponseEntity(errorDetail,HttpStatus.NOT_FOUND);
+	}
+}
+
+
+
+
+What Happening in the BackGround in Spring boot
+---------------------------------------------
+Enable Debug Logging 
+	Warning : Log change frequently
+How are our requests handled?
+	Dispatcher Servlet - front controller pattern
+		Mapping servlets : dispatcherservlet urls =[/]
+		Auto Configuration(DispatcherServeletAutoConfiguration)
+	
+How does Bean Object get covwrted to Json
+
+	@ResponseBoday + JacksobHttpMessageConverts.
+		Auto Configuration(JacksobHttpMessageConvertsConfiguration)
+		
+Who is Configuring error mapping?
+	Auto Configuration(ErrorMvcAutoCOnfiguration)
+	
+How are all jars available(Spring,Spring mvc,JackSon,TOmcat)
+	Starter Projects - spring Boot starter Web (SPring-Webmvc, Spring-web,SPring boot-starter-tomcat, 
+	Spring-boot-starter-Json)
+
+
+
+Response Status for REST API 
+---------------------------
+Resource is Not found - 404
+
+Server exception - 500
+
+Validation is error - 400
+
+
+200 - Sucess, 201 - created, 204 - No content, 401 - Unauthorized, 400- bad request, 404- resoruce not found, 500 - server error
+
+
+
+Validation for RestAPI
+-------------------------
+Pom.xml
+<dependency>
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-starter-validation</artifactId>
+		</dependency>
+
+
+@Valid  - (jakarta.validation.Valid)
+jakarta.validation.constraints.Past;
+jakarta.validation.constraints.Size;
+
+
+
+REST API Documention:
+---------------------
+ REST API consumers need to understand your REST API:
+ 
+	1. Resources
+	2. Actions
+	3. Request/Reponse Structures(constraints/Validations)
+
+Challenges:
+	Accuracy : how do you your documention is utp date & correct ?
+	Consistency : you might have 100s of REST API in an enterpise?, 
+	how do you ensure consistency?
+	
+Option:
+	1. Manual Maintain Documention
+	2. Generate from code  (i.e Swagger API - Open API)
+	
+
+Swagger API & OPEN API :
+
+	2016: OPEN API Specification created based on Swagger Spec.
+		Swagger Tool (Ex: Swagger UI)
+		
+	OPEN API Specification: Standard, 
+		Discover & understand REST API
+		swagger specification (eariler called)
+	
+	Swagger UI:
+		Visualize and interact with Rest api
+		
+
+	Dependency  - OpenAPI 3
+	springdoc-openapi java library helps to automate the generation of API documentation for spring boot projects.
+	
+		<dependency>
+			<groupId>org.springdoc</groupId>
+			<artifactId>springdoc-openapi-starter-webmvc-ui</artifactId>
+			<version>2.2.0</version>
+		</dependency>
+	
+	http://localhost:8080/swagger-ui/index.html
+	
+	
+	
+	Mulit-language Support & Accept Header 
+	--------------------------------------
+	<dependency>
+			<groupId>com.fasterxml.jackson.dataformat</groupId>
+			<artifactId>jackson-dataformat-xml</artifactId>
+		</dependency>
+		
+	
+	Custmer REST API JSON :
+	
+	@JsonProperty("user_id")
+	@JsonIgnore
+	
+	
+	
+	Spring Boot Actuator:
+	---------------------
+	Get Production ready with spring boot actuator 
+	
+		1. monitor & manage your application in your production 
+		2. Spring boot Actuator - dependency
+			<dependency>
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-starter-actuator</artifactId>
+		</dependency>
+		3. Actuator Endpoints:
+			*. beans - Complete list of spring beans in your application
+			*.helath - application health information
+			*.metrics - application metrics
+			*.mappings - Details around request mappings 
+			
+		
+			http://localhost:8080/actuator
+			
+			
+		application.properties add below line:
+	//actuator
+	management.endpoints.web.exposure.include=*		
+			
+			
+			{
+    "_links": {
+        "self": {
+            "href": "http://localhost:8080/actuator",
+            "templated": false
+        },
+        "beans": {
+            "href": "http://localhost:8080/actuator/beans",
+            "templated": false
+        },
+        "caches-cache": {
+            "href": "http://localhost:8080/actuator/caches/{cache}",
+            "templated": true
+        },
+        "caches": {
+            "href": "http://localhost:8080/actuator/caches",
+            "templated": false
+        },
+        "health-path": {
+            "href": "http://localhost:8080/actuator/health/{*path}",
+            "templated": true
+        },
+        "health": {
+            "href": "http://localhost:8080/actuator/health",
+            "templated": false
+        },
+        "info": {
+            "href": "http://localhost:8080/actuator/info",
+            "templated": false
+        },
+        "conditions": {
+            "href": "http://localhost:8080/actuator/conditions",
+            "templated": false
+        },
+        "configprops": {
+            "href": "http://localhost:8080/actuator/configprops",
+            "templated": false
+        },
+        "configprops-prefix": {
+            "href": "http://localhost:8080/actuator/configprops/{prefix}",
+            "templated": true
+        },
+        "env": {
+            "href": "http://localhost:8080/actuator/env",
+            "templated": false
+        },
+        "env-toMatch": {
+            "href": "http://localhost:8080/actuator/env/{toMatch}",
+            "templated": true
+        },
+        "loggers": {
+            "href": "http://localhost:8080/actuator/loggers",
+            "templated": false
+        },
+        "loggers-name": {
+            "href": "http://localhost:8080/actuator/loggers/{name}",
+            "templated": true
+        },
+        "heapdump": {
+            "href": "http://localhost:8080/actuator/heapdump",
+            "templated": false
+        },
+        "threaddump": {
+            "href": "http://localhost:8080/actuator/threaddump",
+            "templated": false
+        },
+        "metrics-requiredMetricName": {
+            "href": "http://localhost:8080/actuator/metrics/{requiredMetricName}",
+            "templated": true
+        },
+        "metrics": {
+            "href": "http://localhost:8080/actuator/metrics",
+            "templated": false
+        },
+        "scheduledtasks": {
+            "href": "http://localhost:8080/actuator/scheduledtasks",
+            "templated": false
+        },
+        "mappings": {
+            "href": "http://localhost:8080/actuator/mappings",
+            "templated": false
+        }
+    }
+}
+
+
+
+
+
+
+---------------------------------------------------
+Hibernate with JPA & Spring Data JPA 
+
+<dependency>
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-starter-data-jdbc</artifactId>
+		</dependency>
+		<dependency>
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-starter-data-jpa</artifactId>
+		</dependency>
+		<dependency>
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-starter-web</artifactId>
+		</dependency>
+
+		<dependency>
+			<groupId>com.h2database</groupId>
+			<artifactId>h2</artifactId>
+			<scope>runtime</scope>
+		</dependency>
+
+H2 Database:
+
+url=jdbc:h2:mem:fd4c63b3-8502-4e5a-bd9e-0d6d65f51e9b user=SA
+
+
+Application.properties:
+spring.h2.console.enabled=true
+spring.datasoruce.url=jdbc:h2:mem:studentDB
+
+
+http://localhost:8080/h2-console/
+
+
+
+/*
+CREATE TABLE users (
+    ID bigint NOT NULL,
+    LastName varchar(255) NOT NULL,
+    FirstName varchar(255),
+    dateofbirth varchar(255),
+    PRIMARY KEY (ID)
+);*/
+
+
+JPA:
+	JPA define as Specification , its an API (Interface)
+	
+	hibernate is Implematios of JPA 
+	
+

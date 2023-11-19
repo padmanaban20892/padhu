@@ -1,5 +1,123 @@
 
 
+
+Zuul -> API gateway 
+Circut breake
+service Regiration
+
+
+
+
+
+Mulipe Company : 18/11/2023 (hm health solutions inc)
+----------------------------------
+1. API Gateway in microserivce
+2. How to implantation API gateway , Mechanism used in autnecation or autniorzation
+3. localhost:8080/student/studentdetsi?id=100
+Rest API -> Class level annontaion, method level anonation
+4. How to make rest webservice calll
+5. ASYN & SYNc Call ? , how to make call?
+6. 
+
+
+RAKBANK project :Internal 17/11/2023
+-----------------------------------------
+1. Idenfiy Hashmap, Hashmap
+2.SeachTO framework
+3. Sevlet ,?
+4. SPring vs SPring mvc
+5. Path Variable vs class variable
+6. functional interface, lamaba exprersion, steam api
+7. Web.xml purpose
+8. Depencency Injection
+9. ioc 
+10. HIbernate annonation
+11. Stored procedure
+12. Function
+13. view & Composite Key
+
+
+
+
+
+
+
+---------------
+List<Integer> = (3,8,10,7,11)
+
+//max Integer
+
+
+
+		int max=list.stream().collect(collectors.summarzingInt(Integer:intValue)).getMax();
+
+
+
+HTC:
+----------------
+1. Create REST API using Java 8 stream, Optional Class, using PUT Operation with JPA Resposity, with Create table 
+2. 
+
+
+
+
+LTTS
+----------------
+fibonacci : Series 
+fibonacci given or not 
+Employye Age sorted -?
+custom query
+@Tranasction  
+@Sevice
+@responsity
+@SPring profiles
+put vs post
+Static, Transit, Enum, Method refernce, lamba experience, steam api, Optional class, Controller, dependceny injection
+abstract class, as constructor , can you overridee 
+
+Capgemini
+-----------------
+1. API gatway details 
+2. how to number of instnace, number of class 
+3. input: integer array of n elements of random numbers within the range of -100 to 100
+	output: print the two numbers that produces the maximum product
+print "Hello world" without using semicolon
+
+	syso.out.print("Hello world");
+
+Nielson 16/11/2023
+---------
+1. Singelton ? Create Singelton
+2. Mutable Object
+3. IOC spring 
+4. Dependecy inject way ?
+5. what is spring
+6. How to bulid  spring boot application
+7. palindrome given number largest value 
+8. binary Value to decimal Value => 
+
+
+HCL : 14/11/2023
+---------------------------------------------
+1. List<String> names = Arrays.asList("Jon","Ajeet","Steve","Ajeet","Jon","Ajeet");
+Output:{steave=1,Jon=2,Ajeet=3}
+	Map<String,Integer> DuplicateWordCount2=names.stream().
+				collect(Collectors.toMap(Function.identity(), word ->1 , Math::addExact));
+2. startwidth "A"
+
+List<String> nameStart=names.stream()
+				.filter(s2 -> s2.startsWith("A")).collect(Collectors.toList());
+
+3. FuntionalInterface accpet other method?
+4. employee Table as Name is Null is Same data, how to remove the name as null, using java strema 8
+5. Monolithic advantage & disadvantage , Microserivce advantage & disAdvantage
+6. git vs bitbucket
+7. How to change the deafult server to APache tomcat server in Spring boot
+8. How to create microservices Steps 
+9.Lamdba Exception in why ?
+10. Java 8 vs before ? benfits.
+
+
 HCL : 13/11/2023
 -------------------------------
 1. FunctionalInterface 
@@ -12,16 +130,6 @@ HCL : 13/11/2023
 6. Hibernate vs JPA  , Hibenrate Vs jdbc advantage ?
 7. Dependecy Injection in spring, Which objects to create where store object >
 8. PUT vs POST
-
-
-
-
-
-
-
-
-
-
 
 
 Internal : Test : 

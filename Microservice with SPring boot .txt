@@ -1,0 +1,15 @@
+
+How to Bulid Microservices using Spring Boot Step by Step
+-----------------------------------------
+Step 1: Set up your Development Environment
+Step 2: Define your Microservices Architecture
+Step 3: Create your Microservices
+Step 4: Define your API Endpoints
+Step 5: Implement your Business Logic
+Step 6: Test your Microservices
+Step 7: Deploy your Microservices
+
+
+
+
+https://www.linkedin.com/pulse/building-microservices-using-spring-boot-step-deepthi-g/
