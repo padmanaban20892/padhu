@@ -1,5 +1,16 @@
 
 
+BNP : 20/11/2023
+----------------------
+1. List vs Set , which best option for seaching
+2. Abstract class vs interface in java 8 
+3. Member varibale interface 
+4. FunctionalInterface 
+
+
+
+
+
 
 Zuul -> API gateway 
 Circut breake

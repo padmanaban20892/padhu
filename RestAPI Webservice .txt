@@ -345,3 +345,20 @@ JPA:
 	hibernate is Implematios of JPA 
 	
 
+spring.jpa.defer-datasource-initialization=true
+-----
+	
+It seems Spring Boot has modified how it initializes the DataSource with SQL scripts with 2.5.0.
+
+This can be fixed by including the following property in the project:
+
+spring:
+  jpa:
+    defer-datasource-initialization: true
+The explanation:
+
+Among the changes introduced in 2.5.0, it seems now the data.sql script is executed before Hibernate is initialized:
+
+Spring Boot 2.5 Release Notes - Hibernate and data.sql
+And since I'm relying on the ORM mechanism (i.e. Hibernate) to create the schema from the entity definition, the database table does not exist at the moment the initialization SQL script is executed
+
