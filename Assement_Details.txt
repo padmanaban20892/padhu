@@ -1374,6 +1374,107 @@ To https://github.com/padmanaban20892/padhu.git
 
 PA20303803@L-158041152 MINGW64 /d/CodingAssement/Personal_Interview (master)
 $
+----------------------------------------------------------
+
+
+PA20303803@L-158041152 MINGW64 ~
+$ cd d:/
+
+PA20303803@L-158041152 MINGW64 /d
+$ cd CodingAssement/
+
+PA20303803@L-158041152 MINGW64 /d/CodingAssement
+$ cd Personal_Interview/
+
+PA20303803@L-158041152 MINGW64 /d/CodingAssement/Personal_Interview (master)
+$ git remote -v
+origin  https://github.com/padmanaban20892/padhu.git (fetch)
+origin  https://github.com/padmanaban20892/padhu.git (push)
+
+PA20303803@L-158041152 MINGW64 /d/CodingAssement/Personal_Interview (master)
+$ git status
+On branch master
+Your branch is up to date with 'origin/master'.
+
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+  (commit or discard the untracked or modified content in submodules)
+        modified:   Assement_Details.txt
+        modified:   Interview Questions Bench & External.txt
+        modified:   padhu (modified content)
+
+no changes added to commit (use "git add" and/or "git commit -a")
+
+PA20303803@L-158041152 MINGW64 /d/CodingAssement/Personal_Interview (master)
+$ ls
+'Assement Details.txt'                       Resume/
+ Assement_Details.txt                        SpringBootProject/
+'Interview Answer_details .txt'              SpringBoot_URL.txt
+'Interview Questions Bench & External.txt'   learing/
+'Microservice with SPring boot .txt'         padhu/
+ Payslip/                                    spring-boot-hibernate/
+'RestAPI Webservice .txt'
+
+PA20303803@L-158041152 MINGW64 /d/CodingAssement/Personal_Interview (master)
+$ git add *
+
+PA20303803@L-158041152 MINGW64 /d/CodingAssement/Personal_Interview (master)
+$ git status
+On branch master
+Your branch is up to date with 'origin/master'.
+
+Changes to be committed:
+  (use "git restore --staged <file>..." to unstage)
+        modified:   Assement_Details.txt
+        modified:   Interview Questions Bench & External.txt
+        new file:   learing/1699890446096.gif
+        new file:   learing/How do message Queue.gif
+        new file:   learing/Kuernets.pdf
+        new file:   learing/git
+
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+  (commit or discard the untracked or modified content in submodules)
+        modified:   padhu (modified content)
+
+
+PA20303803@L-158041152 MINGW64 /d/CodingAssement/Personal_Interview (master)
+$ git commit -m "udate Questions 2"
+[master 9769469] udate Questions 2
+ Committer: Padmanaban A <PA20303803@wipro.com>
+Your name and email address were configured automatically based
+on your username and hostname. Please check that they are accurate.
+You can suppress this message by setting them explicitly:
+
+    git config --global user.name "Your Name"
+    git config --global user.email you@example.com
+
+After doing this, you may fix the identity used for this commit with:
+
+    git commit --amend --reset-author
+
+ 6 files changed, 138 insertions(+), 1 deletion(-)
+ create mode 100644 learing/1699890446096.gif
+ create mode 100644 learing/How do message Queue.gif
+ create mode 100644 learing/Kuernets.pdf
+ create mode 100644 learing/git
+
+PA20303803@L-158041152 MINGW64 /d/CodingAssement/Personal_Interview (master)
+$ git push origin master
+Enumerating objects: 13, done.
+Counting objects: 100% (13/13), done.
+Delta compression using up to 8 threads
+Compressing objects: 100% (9/9), done.
+Writing objects: 100% (9/9), 8.39 MiB | 9.64 MiB/s, done.
+Total 9 (delta 4), reused 0 (delta 0), pack-reused 0
+remote: Resolving deltas: 100% (4/4), completed with 4 local objects.
+To https://github.com/padmanaban20892/padhu.git
+   1950a07..9769469  master -> master
+
+PA20303803@L-158041152 MINGW64 /d/CodingAssement/Personal_Interview (master)
+$
 
 
 

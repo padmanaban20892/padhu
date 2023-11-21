@@ -32,6 +32,7 @@ https://medium.com/@ankithahjpgowda/ways-to-log-database-queries-in-spring-jdbc-
 
 
 
+https://medium.com/@kharvinagaraj1/explore-jpa-java-persistence-api-mastery-with-java-and-spring-boot-sql-part-1-3f17530ad5ed
 
 Internal : Test : 
 -------------------------------------------
