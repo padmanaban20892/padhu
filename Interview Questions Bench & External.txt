@@ -1,4 +1,41 @@
 
+StG: 21/11/2023 (Good - Myself)
+------------------------------
+1. API Gateway in micorservices
+2. One to another Microserivce Communicate
+3. Static methods why ? java 8
+4. deafult methods why ?
+5. why immutable methods ? string immutable why?
+6. ArrayList vs linklist ?
+7. @CompoundScan 
+8. Function.identity()
+9. List<Interger> , find the occurence of Integer in java 8 stream
+
+System.out.println("*****************No of Interge*************");	
+		
+		List<Integer> numbers = Arrays.asList(1,2,4,7,8,9,8,5,1);
+		
+		Map<Integer,Integer> Duplicatenumbers=numbers.stream().
+				collect(Collectors.toMap(Function.identity(), word ->1 , Math::addExact));
+		
+		System.out.println("DUplicate List Coun..."+Duplicatenumbers);	
+		
+		Map<Integer, Integer> DuplicateWithCount = Duplicatenumbers.entrySet()
+			    .stream().filter(e -> e.getValue() > 1)
+			    .collect(Collectors.toMap(Entry::getKey, Entry::getValue));
+		
+		System.out.println("Alrady Map Count..."+Duplicatenumbers);	
+
+
+
+10.How create immutable Class Or object 
+
+
+
+
+
+
+
 Customer Randstad : 21/11/2023
 ----------------------------
 1. PUT vs Post, Post instend of PUT

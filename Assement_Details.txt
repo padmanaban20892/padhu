@@ -346,6 +346,7 @@ PA20303803@L-158041152 MINGW64 /d/CodingAssement/Personal_Interview (master)
 
 ----------------------------------------------------
 
+
 PA20303803@L-158041152 MINGW64 ~
 $ cd d
 bash: cd: d: No such file or directory
@@ -1273,7 +1274,106 @@ PA20303803@L-158041152 MINGW64 /d/CodingAssement/Personal_Interview (master)
 $ git add *
 
 PA20303803@L-158041152 MINGW64 /d/CodingAssement/Personal_Interview (master)
-$ git status
+$ git add *
+
+PA20303803@L-158041152 MINGW64 /d/CodingAssement/Personal_Interview (master)
+$ git commit -m " update example questions"
+[master 1950a07]  update example questions
+ Committer: Padmanaban A <PA20303803@wipro.com>
+Your name and email address were configured automatically based
+on your username and hostname. Please check that they are accurate.
+You can suppress this message by setting them explicitly:
+
+    git config --global user.name "Your Name"
+    git config --global user.email you@example.com
+
+After doing this, you may fix the identity used for this commit with:
+
+    git commit --amend --reset-author
+
+ 69 files changed, 297399 insertions(+), 350 deletions(-)
+ create mode 100644 Payslip/Payslip_August2023.pdf
+ create mode 100644 Payslip/Payslip_July2023.pdf
+ create mode 100644 Payslip/Payslip_June2023_03may.pdf
+ create mode 100644 Payslip/Payslip_May2023.pdf
+ create mode 100644 Payslip/Payslip_September2023.pdf
+ create mode 100644 Resume/Padmanaban_Latest_CV_Nov'23.docx
+ create mode 100644 learing/16x24 print copy (1).jpg
+ create mode 100644 learing/1700107262383.pdf
+ create mode 100644 learing/202310061029153312-fir.pdf
+ create mode 100644 learing/202310061029153312-invoice.pdf
+ create mode 100644 learing/202310061029153312-otherIdFile.pdf
+ create mode 100644 learing/521040934750130601.pdf
+ create mode 100644 learing/APP_8000000_TXN_153886056_TMPLT_705.pdf
+ create mode 100644 learing/APP_8000001_TXN_20513747_TMPLT_228.pdf
+ create mode 100644 learing/APP_8000039_TXN_20513747_TMPLT_228.pdf
+ create mode 100644 learing/ARUN1957_adhaarcard_withPwd.pdf
+ create mode 100644 learing/Aadhaar_Amma_valli.pdf
+ create mode 100644 learing/Aadhaar_withoutpwd_newAddress.pdf
+ create mode 100644 learing/Aadhaar_withoutpwd_newAddress_compressed.pdf
+ create mode 100644 learing/Account Details - All.txt
+ create mode 100644 learing/Amma_VoterId_Change_of_Address_Form8_S22005O8W0610231200004.pdf.pdf
+ create mode 100644 learing/Appa_VoterId_Change_of_AddressForm8_S22005O8W0610231200005.pdf.pdf
+ create mode 100644 learing/Appa_adhaarcard.pdf
+ create mode 100644 learing/Bench - Interview Questions .txt
+ create mode 100644 learing/Drpre.jpg
+ create mode 100644 learing/GCP details.txt
+ create mode 100644 learing/Git.pdf
+ create mode 100644 learing/IMG_20230913_174818-removebg-preview.jpg
+ create mode 100644 learing/IMG_20230921_144553.jpg
+ create mode 100644 learing/Interview Answer_details .txt
+ create mode 100644 learing/Interview From 18April23_onway.txt
+ create mode 100644 learing/Java-8 (1).pdf
+ create mode 100644 learing/Java-8.pdf
+ create mode 100644 learing/LWW32WJ6W183.pdf
+ create mode 100644 learing/Marriage Cerfication details.7z
+ create mode 100644 learing/Microservices - Pratham Kohli.pdf
+ create mode 100644 learing/Missing Compliant_Ceir portal.pdf
+ create mode 100644 learing/PGS Technical Discussion.docx
+ create mode 100644 learing/Padmanaban A_20303803.pdf
+ create mode 100644 learing/Padmanaban_Latest_CV_Nov'23.docx
+ create mode 100644 learing/Padmanaban_Resume_Aug'23.doc
+ create mode 100644 learing/Padmanaban_Resume_Aug'23.doc.pdf
+ create mode 100644 learing/Padmanaban_Resume_Aug'23.docx
+ create mode 100644 learing/Padmanaban_Resume_Nove'23.doc
+ create mode 100644 learing/Padmanaban_Resume_OCT'23.pdf
+ create mode 100644 learing/Padmanaban_Resume_Sept'23.docx
+ create mode 100644 learing/Padmanaban_Resume_Sept'23.pdf
+ create mode 100644 learing/Padmanaban_Resume_Sept'23_NF.docx
+ create mode 100644 learing/PassPort-by-Sriram-Studio_290123.jpeg
+ create mode 100644 learing/PhoneMissing Complient.pdf
+ create mode 100644 learing/PhoneMissing Complient2.pdf
+ create mode 100644 learing/RefresherTraining-JavaBackend (1).docx
+ create mode 100644 learing/SQL Complete Notes.pdf
+ create mode 100644 learing/Solid Principle .pdf
+ create mode 100644 learing/Spring Boot - L1+L2 - Handson Assignments.docx
+ create mode 100644 learing/Spring-Boot-Casestudy-Best-Choice-Cars-Usecase.docx
+ create mode 100644 learing/Spring-Boot-Casestudy-Movie-Library-Usecase.docx
+ create mode 100644 learing/Suba Passport photo.jpg
+ create mode 100644 learing/Subha_2023.docx
+ create mode 100644 learing/Subha_2023.pdf
+ create mode 100644 learing/Subha_S3pt23.pdf
+ create mode 100644 learing/bill.jpg
+ create mode 100644 learing/e-EPIC_UVQ1072743_Myself.pdf
+ create mode 100644 learing/flow+control.java.txt
+ create mode 100644 learing/marriage Certication .txt
+ create mode 100644 learing/marriage Certication_Screenshot_SubRegistration office.png
+ create mode 100644 learing/suba signature.jpg
+
+PA20303803@L-158041152 MINGW64 /d/CodingAssement/Personal_Interview (master)
+$ git push  origin master
+Enumerating objects: 73, done.
+Counting objects: 100% (73/73), done.
+Delta compression using up to 8 threads
+Compressing objects: 100% (70/70), done.
+Writing objects: 100% (70/70), 49.05 MiB | 9.63 MiB/s, done.
+Total 70 (delta 6), reused 0 (delta 0), pack-reused 0
+remote: Resolving deltas: 100% (6/6), completed with 2 local objects.
+To https://github.com/padmanaban20892/padhu.git
+   b665430..1950a07  master -> master
+
+PA20303803@L-158041152 MINGW64 /d/CodingAssement/Personal_Interview (master)
+$
 
 
 
