@@ -1,0 +1,186 @@
+
+1)Capgemini -> Video Call Date: 18.04.2023
+-----------------------------------------
+1. Java 8 features
+2. what is optional - where implemation in your project
+3. what is flatmap
+4. Spring boot configuration
+5. spring boot integration websphere/webflux configuration
+6. spring boot swagger configuration
+7. swagger , implantation swagger spring boot, what use of swagger 
+8. metaspace 
+9. spring actuator and actuator configuration
+10. Spring boot disavantage & advantages 
+Spring Boot Advantages
+1.Simplified & version conflict free dependency management through the starter POMs.
+2.We can quickly setup and run standalone, web applications and micro services at very less time.
+3.You can just assemble the jar artifact which comes with an embedded Tomact, Jetty or Undertow application server and you are ready to go.
+4.Spring Boot provides HTTP endpoints to access application internals like detailed metrics, application inner working, health status, etc.
+5.No XML based configurations at all. Very much simplified properties. The beans are initialized, configured and wired automatically.
+6.The Spring Initializer provides a project generator to make you productive with the certain technology stack from the beginning. You can create a skeleton project with web, data access (relational and NoSQL datastores), cloud, or messaging support.
+
+Disadvantages:
+1.Spring boot may unnecessarily increase the deployment binary size with unused dependencies.
+2.If you are a control freak, I doubt Spring Boot would fit your needs.
+3.	Spring Boot sticks good with micro services. The Spring Boot artifacts can be deployed directly into Docker containers. In a large and monolithic based applications, I would not encourage you to use Spring Boot
+
+
+
+------------------------------------------------
+2)Experis IT -> 1st Level Date: 25.04.2023
+----------------------------------------
+1. Java 8,11 to 15
+2. Spring, Spring boot
+3. Cache many
+4. constrctor & Construct reutrn values?
+5. inner class
+6. Whats are API working?
+7. Batch ?
+8. 
+
+
+----------------------------------------------
+3) DXC  -> Video Call Date:27.04.2023
+-----------------------------------
+1. Hashmap Internal working, hashing collision, methods 
+2. Program 
+
+int[] arryInt = {1,2,1,3,4,1,4,1}
+Output: 
+1  is repeated >> True
+2 is repeated >> False
+3 is repeated >> False
+4 is repeated >> True
+
+Repeated is true, Non - repeated is false
+
+a. Without Collections
+b. Time COmplex 
+c. if using Collections & Sequence order Collection
+
+3. Concurrent API
+4, fail fast and fail safe 
+5. Hash map vs Concurrent Hashmap 
+6.Java 8 fateatures
+	a. default methods
+	b. deafult method dimand problem
+	
+7. Exception hireachy
+	a. try with resource use ?
+	b. custom exception - try with resource 
+	
+8. Immutable object 
+	a. how to create immutable object
+	b. which is immutable object in java
+	
+9. thread Pool
+10. synchronization
+11. Mulithread race condtion
+12. JVM
+	a. Memory type 
+	b. stack memory 
+	c. class loader type
+	d. gc
+	e. gc type
+13.Solid Priciple
+14. Design patten
+	a. Abstact factory pattern
+	
+15. Spring
+	a. Spring bean scope
+	3. Spring core and mvc 
+	c. Spring security
+	4. Depency injection:
+	5. autowired & types
+	
+16. Spring boot
+	a. @AutoConfiguration details 
+	b. actuator 
+	
+17.Microservice(ms) -> Commication one ms to inner ms
+18. SQL :
+	a.Index
+	b. join
+19. Hibernate
+	a. Hibernate entity state
+	b. Assoication
+	c. Caching
+20. Cloud - basic
+21. JMS, acitve MQ, IBM Quuew, Kafka
+22. Linux commands 
+
+
+	
+=======================interview prepations=====
+
+https://workat.tech/
+https://leetcode.com/problemset/all/
+https://www.interviewbit.com/technical-interview-questions/
+https://grow.google/intl/en_in/learn-skills/
+
+
+==========================================
+Infosys Date:06/05/2023  Video call
+
+Two number sum
+Given an array of integers, return the two numbers whose sum is equal to a given target
+For example: array [7, 9, 5, 2, 4, 6]. Target = 15
+Output – 9 , 6
+Note:-
+
+1.You can create your own array in main method with a set of values.
+1. Hightest 2nd salary in employee table
+2. SPRINGG BOOT APPLICATION Explain
+3. HOW TO WORK SORING BOOT APPLICATION
+4. HOW TO CREATE SPRING BOOT
+5. GIT , JEKINDS INTEGRATED
+6. Spring boot vs spring MVC
+7. Depency injection
+8.ioc
+9. Microserivce , why?
+10. How to communicate different microserivce
+11. Different language microserive communication
+12. Functional & logic microservice
+13. Rest controller vs controller
+14. Patch method in rest
+15. Rest method
+16. Rest intergeration method
+17. Spring boot database intergeration
+18. Rest swagger api integration
+19. Rest testing how?
+20. Singeton
+21. Immutable class
+22. Array vs ArrayList
+23. Hashmap
+24. Ploymorphism
+25. Abstract & Interface
+
+
+==========================================
+ZemosoLabs Date:10/06/2023  video call
+
+
+/ # // // Given an array of positive integers nums and a positive integer target,
+
+// # // * return the minimal length of a contiguous * subarray
+
+// # // [numsl, numsl+1, ..., numsr-1, numsr] of which the sum is greater than or equal to the target.
+
+// # // If there is no such subarray, return 0 instead.
+
+// # // Input: target = 7, nums = [2,3,1,2,4,3]
+
+// # // Output: 2
+
+// # // Explanation: The subarray [4,3] has the minimal length
+
+
+2. Loops Conepts Example of Code
+3. Microserivce
+4. Solid Priciple
+5. Spring boot vs SPring
+6. Design patten
+7. Depency injection
+
+
+

@@ -1,8 +1,55 @@
 
+Customer Randstad : 21/11/2023
+----------------------------
+1. PUT vs Post, Post instend of PUT
+2. Microserivce vs RestAPi-
+3. Docker Compose
+4. how to deploy docker webseice 
+5. create docker file.
+6. Top 3 salary in emplouyee table
+7. Dabase paration
+8. Index & types
+9. Junit - Mockit 
+
+
+
+
+
+
+Tavant : 20/11/2023
+----------------
+1. difference type of classloader
+2. paraellel stream user?
+3. lamaba Experine example?
+4. one to another communication microservices with spring boot application
+4. Spring security ? how to enable 
+5. Spring boot acuator
+6. Kubernetes, JEKINDS pipenes
+7. Spring kafke 
+8. Java 8 features
+9. How the database SQL:
+what is consuming and exposing api
+
+
+Conduent: 20/11/2023
+---------------
+1. lamaba Experssion
+2. List vs Map => want choose list or map
+3. Map -> same key allow map, Hashcode ? eqaul?
+4. Hashcode() object 
+5.Exception hernachy
+6. throws ?
+7. Mutlipe catch ?
+8. Consume api or produce api ?
+
+
+
+
 
 BNP : 20/11/2023
 ----------------------
-1. List vs Set , which best option for seaching
+1. List vs Set , which collection is best for searching in java,
+which collection is best for sorting in java
 2. Abstract class vs interface in java 8 
 3. Member varibale interface 
 4. FunctionalInterface 

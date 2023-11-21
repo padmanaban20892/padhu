@@ -344,6 +344,937 @@ branch 'master' set up to track 'origin/master'.
 
 PA20303803@L-158041152 MINGW64 /d/CodingAssement/Personal_Interview (master)
 
+----------------------------------------------------
+
+PA20303803@L-158041152 MINGW64 ~
+$ cd d
+bash: cd: d: No such file or directory
+
+PA20303803@L-158041152 MINGW64 ~
+$ cd d:
+
+PA20303803@L-158041152 MINGW64 /d
+$ ls
+cd'!!!!!1062445758.db'            XORXOR1394390699.pst
+'!!!!!1229471500.db'            XORXOR2087938141.txt
+'!!!!!2012734732.jpg'           XORXOR2549738926.png
+'!!!!!2151589540.doc'           XORXOR256035175.pptx
+'!!!!!3062300753.pps'           XORXOR2597071208.xlsx
+'!!!!!3953898644.xls'           XORXOR3618611435.pptx
+'!!!!!4091669980.jpg'           XORXOR3910351424.png
+'!!!!!4204564922.xls'           XORXOR4183933951.pst
+'!!!!!4277236832.doc'           XORXOR516079276.xlsx
+'!!!!!952388256.pps'            XORXOR672839429.txt
+'$RECYCLE.BIN'/                 ZZZZZ1688304412.pem
+ Captures/                      ZZZZZ2356767500/
+ CmVYBL1201555822.pdf           ZZZZZ2436274445.ppt
+ CmVYBL1338546465.mdb           ZZZZZ249182556.ppt
+ CmVYBL1521302178.sql           ZZZZZ2802744852.eml
+ CmVYBL157320525.bmp            ZZZZZ296507068.doc
+ CmVYBL1662022185.docx          ZZZZZ3460265630.avi
+ CmVYBL2557393182.pdf           ZZZZZ3652663982.avi
+ CmVYBL3761187823.docx          ZZZZZ3761721236.eml
+ CmVYBL4023150216.sql           ZZZZZ4137492874.doc
+ CmVYBL4109346244.bmp           ZZZZZ821884206/
+ CmVYBL4254260248.mdb           ZZZZZ927610139.pem
+ CodingAssement/                doc
+ Eclipse-workspace/            'java-8-runnable (1).zip'
+ Gitproject/                    java-8-runnable.zip
+ Interview/                    'npp833 (1).exe'*
+ Learing/                      'time-to-learn (1).ics'
+'Marriage cerfiication form'/   time-to-learn.ics
+ Personal/                      toasmaster/
+ Project_Workspace/             webex.exe*
+ Resume/                        workspace/
+ STS/                           xxxx-xxxx-xx-xxxx37_272842_17_09_2023.pdf
+ Software/                     '~$dmanaban_Resume_Sept'\''23.docx'
+'System Volume Information'/   '~$fresherTraining-JavaBackend (1).docx'
+
+PA20303803@L-158041152 MINGW64 /d
+$ cd CodingAssement/
+
+PA20303803@L-158041152 MINGW64 /d/CodingAssement
+$ ls
+DemoCopy/               Telstra_SpringBootMicroservices_CodingAssement/
+Personal_Interview/     restful-web-service/
+SpringProjectPractice/  restful-web-service.zip
+
+PA20303803@L-158041152 MINGW64 /d/CodingAssement
+$ cd Personal_Interview/
+
+PA20303803@L-158041152 MINGW64 /d/CodingAssement/Personal_Interview (master)
+$ git branch
+* master
+
+PA20303803@L-158041152 MINGW64 /d/CodingAssement/Personal_Interview (master)
+$ git remote
+origin
+g
+PA20303803@L-158041152 MINGW64 /d/CodingAssement/Personal_Interview (master)
+$ git remote -v
+origin  https://github.com/padmanaban20892/padhu.git (fetch)
+origin  https://github.com/padmanaban20892/padhu.git (push)
+
+PA20303803@L-158041152 MINGW64 /d/CodingAssement/Personal_Interview (master)
+$ git status
+On branch master
+Your branch is up to date with 'origin/master'.
+
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+  (commit or discard the untracked or modified content in submodules)
+        modified:   Assement Details.txt
+        modified:   Assement_Details.txt
+        modified:   Interview Questions Bench & External.txt
+        modified:   SpringBoot_URL.txt
+        modified:   padhu (untracked content)
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+        Microservice with SPring boot .txt
+        RestAPI Webservice .txt
+        spring-boot-hibernate/
+
+no changes added to commit (use "git add" and/or "git commit -a")
+
+PA20303803@L-158041152 MINGW64 /d/CodingAssement/Personal_Interview (master)
+$ git add "^C
+
+PA20303803@L-158041152 MINGW64 /d/CodingAssement/Personal_Interview (master)
+$ git add Assement_Details.txt "Interview Questions Bench & External.txt" SpringBoot_URL.txt "Microservice with SPring boot .txt" "RestAPI Webservice .txt"
+
+PA20303803@L-158041152 MINGW64 /d/CodingAssement/Personal_Interview (master)
+$ git status
+On branch master
+Your branch is up to date with 'origin/master'.
+
+Changes to be committed:
+  (use "git restore --staged <file>..." to unstage)
+        modified:   Assement_Details.txt
+        modified:   Interview Questions Bench & External.txt
+        new file:   Microservice with SPring boot .txt
+        new file:   RestAPI Webservice .txt
+        modified:   SpringBoot_URL.txt
+
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+  (commit or discard the untracked or modified content in submodules)
+        modified:   Assement Details.txt
+        modified:   padhu (untracked content)
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+        spring-boot-hibernate/
+
+
+PA20303803@L-158041152 MINGW64 /d/CodingAssement/Personal_Interview (master)
+$ git add spring-boot-hibernate
+warning: in the working copy of 'spring-boot-hibernate/spring-boot-hibernate/.gitignore', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'spring-boot-hibernate/spring-boot-hibernate/.mvn/wrapper/maven-wrapper.properties', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'spring-boot-hibernate/spring-boot-hibernate/mvnw', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'spring-boot-hibernate/spring-boot-hibernate/mvnw.cmd', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'spring-boot-hibernate/spring-boot-hibernate/pom.xml', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'spring-boot-hibernate/spring-boot-hibernate/src/main/java/com/ipadhu/database/hibernate/springboothibernate/SpringBootHibernateApplication.java', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'spring-boot-hibernate/spring-boot-hibernate/src/main/resources/application.properties', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'spring-boot-hibernate/spring-boot-hibernate/src/test/java/com/ipadhu/database/hibernate/springboothibernate/SpringBootHibernateApplicationTests.java', LF will be replaced by CRLF the next time Git touches it
+
+PA20303803@L-158041152 MINGW64 /d/CodingAssement/Personal_Interview (master)
+$ git status
+On branch master
+Your branch is up to date with 'origin/master'.
+
+Changes to be committed:
+  (use "git restore --staged <file>..." to unstage)
+        modified:   Assement_Details.txt
+        modified:   Interview Questions Bench & External.txt
+        new file:   Microservice with SPring boot .txt
+        new file:   RestAPI Webservice .txt
+        modified:   SpringBoot_URL.txt
+        new file:   spring-boot-hibernate/spring-boot-hibernate/.gitignore
+        new file:   spring-boot-hibernate/spring-boot-hibernate/.mvn/wrapper/maven-wrapper.jar
+        new file:   spring-boot-hibernate/spring-boot-hibernate/.mvn/wrapper/maven-wrapper.properties
+        new file:   spring-boot-hibernate/spring-boot-hibernate/mvnw
+        new file:   spring-boot-hibernate/spring-boot-hibernate/mvnw.cmd
+        new file:   spring-boot-hibernate/spring-boot-hibernate/pom.xml
+        new file:   spring-boot-hibernate/spring-boot-hibernate/src/main/java/com/ipadhu/database/hibernate/springboothibernate/SpringBootHibernateApplication.java
+        new file:   spring-boot-hibernate/spring-boot-hibernate/src/main/resources/application.properties
+        new file:   spring-boot-hibernate/spring-boot-hibernate/src/main/resources/schema.sql
+        new file:   spring-boot-hibernate/spring-boot-hibernate/src/test/java/com/ipadhu/database/hibernate/springboothibernate/SpringBootHibernateApplicationTests.java
+
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+  (commit or discard the untracked or modified content in submodules)
+        modified:   Assement Details.txt
+        modified:   padhu (untracked content)
+
+
+PA20303803@L-158041152 MINGW64 /d/CodingAssement/Personal_Interview (master)
+$ git add padhu
+
+PA20303803@L-158041152 MINGW64 /d/CodingAssement/Personal_Interview (master)
+$ git status
+On branch master
+Your branch is up to date with 'origin/master'.
+
+Changes to be committed:
+  (use "git restore --staged <file>..." to unstage)
+        modified:   Assement_Details.txt
+        modified:   Interview Questions Bench & External.txt
+        new file:   Microservice with SPring boot .txt
+        new file:   RestAPI Webservice .txt
+        modified:   SpringBoot_URL.txt
+        new file:   spring-boot-hibernate/spring-boot-hibernate/.gitignore
+        new file:   spring-boot-hibernate/spring-boot-hibernate/.mvn/wrapper/maven-wrapper.jar
+        new file:   spring-boot-hibernate/spring-boot-hibernate/.mvn/wrapper/maven-wrapper.properties
+        new file:   spring-boot-hibernate/spring-boot-hibernate/mvnw
+        new file:   spring-boot-hibernate/spring-boot-hibernate/mvnw.cmd
+        new file:   spring-boot-hibernate/spring-boot-hibernate/pom.xml
+        new file:   spring-boot-hibernate/spring-boot-hibernate/src/main/java/com/ipadhu/database/hibernate/springboothibernate/SpringBootHibernateApplication.java
+        new file:   spring-boot-hibernate/spring-boot-hibernate/src/main/resources/application.properties
+        new file:   spring-boot-hibernate/spring-boot-hibernate/src/main/resources/schema.sql
+        new file:   spring-boot-hibernate/spring-boot-hibernate/src/test/java/com/ipadhu/database/hibernate/springboothibernate/SpringBootHibernateApplicationTests.java
+
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+  (commit or discard the untracked or modified content in submodules)
+        modified:   Assement Details.txt
+        modified:   padhu (untracked content)
+
+
+PA20303803@L-158041152 MINGW64 /d/CodingAssement/Personal_Interview (master)
+$ cd padhu/
+
+PA20303803@L-158041152 MINGW64 /d/CodingAssement/Personal_Interview/padhu (master)
+$ ls
+LICENSE  Resume/  learing/
+
+PA20303803@L-158041152 MINGW64 /d/CodingAssement/Personal_Interview/padhu (master)
+$ git add .
+warning: in the working copy of 'learing/flow+control.java.txt', LF will be replaced by CRLF the next time Git touches it
+
+PA20303803@L-158041152 MINGW64 /d/CodingAssement/Personal_Interview/padhu (master)
+$ git config --global core.autocrlf false
+
+PA20303803@L-158041152 MINGW64 /d/CodingAssement/Personal_Interview/padhu (master)
+$ git status
+On branch master
+Your branch is up to date with 'origin/master'.
+
+Changes to be committed:
+  (use "git restore --staged <file>..." to unstage)
+        new file:   Resume/Padmanaban_Latest_CV_Nov'23.docx
+        new file:   learing/16x24 print copy (1).jpg
+        new file:   learing/1700107262383.pdf
+        new file:   learing/202310061029153312-fir.pdf
+        new file:   learing/202310061029153312-invoice.pdf
+        new file:   learing/202310061029153312-otherIdFile.pdf
+        new file:   learing/521040934750130601.pdf
+        new file:   learing/APP_8000000_TXN_153886056_TMPLT_705.pdf
+        new file:   learing/APP_8000001_TXN_20513747_TMPLT_228.pdf
+        new file:   learing/APP_8000039_TXN_20513747_TMPLT_228.pdf
+        new file:   learing/ARUN1957_adhaarcard_withPwd.pdf
+        new file:   learing/Aadhaar_Amma_valli.pdf
+        new file:   learing/Aadhaar_withoutpwd_newAddress.pdf
+        new file:   learing/Aadhaar_withoutpwd_newAddress_compressed.pdf
+        new file:   learing/Account Details - All.txt
+        new file:   learing/Amma_VoterId_Change_of_Address_Form8_S22005O8W0610231200004.pdf.pdf
+        new file:   learing/Appa_VoterId_Change_of_AddressForm8_S22005O8W0610231200005.pdf.pdf
+        new file:   learing/Appa_adhaarcard.pdf
+        new file:   learing/Bench - Interview Questions .txt
+        new file:   learing/Drpre.jpg
+        new file:   learing/GCP details.txt
+        new file:   learing/Git.pdf
+        new file:   learing/IMG_20230913_174818-removebg-preview.jpg
+        new file:   learing/IMG_20230921_144553.jpg
+        new file:   learing/Interview Answer_details .txt
+        new file:   learing/Interview From 18April23_onway.txt
+        new file:   learing/Java-8 (1).pdf
+        new file:   learing/Java-8.pdf
+        new file:   learing/LWW32WJ6W183.pdf
+        new file:   learing/Marriage Cerfication details.7z
+        new file:   learing/Microservices - Pratham Kohli.pdf
+        new file:   learing/Missing Compliant_Ceir portal.pdf
+        new file:   learing/PGS Technical Discussion.docx
+        new file:   learing/Padmanaban A_20303803.pdf
+        new file:   learing/Padmanaban_Latest_CV_Nov'23.docx
+        new file:   learing/Padmanaban_Resume_Aug'23.doc
+        new file:   learing/Padmanaban_Resume_Aug'23.doc.pdf
+        new file:   learing/Padmanaban_Resume_Aug'23.docx
+        new file:   learing/Padmanaban_Resume_Nove'23.doc
+        new file:   learing/Padmanaban_Resume_OCT'23.pdf
+        new file:   learing/Padmanaban_Resume_Sept'23.docx
+        new file:   learing/Padmanaban_Resume_Sept'23.pdf
+        new file:   learing/Padmanaban_Resume_Sept'23_NF.docx
+        new file:   learing/PassPort-by-Sriram-Studio_290123.jpeg
+        new file:   learing/PhoneMissing Complient.pdf
+        new file:   learing/PhoneMissing Complient2.pdf
+        new file:   learing/RefresherTraining-JavaBackend (1).docx
+        new file:   learing/SQL Complete Notes.pdf
+        new file:   learing/Solid Principle .pdf
+        new file:   learing/Spring Boot - L1+L2 - Handson Assignments.docx
+        new file:   learing/Spring-Boot-Casestudy-Best-Choice-Cars-Usecase.docx
+        new file:   learing/Spring-Boot-Casestudy-Movie-Library-Usecase.docx
+        new file:   learing/Suba Passport photo.jpg
+        new file:   learing/Subha_2023.docx
+        new file:   learing/Subha_2023.pdf
+        new file:   learing/Subha_S3pt23.pdf
+        new file:   learing/bill.jpg
+        new file:   learing/e-EPIC_UVQ1072743_Myself.pdf
+        new file:   learing/flow+control.java.txt
+        new file:   learing/marriage Certication .txt
+        new file:   learing/marriage Certication_Screenshot_SubRegistration office.png
+        new file:   learing/suba signature.jpg
+
+
+PA20303803@L-158041152 MINGW64 /d/CodingAssement/Personal_Interview/padhu (master)
+$ git status
+On branch master
+Your branch is up to date with 'origin/master'.
+
+Changes to be committed:
+  (use "git restore --staged <file>..." to unstage)
+        new file:   Resume/Padmanaban_Latest_CV_Nov'23.docx
+        new file:   learing/16x24 print copy (1).jpg
+        new file:   learing/1700107262383.pdf
+        new file:   learing/202310061029153312-fir.pdf
+        new file:   learing/202310061029153312-invoice.pdf
+        new file:   learing/202310061029153312-otherIdFile.pdf
+        new file:   learing/521040934750130601.pdf
+        new file:   learing/APP_8000000_TXN_153886056_TMPLT_705.pdf
+        new file:   learing/APP_8000001_TXN_20513747_TMPLT_228.pdf
+        new file:   learing/APP_8000039_TXN_20513747_TMPLT_228.pdf
+        new file:   learing/ARUN1957_adhaarcard_withPwd.pdf
+        new file:   learing/Aadhaar_Amma_valli.pdf
+        new file:   learing/Aadhaar_withoutpwd_newAddress.pdf
+        new file:   learing/Aadhaar_withoutpwd_newAddress_compressed.pdf
+        new file:   learing/Account Details - All.txt
+        new file:   learing/Amma_VoterId_Change_of_Address_Form8_S22005O8W0610231200004.pdf.pdf
+        new file:   learing/Appa_VoterId_Change_of_AddressForm8_S22005O8W0610231200005.pdf.pdf
+        new file:   learing/Appa_adhaarcard.pdf
+        new file:   learing/Bench - Interview Questions .txt
+        new file:   learing/Drpre.jpg
+        new file:   learing/GCP details.txt
+        new file:   learing/Git.pdf
+        new file:   learing/IMG_20230913_174818-removebg-preview.jpg
+        new file:   learing/IMG_20230921_144553.jpg
+        new file:   learing/Interview Answer_details .txt
+        new file:   learing/Interview From 18April23_onway.txt
+        new file:   learing/Java-8 (1).pdf
+        new file:   learing/Java-8.pdf
+        new file:   learing/LWW32WJ6W183.pdf
+        new file:   learing/Marriage Cerfication details.7z
+        new file:   learing/Microservices - Pratham Kohli.pdf
+        new file:   learing/Missing Compliant_Ceir portal.pdf
+        new file:   learing/PGS Technical Discussion.docx
+        new file:   learing/Padmanaban A_20303803.pdf
+        new file:   learing/Padmanaban_Latest_CV_Nov'23.docx
+        new file:   learing/Padmanaban_Resume_Aug'23.doc
+        new file:   learing/Padmanaban_Resume_Aug'23.doc.pdf
+        new file:   learing/Padmanaban_Resume_Aug'23.docx
+        new file:   learing/Padmanaban_Resume_Nove'23.doc
+        new file:   learing/Padmanaban_Resume_OCT'23.pdf
+        new file:   learing/Padmanaban_Resume_Sept'23.docx
+        new file:   learing/Padmanaban_Resume_Sept'23.pdf
+        new file:   learing/Padmanaban_Resume_Sept'23_NF.docx
+        new file:   learing/PassPort-by-Sriram-Studio_290123.jpeg
+        new file:   learing/PhoneMissing Complient.pdf
+        new file:   learing/PhoneMissing Complient2.pdf
+        new file:   learing/RefresherTraining-JavaBackend (1).docx
+        new file:   learing/SQL Complete Notes.pdf
+        new file:   learing/Solid Principle .pdf
+        new file:   learing/Spring Boot - L1+L2 - Handson Assignments.docx
+        new file:   learing/Spring-Boot-Casestudy-Best-Choice-Cars-Usecase.docx
+        new file:   learing/Spring-Boot-Casestudy-Movie-Library-Usecase.docx
+        new file:   learing/Suba Passport photo.jpg
+        new file:   learing/Subha_2023.docx
+        new file:   learing/Subha_2023.pdf
+        new file:   learing/Subha_S3pt23.pdf
+        new file:   learing/bill.jpg
+        new file:   learing/e-EPIC_UVQ1072743_Myself.pdf
+        new file:   learing/flow+control.java.txt
+        new file:   learing/marriage Certication .txt
+        new file:   learing/marriage Certication_Screenshot_SubRegistration office.png
+        new file:   learing/suba signature.jpg
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+        Payslip/
+
+
+PA20303803@L-158041152 MINGW64 /d/CodingAssement/Personal_Interview/padhu (master)
+$ cd Payslip/
+
+PA20303803@L-158041152 MINGW64 /d/CodingAssement/Personal_Interview/padhu/Payslip (master)
+$ git add .
+
+PA20303803@L-158041152 MINGW64 /d/CodingAssement/Personal_Interview/padhu/Payslip (master)
+$ git commit -m "update microservice example"
+[master 5fc804e] update microservice example
+ Committer: Padmanaban A <PA20303803@wipro.com>
+Your name and email address were configured automatically based
+on your username and hostname. Please check that they are accurate.
+You can suppress this message by setting them explicitly:
+
+    git config --global user.name "Your Name"
+    git config --global user.email you@example.com
+
+After doing this, you may fix the identity used for this commit with:
+
+    git commit --amend --reset-author
+
+ 67 files changed, 296071 insertions(+)
+ create mode 100644 Payslip/Payslip_August2023.pdf
+ create mode 100644 Payslip/Payslip_July2023.pdf
+ create mode 100644 Payslip/Payslip_June2023_03may.pdf
+ create mode 100644 Payslip/Payslip_May2023.pdf
+ create mode 100644 Payslip/Payslip_September2023.pdf
+ create mode 100644 Resume/Padmanaban_Latest_CV_Nov'23.docx
+ create mode 100644 learing/16x24 print copy (1).jpg
+ create mode 100644 learing/1700107262383.pdf
+ create mode 100644 learing/202310061029153312-fir.pdf
+ create mode 100644 learing/202310061029153312-invoice.pdf
+ create mode 100644 learing/202310061029153312-otherIdFile.pdf
+ create mode 100644 learing/521040934750130601.pdf
+ create mode 100644 learing/APP_8000000_TXN_153886056_TMPLT_705.pdf
+ create mode 100644 learing/APP_8000001_TXN_20513747_TMPLT_228.pdf
+ create mode 100644 learing/APP_8000039_TXN_20513747_TMPLT_228.pdf
+ create mode 100644 learing/ARUN1957_adhaarcard_withPwd.pdf
+ create mode 100644 learing/Aadhaar_Amma_valli.pdf
+ create mode 100644 learing/Aadhaar_withoutpwd_newAddress.pdf
+ create mode 100644 learing/Aadhaar_withoutpwd_newAddress_compressed.pdf
+ create mode 100644 learing/Account Details - All.txt
+ create mode 100644 learing/Amma_VoterId_Change_of_Address_Form8_S22005O8W0610231200004.pdf.pdf
+ create mode 100644 learing/Appa_VoterId_Change_of_AddressForm8_S22005O8W0610231200005.pdf.pdf
+ create mode 100644 learing/Appa_adhaarcard.pdf
+ create mode 100644 learing/Bench - Interview Questions .txt
+ create mode 100644 learing/Drpre.jpg
+ create mode 100644 learing/GCP details.txt
+ create mode 100644 learing/Git.pdf
+ create mode 100644 learing/IMG_20230913_174818-removebg-preview.jpg
+ create mode 100644 learing/IMG_20230921_144553.jpg
+ create mode 100644 learing/Interview Answer_details .txt
+ create mode 100644 learing/Interview From 18April23_onway.txt
+ create mode 100644 learing/Java-8 (1).pdf
+ create mode 100644 learing/Java-8.pdf
+ create mode 100644 learing/LWW32WJ6W183.pdf
+ create mode 100644 learing/Marriage Cerfication details.7z
+ create mode 100644 learing/Microservices - Pratham Kohli.pdf
+ create mode 100644 learing/Missing Compliant_Ceir portal.pdf
+ create mode 100644 learing/PGS Technical Discussion.docx
+ create mode 100644 learing/Padmanaban A_20303803.pdf
+ create mode 100644 learing/Padmanaban_Latest_CV_Nov'23.docx
+ create mode 100644 learing/Padmanaban_Resume_Aug'23.doc
+ create mode 100644 learing/Padmanaban_Resume_Aug'23.doc.pdf
+ create mode 100644 learing/Padmanaban_Resume_Aug'23.docx
+ create mode 100644 learing/Padmanaban_Resume_Nove'23.doc
+ create mode 100644 learing/Padmanaban_Resume_OCT'23.pdf
+ create mode 100644 learing/Padmanaban_Resume_Sept'23.docx
+ create mode 100644 learing/Padmanaban_Resume_Sept'23.pdf
+ create mode 100644 learing/Padmanaban_Resume_Sept'23_NF.docx
+ create mode 100644 learing/PassPort-by-Sriram-Studio_290123.jpeg
+ create mode 100644 learing/PhoneMissing Complient.pdf
+ create mode 100644 learing/PhoneMissing Complient2.pdf
+ create mode 100644 learing/RefresherTraining-JavaBackend (1).docx
+ create mode 100644 learing/SQL Complete Notes.pdf
+ create mode 100644 learing/Solid Principle .pdf
+ create mode 100644 learing/Spring Boot - L1+L2 - Handson Assignments.docx
+ create mode 100644 learing/Spring-Boot-Casestudy-Best-Choice-Cars-Usecase.docx
+ create mode 100644 learing/Spring-Boot-Casestudy-Movie-Library-Usecase.docx
+ create mode 100644 learing/Suba Passport photo.jpg
+ create mode 100644 learing/Subha_2023.docx
+ create mode 100644 learing/Subha_2023.pdf
+ create mode 100644 learing/Subha_S3pt23.pdf
+ create mode 100644 learing/bill.jpg
+ create mode 100644 learing/e-EPIC_UVQ1072743_Myself.pdf
+ create mode 100644 learing/flow+control.java.txt
+ create mode 100644 learing/marriage Certication .txt
+ create mode 100644 learing/marriage Certication_Screenshot_SubRegistration office.png
+ create mode 100644 learing/suba signature.jpg
+
+PA20303803@L-158041152 MINGW64 /d/CodingAssement/Personal_Interview/padhu/Payslip (master)
+$ git push -f -u master
+fatal: 'master' does not appear to be a git repository
+fatal: Could not read from remote repository.
+
+Please make sure you have the correct access rights
+and the repository exists.
+
+PA20303803@L-158041152 MINGW64 /d/CodingAssement/Personal_Interview/padhu/Payslip (master)
+$ git branch
+* master
+
+PA20303803@L-158041152 MINGW64 /d/CodingAssement/Personal_Interview/padhu/Payslip (master)
+$ git push -u -f origin master
+Enumerating objects: 72, done.
+Counting objects: 100% (72/72), done.
+Delta compression using up to 8 threads
+Compressing objects: 100% (72/72), done.
+Writing objects: 100% (72/72), 49.05 MiB | 11.07 MiB/s, done.
+Total 72 (delta 4), reused 3 (delta 0), pack-reused 0
+remote: Resolving deltas: 100% (4/4), done.
+To https://github.com/padmanaban20892/padhu.git
+ + 3c36a44...5fc804e master -> master (forced update)
+branch 'master' set up to track 'origin/master'.
+
+PA20303803@L-158041152 MINGW64 /d/CodingAssement/Personal_Interview/padhu/Payslip (master)
+$ cd ..
+
+PA20303803@L-158041152 MINGW64 /d/CodingAssement/Personal_Interview/padhu (master)
+$ git status
+On branch master
+Your branch is up to date with 'origin/master'.
+
+nothing to commit, working tree clean
+
+PA20303803@L-158041152 MINGW64 /d/CodingAssement/Personal_Interview/padhu (master)
+$ ls
+LICENSE  Payslip/  Resume/  learing/
+
+PA20303803@L-158041152 MINGW64 /d/CodingAssement/Personal_Interview/padhu (master)
+$ cd ..
+
+PA20303803@L-158041152 MINGW64 /d/CodingAssement/Personal_Interview (master)
+$ ls
+'Assement Details.txt'  'Interview Answer_details .txt'             'Microservice with SPring boot .txt'   SpringBootProject/   padhu/
+ Assement_Details.txt   'Interview Questions Bench & External.txt'  'RestAPI Webservice .txt'              SpringBoot_URL.txt   spring-boot-hibernate/
+
+PA20303803@L-158041152 MINGW64 /d/CodingAssement/Personal_Interview (master)
+$ git status
+On branch master
+Your branch is up to date with 'origin/master'.
+
+Changes to be committed:
+  (use "git restore --staged <file>..." to unstage)
+        modified:   Assement_Details.txt
+        modified:   Interview Questions Bench & External.txt
+        new file:   Microservice with SPring boot .txt
+        new file:   RestAPI Webservice .txt
+        modified:   SpringBoot_URL.txt
+        new file:   spring-boot-hibernate/spring-boot-hibernate/.gitignore
+        new file:   spring-boot-hibernate/spring-boot-hibernate/.mvn/wrapper/maven-wrapper.jar
+        new file:   spring-boot-hibernate/spring-boot-hibernate/.mvn/wrapper/maven-wrapper.properties
+        new file:   spring-boot-hibernate/spring-boot-hibernate/mvnw
+        new file:   spring-boot-hibernate/spring-boot-hibernate/mvnw.cmd
+        new file:   spring-boot-hibernate/spring-boot-hibernate/pom.xml
+        new file:   spring-boot-hibernate/spring-boot-hibernate/src/main/java/com/ipadhu/database/hibernate/springboothibernate/SpringBootHibernateApplication.java
+        new file:   spring-boot-hibernate/spring-boot-hibernate/src/main/resources/application.properties
+        new file:   spring-boot-hibernate/spring-boot-hibernate/src/main/resources/schema.sql
+        new file:   spring-boot-hibernate/spring-boot-hibernate/src/test/java/com/ipadhu/database/hibernate/springboothibernate/SpringBootHibernateApplicationTests.java
+
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+        modified:   Assement Details.txt
+        modified:   padhu (new commits)
+
+
+PA20303803@L-158041152 MINGW64 /d/CodingAssement/Personal_Interview (master)
+$ git commit -m "next update"
+[master 9550676] next update
+ Committer: Padmanaban A <PA20303803@wipro.com>
+Your name and email address were configured automatically based
+on your username and hostname. Please check that they are accurate.
+You can suppress this message by setting them explicitly:
+
+    git config --global user.name "Your Name"
+    git config --global user.email you@example.com
+
+After doing this, you may fix the identity used for this commit with:
+
+    git commit --amend --reset-author
+
+ 15 files changed, 3279 insertions(+), 1979 deletions(-)
+ create mode 100644 Microservice with SPring boot .txt
+ create mode 100644 RestAPI Webservice .txt
+ create mode 100644 spring-boot-hibernate/spring-boot-hibernate/.gitignore
+ create mode 100644 spring-boot-hibernate/spring-boot-hibernate/.mvn/wrapper/maven-wrapper.jar
+ create mode 100644 spring-boot-hibernate/spring-boot-hibernate/.mvn/wrapper/maven-wrapper.properties
+ create mode 100644 spring-boot-hibernate/spring-boot-hibernate/mvnw
+ create mode 100644 spring-boot-hibernate/spring-boot-hibernate/mvnw.cmd
+ create mode 100644 spring-boot-hibernate/spring-boot-hibernate/pom.xml
+ create mode 100644 spring-boot-hibernate/spring-boot-hibernate/src/main/java/com/ipadhu/database/hibernate/springboothibernate/SpringBootHibernateApplication.java
+ create mode 100644 spring-boot-hibernate/spring-boot-hibernate/src/main/resources/application.properties
+ create mode 100644 spring-boot-hibernate/spring-boot-hibernate/src/main/resources/schema.sql
+ create mode 100644 spring-boot-hibernate/spring-boot-hibernate/src/test/java/com/ipadhu/database/hibernate/springboothibernate/SpringBootHibernateApplicationTests.java
+
+PA20303803@L-158041152 MINGW64 /d/CodingAssement/Personal_Interview (master)
+$ git push origin master
+To https://github.com/padmanaban20892/padhu.git
+ ! [rejected]        master -> master (fetch first)
+error: failed to push some refs to 'https://github.com/padmanaban20892/padhu.git'
+hint: Updates were rejected because the remote contains work that you do
+hint: not have locally. This is usually caused by another repository pushing
+hint: to the same ref. You may want to first integrate the remote changes
+hint: (e.g., 'git pull ...') before pushing again.
+hint: See the 'Note about fast-forwards' in 'git push --help' for details.
+
+PA20303803@L-158041152 MINGW64 /d/CodingAssement/Personal_Interview (master)
+$ git pull origin master
+remote: Enumerating objects: 71, done.
+remote: Total 71 (delta 0), reused 0 (delta 0), pack-reused 71
+error: RPC failed; curl 56 Failure when receiving data from the peer
+Unpacking objects: 100% (71/71), 49.04 MiB | 7.22 MiB/s, done.
+From https://github.com/padmanaban20892/padhu
+ * branch            master     -> FETCH_HEAD
+ + 3c36a44...5fc804e master     -> origin/master  (forced update)
+fatal: refusing to merge unrelated histories
+
+PA20303803@L-158041152 MINGW64 /d/CodingAssement/Personal_Interview (master)
+$ git status
+On branch master
+Your branch and 'origin/master' have diverged,
+and have 4 and 2 different commits each, respectively.
+  (use "git pull" to merge the remote branch into yours)
+
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+        modified:   Assement Details.txt
+        modified:   padhu (new commits)
+
+no changes added to commit (use "git add" and/or "git commit -a")
+
+PA20303803@L-158041152 MINGW64 /d/CodingAssement/Personal_Interview (master)
+$ ls
+'Assement Details.txt'  'Interview Answer_details .txt'             'Microservice with SPring boot .txt'   SpringBootProject/   padhu/
+ Assement_Details.txt   'Interview Questions Bench & External.txt'  'RestAPI Webservice .txt'              SpringBoot_URL.txt   spring-boot-hibernate/
+
+PA20303803@L-158041152 MINGW64 /d/CodingAssement/Personal_Interview (master)
+$ git add Assement_Details.txt "Interview Questions Bench & External.txt" SpringBoot_URL.txt "Microservice with SPring boot .txt" "RestAPI Webservice .txt"
+
+PA20303803@L-158041152 MINGW64 /d/CodingAssement/Personal_Interview (master)
+$ git status
+On branch master
+Your branch and 'origin/master' have diverged,
+and have 4 and 2 different commits each, respectively.
+  (use "git pull" to merge the remote branch into yours)
+
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+        modified:   Assement Details.txt
+        modified:   padhu (new commits)
+
+no changes added to commit (use "git add" and/or "git commit -a")
+
+PA20303803@L-158041152 MINGW64 /d/CodingAssement/Personal_Interview (master)
+$ cd padhu/
+
+PA20303803@L-158041152 MINGW64 /d/CodingAssement/Personal_Interview/padhu (master)
+$ ls
+LICENSE  Payslip/  Resume/  learing/
+gi
+PA20303803@L-158041152 MINGW64 /d/CodingAssement/Personal_Interview/padhu (master)
+$ git status
+On branch master
+Your branch is up to date with 'origin/master'.
+
+nothing to commit, working tree clean
+
+PA20303803@L-158041152 MINGW64 /d/CodingAssement/Personal_Interview/padhu (master)
+$ cd ..
+
+PA20303803@L-158041152 MINGW64 /d/CodingAssement/Personal_Interview (master)
+$ git commit -m "next update file"
+On branch master
+Your branch and 'origin/master' have diverged,
+and have 4 and 2 different commits each, respectively.
+  (use "git pull" to merge the remote branch into yours)
+
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+        modified:   Assement Details.txt
+        modified:   padhu (new commits)
+
+no changes added to commit (use "git add" and/or "git commit -a")
+
+PA20303803@L-158041152 MINGW64 /d/CodingAssement/Personal_Interview (master)
+$ git pull
+fatal: refusing to merge unrelated histories
+
+PA20303803@L-158041152 MINGW64 /d/CodingAssement/Personal_Interview (master)
+$ git add *
+
+PA20303803@L-158041152 MINGW64 /d/CodingAssement/Personal_Interview (master)
+$ git status
+On branch master
+Your branch and 'origin/master' have diverged,
+and have 4 and 2 different commits each, respectively.
+  (use "git pull" to merge the remote branch into yours)
+
+Changes to be committed:
+  (use "git restore --staged <file>..." to unstage)
+        modified:   Assement Details.txt
+        modified:   padhu
+
+
+PA20303803@L-158041152 MINGW64 /d/CodingAssement/Personal_Interview (master)
+$ ls
+'Assement Details.txt'  'Interview Answer_details .txt'             'Microservice with SPring boot .txt'   SpringBootProject/   padhu/
+ Assement_Details.txt   'Interview Questions Bench & External.txt'  'RestAPI Webservice .txt'              SpringBoot_URL.txt   spring-boot-hibernate/
+
+PA20303803@L-158041152 MINGW64 /d/CodingAssement/Personal_Interview (master)
+$ git add Assement_Details.txt "Interview Questions Bench & External.txt" SpringBoot_URL.txt "Microservice with SPring boot .txt" "RestAPI Webservice .txt"
+
+PA20303803@L-158041152 MINGW64 /d/CodingAssement/Personal_Interview (master)
+$ git add spring-boot-hibernate
+
+PA20303803@L-158041152 MINGW64 /d/CodingAssement/Personal_Interview (master)
+$ git add spring-boot-hibernate//
+
+PA20303803@L-158041152 MINGW64 /d/CodingAssement/Personal_Interview (master)
+$ git add spring-boot-hibernate/
+
+PA20303803@L-158041152 MINGW64 /d/CodingAssement/Personal_Interview (master)
+$ git add SpringBootProject
+
+PA20303803@L-158041152 MINGW64 /d/CodingAssement/Personal_Interview (master)
+$ git add padhu/
+
+PA20303803@L-158041152 MINGW64 /d/CodingAssement/Personal_Interview (master)
+$ git status
+On branch master
+Your branch and 'origin/master' have diverged,
+and have 4 and 2 different commits each, respectively.
+  (use "git pull" to merge the remote branch into yours)
+
+Changes to be committed:
+  (use "git restore --staged <file>..." to unstage)
+        modified:   Assement Details.txt
+        modified:   padhu
+
+
+PA20303803@L-158041152 MINGW64 /d/CodingAssement/Personal_Interview (master)
+$ git log HEAD..origin/main
+fatal: ambiguous argument 'HEAD..origin/main': unknown revision or path not in the working tree.
+Use '--' to separate paths from revisions, like this:
+'git <command> [<revision>...] -- [<file>...]'
+
+PA20303803@L-158041152 MINGW64 /d/CodingAssement/Personal_Interview (master)
+$ git log HEAD
+commit 9550676558495882da7f36c32edd3d1eb3e806fc (HEAD -> master)
+Author: Padmanaban A <PA20303803@wipro.com>
+Date:   Sun Nov 19 22:26:43 2023 +0530
+
+    next update
+
+commit 3c36a44cb47252b2184a1f2e2908995cc6804c71
+Author: Padmanaban A <PA20303803@wipro.com>
+Date:   Mon Nov 13 18:01:19 2023 +0530
+
+    test git comments
+
+commit 9f30a74a9827ff3efcefff92e522e2bd88988a42
+Author: Padmanaban A <PA20303803@wipro.com>
+Date:   Mon Nov 13 17:51:34 2023 +0530
+
+    testproject1
+
+commit d6084076f40e7e03db788ee526a2251423e8908c
+Author: Padmanaban A <PA20303803@wipro.com>
+Date:   Mon Nov 13 17:47:12 2023 +0530
+
+    testProject
+
+PA20303803@L-158041152 MINGW64 /d/CodingAssement/Personal_Interview (master)
+$ git merge origin master
+merge: origin - not something we can merge
+
+PA20303803@L-158041152 MINGW64 /d/CodingAssement/Personal_Interview (master)
+$ ls
+'Assement Details.txt'  'Interview Answer_details .txt'             'Microservice with SPring boot .txt'   SpringBootProject/   padhu/
+ Assement_Details.txt   'Interview Questions Bench & External.txt'  'RestAPI Webservice .txt'              SpringBoot_URL.txt   spring-boot-hibernate/
+git ad
+PA20303803@L-158041152 MINGW64 /d/CodingAssement/Personal_Interview (master)
+$ git add *
+
+PA20303803@L-158041152 MINGW64 /d/CodingAssement/Personal_Interview (master)
+$ git status
+On branch master
+Your branch and 'origin/master' have diverged,
+and have 4 and 2 different commits each, respectively.
+  (use "git pull" to merge the remote branch into yours)
+
+Changes to be committed:
+  (use "git restore --staged <file>..." to unstage)
+        modified:   Assement Details.txt
+        modified:   Interview Questions Bench & External.txt
+        modified:   RestAPI Webservice .txt
+        modified:   padhu
+
+
+PA20303803@L-158041152 MINGW64 /d/CodingAssement/Personal_Interview (master)
+$ cd padhu/
+
+PA20303803@L-158041152 MINGW64 /d/CodingAssement/Personal_Interview/padhu (master)
+$ git add *
+
+PA20303803@L-158041152 MINGW64 /d/CodingAssement/Personal_Interview/padhu (master)
+$ cd ..
+g
+PA20303803@L-158041152 MINGW64 /d/CodingAssement/Personal_Interview (master)
+$ git status
+On branch master
+Your branch and 'origin/master' have diverged,
+and have 4 and 2 different commits each, respectively.
+  (use "git pull" to merge the remote branch into yours)
+
+Changes to be committed:
+  (use "git restore --staged <file>..." to unstage)
+        modified:   Assement Details.txt
+        modified:   Interview Questions Bench & External.txt
+        modified:   RestAPI Webservice .txt
+        modified:   padhu
+
+
+PA20303803@L-158041152 MINGW64 /d/CodingAssement/Personal_Interview (master)
+$ cd padhu/
+gits
+PA20303803@L-158041152 MINGW64 /d/CodingAssement/Personal_Interview/padhu (master)
+$ git status
+On branch master
+Your branch is up to date with 'origin/master'.
+
+nothing to commit, working tree clean
+
+PA20303803@L-158041152 MINGW64 /d/CodingAssement/Personal_Interview/padhu (master)
+$ cd ..
+
+PA20303803@L-158041152 MINGW64 /d/CodingAssement/Personal_Interview (master)
+$ git commit -m " update example"
+[master b665430]  update example
+ Committer: Padmanaban A <PA20303803@wipro.com>
+Your name and email address were configured automatically based
+on your username and hostname. Please check that they are accurate.
+You can suppress this message by setting them explicitly:
+
+    git config --global user.name "Your Name"
+    git config --global user.email you@example.com
+
+After doing this, you may fix the identity used for this commit with:
+
+    git commit --amend --reset-author
+
+ 4 files changed, 2420 insertions(+), 2373 deletions(-)
+
+PA20303803@L-158041152 MINGW64 /d/CodingAssement/Personal_Interview (master)
+$ git push origin master
+To https://github.com/padmanaban20892/padhu.git
+ ! [rejected]        master -> master (non-fast-forward)
+error: failed to push some refs to 'https://github.com/padmanaban20892/padhu.git'
+hint: Updates were rejected because the tip of your current branch is behind
+hint: its remote counterpart. Integrate the remote changes (e.g.
+hint: 'git pull ...') before pushing again.
+hint: See the 'Note about fast-forwards' in 'git push --help' for details.
+
+PA20303803@L-158041152 MINGW64 /d/CodingAssement/Personal_Interview (master)
+$ git log
+commit b6654307071549c47aea1b101b82c904f2f0d8a1 (HEAD -> master)
+Author: Padmanaban A <PA20303803@wipro.com>
+Date:   Mon Nov 20 09:54:02 2023 +0530
+
+     update example
+
+commit 9550676558495882da7f36c32edd3d1eb3e806fc
+Author: Padmanaban A <PA20303803@wipro.com>
+Date:   Sun Nov 19 22:26:43 2023 +0530
+
+    next update
+
+commit 3c36a44cb47252b2184a1f2e2908995cc6804c71
+Author: Padmanaban A <PA20303803@wipro.com>
+Date:   Mon Nov 13 18:01:19 2023 +0530
+
+    test git comments
+
+commit 9f30a74a9827ff3efcefff92e522e2bd88988a42
+Author: Padmanaban A <PA20303803@wipro.com>
+Date:   Mon Nov 13 17:51:34 2023 +0530
+
+    testproject1
+
+commit d6084076f40e7e03db788ee526a2251423e8908c
+Author: Padmanaban A <PA20303803@wipro.com>
+Date:   Mon Nov 13 17:47:12 2023 +0530
+
+    testProject
+
+PA20303803@L-158041152 MINGW64 /d/CodingAssement/Personal_Interview (master)
+$ git revert 33c36a44cb47252b2184a1f2e2908995cc6804c71
+fatal: bad revision '3c36a44cb47252b2184a1f2e2908995cc6804c71'
+
+PA20303803@L-158041152 MINGW64 /d/CodingAssement/Personal_Interview (master)
+$ git push -f -u origin master
+Enumerating objects: 54, done.
+Counting objects: 100% (54/54), done.
+Delta compression using up to 8 threads
+Compressing objects: 100% (41/41), done.
+Writing objects: 100% (54/54), 115.67 KiB | 1.45 MiB/s, done.
+Total 54 (delta 11), reused 0 (delta 0), pack-reused 0
+remote: Resolving deltas: 100% (11/11), done.
+To https://github.com/padmanaban20892/padhu.git
+ + 5fc804e...b665430 master -> master (forced update)
+branch 'master' set up to track 'origin/master'.
+
+PA20303803@L-158041152 MINGW64 /d/CodingAssement/Personal_Interview (master)
+$ git status
+On branch master
+Your branch is up to date with 'origin/master'.
+
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+        modified:   Interview Questions Bench & External.txt
+
+no changes added to commit (use "git add" and/or "git commit -a")
+
+PA20303803@L-158041152 MINGW64 /d/CodingAssement/Personal_Interview (master)
+$ cd padhu/
+
+PA20303803@L-158041152 MINGW64 /d/CodingAssement/Personal_Interview/padhu (master)
+$ git add *
+
+PA20303803@L-158041152 MINGW64 /d/CodingAssement/Personal_Interview/padhu (master)
+$ git status
+On branch master
+Your branch is up to date with 'origin/master'.
+
+nothing to commit, working tree clean
+
+PA20303803@L-158041152 MINGW64 /d/CodingAssement/Personal_Interview/padhu (master)
+$ cd ..
+
+PA20303803@L-158041152 MINGW64 /d/CodingAssement/Personal_Interview (master)
+$ git status
+On branch master
+Your branch is up to date with 'origin/master'.
+
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+  (commit or discard the untracked or modified content in submodules)
+        modified:   Interview Questions Bench & External.txt
+        modified:   padhu (modified content)
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+        Payslip/
+        Resume/
+        learing/
+
+no changes added to commit (use "git add" and/or "git commit -a")
+g
+PA20303803@L-158041152 MINGW64 /d/CodingAssement/Personal_Interview (master)
+$ git add *
+
+PA20303803@L-158041152 MINGW64 /d/CodingAssement/Personal_Interview (master)
+$ git status
+
 
 
 

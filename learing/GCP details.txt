@@ -1,0 +1,159 @@
+
+
+GCP: google Could Paltform
+--------------------------
+HI {sowmiya.r73@wipro.com]
+Could you please request for Qwiklabs access  using the form.
+You will get the access in 3-4 working days
+Please fill out this form
+https://apc01.safelinks.protection.outlook.com/?url=https%3A%2F%2Fforms.office.com%2FPages%2FResponsePage.aspx%3Fid%3D5MSKJWoUHkGdyHmp4S_W2tvbyOfUzDVIomj8Q_ek9LdUMk04VjZJSk03WkpLRlpaTEhSUUFPUllXOC4u&data=05%7C01%7Csowmiya.r73%40wipro.com%7C60309c6ad10b4ccd0f5c08daf2c0aaa4%7C258ac4e4146a411e9dc879a9e12fd6da%7C1%7C0%7C638089206577834216%7CUnknown%7CTWFpbGZsb3d8eyJWIjoiMC4wLjAwMDAiLCJQIjoiV2luMzIiLCJBTiI6Ik1haWwiLCJXVCI6Mn0%3D%7C3000%7C%7C%7C&sdata=H%2BW7MzfvjHpbJfHeDEpXwW7mR%2BWMpiIGVYc86cXU8SM%3D&reserved=0
+
+
+
+Here are the mandatory topics and the sample questions. Once you complete with your learning , please notify us . Will help you with the voucher code.
+ 	 
+Mandatory topics to complete under ACE
+Course Name	URL
+Google Cloud Fundamentals: Core Infrastructure	https://partner.cloudskillsboost.google/course_templates/60
+Essential Google Cloud Infrastructure: Foundation	https://partner.cloudskillsboost.google/course_templates/50
+Essential Cloud Infrastructure: Core Services	https://partner.cloudskillsboost.google/course_templates/49
+Elastic Google Cloud Infrastructure: Scaling and Automation	https://partner.cloudskillsboost.google/course_templates/178
+Getting Started with Google Kubernetes Engine	https://partner.cloudskillsboost.google/course_templates/2
+Logging, Monitoring and Observability in Google Cloud	https://partner.cloudskillsboost.google/course_templates/99?catalog_rank=%7B%22rank%22%3A2%2C%22num_filters%22%3A0%2C%22has_search%22%3Atrue%7D&search_id=17440009
+ 	 
+ 	 
+Please utilize these practice test which is helpful for you to clear your exam
+Practice Test in Google Cloud	https://docs.google.com/forms/d/e/1FAIpQLSfexWKtXT2OSFJ-obA4iT3GmzgiOCGvjrT9OfxilWC1yPtmfQ/viewform
+(Say "No" for Candiate ID and fill the form to see sample questions - Multiple attempts allowed)
+Practice Test	Answer (Refer - Answers sheet) - https://wipro365.sharepoint.com/:x:/s/PRP-GoogleCloud/EbtcacY_AGpAm6DRuvefKaUBhltzjy8-N_hFwJw1ynPUpQ?e=LKcwxy
+ 	 
+Sample questions for ACE:
+
+
+
+Access the gcp:
+-----------------------
+Hello Padmanaban A,
+
+To help you ramp on Google Cloud, we have provisioned the following learning resources for you:
+
+On Demand Learning
+
+You have been provisioned access to Google Cloud Skills Boost for Partners (formerly Google Courses) to complete the Associate Cloud Engineer Certification track.
+To begin these classes, log on to Google Cloud Skills Boost for Partners at
+https://partner.cloudskillsboost.google with your email padmanaban.a38@wipro.com, and click each link to access your training. If you already have a qwiklabs account with your email padmanaban.a38@wipro.com, log in to https://partner.cloudskillsboost.google with your existing password, otherwise create a new account.
+Video walkthrough of Google Cloud Skills Boost for Partners
+
+Learning Path: Associate Cloud Engineer Certification
+The Google Cloud Partner Enablement Team
+
+
+1. Guide information : google labs & pwd
+https://partner.cloudskillsboost.google/focuses/11600?parent=catalog
+
+https://partner.cloudskillsboost.google/focuses/42413?parent=catalog
+
+https://partner.cloudskillsboost.google/course_templates/77
+
+
+-----------------------------------------------------
+Azure Az-900
+
+https://learn.microsoft.com/en-us/certifications/exams/AZ-900/
+
+https://vshow.on24.com/vshow/Azure_Cloud_Week/#exhibits/Home
+
+
+https://blog.devgenius.io/azure-az-900-notes-4bd94e166978
+
+
+
+https://k21academy.com/microsoft-azure/az-900/certification-path/
+
+https://medium.com/@ershivamgupta/azure-certification-roadmap-2023-which-certificate-is-right-for-you-and-your-team-ecfb5a02567d
+
+
+https://www.netcomlearning.com/blogs/347/microsoft-azure-certification-path-for-2023-the-ultimate-microsoft-azure-certifications-training-guide.html
+
+https://www.whizlabs.com/blog/azure-certifications-path/
+
+
+https://www.devopsschool.com/blog/azure-certification-roadmap-path/  (Clearly Explain roadmap)
+
+
+https://www.freecodecamp.org/news/azure-administrator-certification-az-104-pass-the-exam-with-this-free-11-hour-course/
+
+https://www.guru99.com/microsoft-azure-tutorial.html
+
+https://www.javatpoint.com/microsoft-azure
+
+
+
+-----
+Start Day with Microsoft Learn 🔊
+
+➡ Microsoft Learn is the easiest way to learn products and services through task-based, interactive learning, covering Azure, Dynamics, Power Apps, Flow, with more coming in the future.
+ 
+✔ Why Microsoft Learn?
+https://lnkd.in/gpSM5Fun
+
+✔ Exam AZ-900: Microsoft Azure Fundamentals
+https://lnkd.in/g_cpG5S7
+
+✔ Exam AZ-104: Microsoft Azure Administrator
+https://lnkd.in/gFSgMyqg
+
+✔ Exam AZ-305: Designing Microsoft Azure Infrastructure
+https://lnkd.in/g-e99xPE
+
+✔ The basic concepts of cybersecurity
+https://lnkd.in/gcqC_2QE
+
+✔ Exam AZ-500: Microsoft Azure Security Technologies
+https://lnkd.in/ggVTCkeE
+
+✔ Exam SC-900: Microsoft Security, Compliance, and Identity Fundamentals
+https://lnkd.in/gQgNJs5u
+
+✔ Exam MS-500: Microsoft 365 Security Administration
+https://lnkd.in/g2w_iyDi
+
+✔ Exam SC-200: Microsoft Security Operations Analyst
+https://lnkd.in/gQbTweit
+
+✔ Exam SC-300: Microsoft Identity and Access Administrator
+https://lnkd.in/gsQX6eWc
+
+✔ Exam SC-400: Microsoft Information Protection Administrator
+https://lnkd.in/geR28A5V
+
+✔Exam SC-100: Microsoft Cybersecurity Architect
+https://lnkd.in/gj5Wtwq6
+
+------------
+
+======================================================================
+
+AZ-900 (Wipro Traning Redeem your code)
+
+
+
+https://learn.microsoft.com/en-us/users/me/achievements?redeem=4L8Q5Y
+
+
+
+https://learn.microsoft.com/en-us/users/me/achievements?redeem=4L8Q5Y
+
+login => achievements => redeem=4L8Q5Y
+
+
+
+
+https://esi.microsoft.com/
+
+(Before Exam 31/05/2023) (Sign into wipro mail.com)
+
+
+
+https://learn.microsoft.com/en-us/certifications/exams/ai-900/
+
