@@ -1,4 +1,81 @@
 
+
+--------------------------------------
+1. 1stcache Hibenrate 
+2. 2nd cache Hibernate 
+3. get() vs load() hibenrate
+4. SerialUID
+5.	Map<Integer, String> map1 = new HashMap<Integer, String>();
+		map1.put(101, "Amit");
+		map1.put(100, "Vijay");
+		map1.put(110, "Kannan");
+		map1.put(102, "Rahul");
+		map1.put(99, "Padhu");
+		
+		//desc sorting 
+		
+		map1.entrySet().stream()
+				.sorted(Collections.reverseOrder(Map.Entry.comparingByValue()))
+				.forEach(System.out::println);
+		
+		String[] letters = {"a", "b", "a", "e", "a", "c", "b", "f", "a", "b","e"};
+		
+		//No of occurennes characters 
+		
+	Map<String,Long>	result=Arrays.asList(letters).stream().
+			collect(Collectors.groupingBy(Function.identity(),Collectors.counting()));
+		
+		System.out.println(result);
+
+6.API Gateway in microservices
+7.SPring data JPA - Native query  syntx?
+8. One to antoher communicate in microservices 
+9. endclient microservices 
+10. 2microservices connect in one database possible or not ?
+	If possible - how to can database management
+	
+11. Microserivce architecture
+12. Optioonal Class through database all level
+13. NoSQL Advantage over RDBMS
+13. Autowired over Qualified when use?
+14. Bean life cycle 
+15. creating bean
+16. Scop of bean 
+17. >> vs >>> java
+18. Synchronized vs volatile
+19. transist 
+19. thread safetly
+20. hibenrate vs jbdc
+
+
+
+
+BYS : 22/11/2023
+--------------------------------------
+1. Spring vs spring boot
+2. Service is down how to check or how to handle mechanism / how to inform frontend in Microserivce
+3. How to can Gobel handle Exception in Microservice
+4. How can handle the Error in Rest Template
+5. Path Variable 
+6.2nd hignest salary in sql
+7,treeset features
+
+
+
+
+
+Asipre System : 22/11/2023
+------------------------
+
+1. Hibernate over native Query
+2. readlock, writelock, & Synchronized
+3. 2 thread access same time & smae resourec what haapped ?
+4. Hash , HashMap, Hashtable
+5. HashCollision
+
+
+
+
 StG: 21/11/2023 (Good - Myself)
 ------------------------------
 1. API Gateway in micorservices

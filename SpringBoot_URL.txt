@@ -33,6 +33,13 @@ https://medium.com/@ankithahjpgowda/ways-to-log-database-queries-in-spring-jdbc-
 
 
 https://medium.com/@kharvinagaraj1/explore-jpa-java-persistence-api-mastery-with-java-and-spring-boot-sql-part-1-3f17530ad5ed
+https://www.geeksforgeeks.org/spring-boot-jpa-native-query-with-example/
+
+https://medium.com/@aamermail/asynchronous-communication-in-microservices-14d301b9016
+
+https://stackoverflow.com/questions/4371384/can-a-jpa-query-return-results-as-a-java-map
+
+https://www.linkedin.com/pulse/sync-async-communication-between-microservices-arpit-bhayani/
 
 Internal : Test : 
 -------------------------------------------
