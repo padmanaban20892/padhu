@@ -1479,3 +1479,184 @@ $
 
 
 
+------------------------------------------------------
+29/11/2023
+-------------------------------------------------------
+
+PA20303803@L-158041152 MINGW64 ~
+$ cd d:/
+
+PA20303803@L-158041152 MINGW64 /d
+$ ls
+'!!!!!124815807.avi'            ZZZZZ105801774.doc
+'!!!!!1290222154.doc'           ZZZZZ1482572381.mdb
+'!!!!!1354325915.eml'           ZZZZZ209317148.pdf
+'!!!!!1480824917.ppt'           ZZZZZ2227454634.pdf
+'!!!!!1621729912.pem'           ZZZZZ2229818083.docx
+'!!!!!1795280185.ppt'           ZZZZZ372913898.sql
+'!!!!!1826224598'/              ZZZZZ3954471148.doc
+'!!!!!2714388422.eml'           ZZZZZ4000548292.mdb
+'!!!!!3089880122'/              ZZZZZ496787073.bmp
+'!!!!!3223622647.doc'           ZZZZZ645290553.sql
+'!!!!!3715066598.avi'           ZZZZZ650617190.bmp
+'!!!!!3811005519.pem'           ZZZZZ835866847.docx
+'$RECYCLE.BIN'/                 doc
+ Captures/                     'java-8-runnable (1).zip'
+ CodingAssement/                java-8-runnable.zip
+ Eclipse-workspace/            'npp833 (1).exe'*
+ Gitproject/                    piQLY1200438925.pptx
+ Interview/                     piQLY1495613014.txt
+ Learing/                       piQLY2095238692.txt
+'Marriage cerfiication form'/   piQLY2245822632.png
+ Project_Workspace/             piQLY2669236316.png
+ Resume/                        piQLY2825675102.xlsx
+ STS/                           piQLY3330837334.pst
+ Software/                      piQLY3709883484.pptx
+'System Volume Information'/    piQLY4063501076.pst
+ XORXOR1225106481.db            piQLY53497288.xlsx
+ XORXOR1900966933.db           'time-to-learn (1).ics'
+ XORXOR2497432517.xls           time-to-learn.ics
+ XORXOR2955865154.doc           toasmaster/
+ XORXOR320948199.jpg            webex.exe*
+ XORXOR3365581054.pps           workspace/
+ XORXOR3930029516.xls           xxxx-xxxx-xx-xxxx37_272842_17_09_2023.pdf
+ XORXOR4029806971.doc          '~$dmanaban_Resume_Sept'\''23.docx'
+ XORXOR781142151.jpg           '~$fresherTraining-JavaBackend (1).docx'
+ XORXOR887418958.pps
+
+PA20303803@L-158041152 MINGW64 /d
+$ cd Learing/
+
+PA20303803@L-158041152 MINGW64 /d/Learing
+$ ls
+ 1698551363373.jpg
+ 1698599090110.gif
+ 1698634233520.gif
+ 1698650626681.gif
+ 1698675052846.gif
+ 1698724176645.gif
+'Cloud Academy Calendar October 2023 - Nominate today!.msg'
+ CodingPrograms50.xlsx
+ CodingPrograms50_1.xlsx
+ DSA.pdf
+'Devops iNterview question ans.pdf'
+ Docter.pdf
+'Java coding.pdf'
+ Java.jpg
+ Kurnates.pdf
+'Microservice pattern.pdf'
+ RefresherTraining-JavaBackend.docx
+ RefresherTraining-JavaFrontEnd-React-L2.docx
+ RefresherTraining-JavaFrontEnd-React.docx
+ SQL.pdf
+'Spring boot annotation.pdf'
+'UI techologies.pdf'
+ Virtuora-WDM-ds.pdf
+"Wipro Engineering Training Calendar - Oct'-Dec'2023 .msg"
+ angular.jpg
+ api.gif
+ aws.pdf
+ cicd.jpg
+ cloud.gif
+ data.gif
+ dataEnigeer.gif
+ datalake.jpg
+ google.gif
+ interview.pdf
+ kubernets.gif
+ netfix.jpg
+ oauthu.gif
+ rationCardPayment.pdf
+ rationCardPayment2.pdf
+ rationCardPayment2_Ack.pdf
+ sso.gif
+ systemdesign.gif
+ testing.gif
+ url.gif
+'~$fresherTraining-JavaBackend.docx'
+
+PA20303803@L-158041152 MINGW64 /d/Learing
+$ cd ../
+
+PA20303803@L-158041152 MINGW64 /d
+$ cd CodingAssement/
+
+PA20303803@L-158041152 MINGW64 /d/CodingAssement
+$ ls
+DemoCopy/               Telstra_SpringBootMicroservices_CodingAssement/
+Personal_Interview/     restful-web-service/
+SpringProjectPractice/  restful-web-service.zip
+
+PA20303803@L-158041152 MINGW64 /d/CodingAssement
+$ cd Personal_Interview/
+
+PA20303803@L-158041152 MINGW64 /d/CodingAssement/Personal_Interview (master)
+$ ls
+'Assement Details.txt'                       Resume/
+ Assement_Details.txt                        SpringBootProject/
+'Interview Answer_details .txt'              SpringBoot_URL.txt
+'Interview Questions Bench & External.txt'   Wipro_Resignation_Separation/
+'Microservice with SPring boot .txt'         learing/
+ Payslip/                                    padhu/
+'Program Quetions.txt'                       spring-boot-hibernate/
+'RestAPI Webservice .txt'
+
+PA20303803@L-158041152 MINGW64 /d/CodingAssement/Personal_Interview (master)
+$ git add *
+
+PA20303803@L-158041152 MINGW64 /d/CodingAssement/Personal_Interview (master)
+$ git status
+On branch master
+Your branch is up to date with 'origin/master'.
+
+Changes to be committed:
+  (use "git restore --staged <file>..." to unstage)
+        modified:   Interview Questions Bench & External.txt
+        new file:   Program Quetions.txt
+        modified:   RestAPI Webservice .txt
+        new file:   Resume/Padmanaban_CV_Nov'23.docx
+        modified:   Resume/Padmanaban_Latest_CV_Nov'23.docx
+        modified:   SpringBoot_URL.txt
+        new file:   Wipro_Resignation_Separation/PF Transfer WiproTrust procdure.pdf
+
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+  (commit or discard the untracked or modified content in submodules)
+        modified:   padhu (modified content)
+
+
+PA20303803@L-158041152 MINGW64 /d/CodingAssement/Personal_Interview (master)
+$ git commit -m "update questions_29_11_2023"
+[master 9185bfc] update questions_29_11_2023
+ Committer: Padmanaban A <PA20303803@wipro.com>
+Your name and email address were configured automatically based
+on your username and hostname. Please check that they are accurate.
+You can suppress this message by setting them explicitly:
+
+    git config --global user.name "Your Name"
+    git config --global user.email you@example.com
+
+After doing this, you may fix the identity used for this commit with:
+
+    git commit --amend --reset-author
+
+ 7 files changed, 248 insertions(+), 2 deletions(-)
+ create mode 100644 Program Quetions.txt
+ create mode 100644 Resume/Padmanaban_CV_Nov'23.docx
+ create mode 100644 Wipro_Resignation_Separation/PF Transfer WiproTrust procdure.pdf
+
+PA20303803@L-158041152 MINGW64 /d/CodingAssement/Personal_Interview (master)
+$ git push origin master
+Enumerating objects: 17, done.
+Counting objects: 100% (17/17), done.
+Delta compression using up to 8 threads
+Compressing objects: 100% (11/11), done.
+Writing objects: 100% (11/11), 244.16 KiB | 9.77 MiB/s, done.
+Total 11 (delta 4), reused 0 (delta 0), pack-reused 0
+remote: Resolving deltas: 100% (4/4), completed with 4 local objects.
+To https://github.com/padmanaban20892/padhu.git
+   907c501..9185bfc  master -> master
+
+PA20303803@L-158041152 MINGW64 /d/CodingAssement/Personal_Interview (master)
+$

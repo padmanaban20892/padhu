@@ -384,3 +384,16 @@ spring.datasoruce.password=
 spring.jpa.generate-ddl=true
 spring.jpa.hibernate.ddl-auto=update
 spring.jpa.proprties.hibernate.dialect=org.hibenrate.dialect.MYSQLDialect
+
+
+-------------------------------------------------
+Spring Security:
+
+	<dependency>
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-starter-security</artifactId>
+		</dependency>
+		
+		
+
+

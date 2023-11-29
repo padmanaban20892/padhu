@@ -7,6 +7,59 @@ Dharani :
 
 
 
+IBS : 29/11/2023 :2.30pm
+----------------------------------------------
+
+	Removes duplicate elements from an array and sorts it in ascending order
+int arr[] = new int[]{12,34,12,67,100,45,21,76,45,88,98,76};
+
+-------------------------------------------------
+Write two REST API end point 
+1-Update employee details
+2-Get employee details Based on name and dob 
+
+Need to write rest controller and Service class.
+
+Java 8 features?
+Java TIme api why?
+FunctionalInterfcae - predfine ?
+Immutable Class
+Serization ? SerialUID?
+HashCollision
+Hashset vs linkedhashset
+Hibenrnate over jbdc
+Cascade in hibenrate
+Sate of object
+1st level cache vs 2nd level cache in hibernate
+truncate vs delete
+thread vs process
+Hashmap make is threadsafe?
+Volatic vs transit
+String vs sting buffer
+Arraylist vslinkedlist
+Design patterns
+Lamaba exprersion purpose?
+Stream api why?
+Spring boot chnage server ?
+Rest api to call another api
+Spring boot database connection
+Microserivce advantage
+load balance in microservices
+DDL vs DML
+Primary key vs forign key
+Joins in sql 
+index in sql
+Create signleton
+SOAP vs REST vs GraphQL
+Convert monolithic application to microserivce application
+Service is down , how to resolve, how to idenfiy , which server failed, another serivce who is know server is down
+map vs flatmap example
+
+
+
+
+
+
 
 
 
