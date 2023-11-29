@@ -362,3 +362,25 @@ Among the changes introduced in 2.5.0, it seems now the data.sql script is execu
 Spring Boot 2.5 Release Notes - Hibernate and data.sql
 And since I'm relying on the ORM mechanism (i.e. Hibernate) to create the schema from the entity definition, the database table does not exist at the moment the initialization SQL script is executed
 
+
+
+
+
+
+-----------------
+
+insert into users_details(id,name,dob,area) values(1,'kannan',current_date(),'CH');
+
+
+
+-----------------------------------
+MYSQL Connector:
+
+
+spring.datasoruce.url=
+spring.datasoruce.username=
+spring.datasoruce.password=
+
+spring.jpa.generate-ddl=true
+spring.jpa.hibernate.ddl-auto=update
+spring.jpa.proprties.hibernate.dialect=org.hibenrate.dialect.MYSQLDialect

@@ -1,0 +1,56 @@
+
+
+int[] array={3,8,9,1,2,3};   - 1,2,3,3,8,9
+
+//find the maximum 3rd array 
+
+
+
+	int totalSize=array.length;
+	int temp;
+	for(int i=0;i<totalSize;i++){
+	for(int j=i+1;j<totalSize;j++){
+	if(array[i]>array[j]){
+	temp=array[i];
+	array[i]=array[j];
+	array[j]=temp;
+	}
+	
+	
+	int thirdInteger = IntStream.of(array)
+			.sorted()
+			.skip(array.length-3)
+			.findFirst().get();
+			
+			
+	int[] array1={1,2,3,4,5,6};
+	int[] array2={4,5,6};
+	
+	//find the duplicate numbers 
+	
+	Set<Integer> set=new HashSet<>();
+	for(int i=0;i<array1.length;i++){
+		for(int j=0;j<array2.length;j++){
+			if(array1[i]==array2[j]){
+				set.add[array1[i]);
+			break;
+			}
+		}
+	}
+	
+	for(Integer i:set){
+	syso(i+" ");
+	}
+	
+	///optional Class Real time exampl
+	
+	String[] words=new String[10];
+	
+	syso(words[5].tolowercase());
+	
+	
+	Optional<String> checkNull=Optional.ofNullable(words[5]);
+	if(checkNull.isPresent()){
+	
+	
+	

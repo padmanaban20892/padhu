@@ -67,3 +67,11 @@ https://github.com/vivek07p/microservice-poc-spring-boot-spring-cloud.git
 https://325b057e.isolation.zscaler.com/profile/1233fc6e-6618-4022-a03b-96afce7da312/zia-session/?controls_id=86c84b00-25ff-42e6-8940-7fd891a4584f&region=bom&tenant=462f064b6b51&user=95abdcfa4fe12a3b647d9401e77e4336ef27f93fd3beae28848275f89f3632ba&original_url=https%3A%2F%2Fgithub.com%2Ftopics%2Fmicroservices-architecture%3Fl%3Djava&key=sh-1&hmac=7f8c735c19504ff532fc7a9d76703cbde6f0ad33633f2167d0407ffc821d5d8c
 
 https://github.com/in28minutes/spring-microservices-v2/tree/main/02.restful-web-services
+
+
+
+
+
+JSF
+------------------------------------------------------
+https://www.beyondjava.net/a-comprehensive-guide-to-jsf-ajax

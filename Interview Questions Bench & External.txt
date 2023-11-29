@@ -1,7 +1,166 @@
+Dharani :
+-------------------------------
+1. Spring boot Exmple
+2. Rest API Example
+3. dependceny injection  example
+4. Microserivece example , all design patten with Commication RadditMQ, Kafka, RestCall, RestTemplate
+
+
+
+
+
+
+Randstad: 29/11/2023 : 12pm
+---------------------------------------
+1. Java 8 feaatures
+2. Stream Api for Methods
+3. Map() vs flatmap
+4. @FuntionalInterface annonation use?
+5. Hashmap in java 8
+6. Custom exception , create ?
+7. CurrenthashMap vs listIterator
+8.Spring to Spring boot migration
+9. Kafka 
+10.load balance in micorservices
+11. api gatway in microservices
+12.Datastructure
+13. Algorthim
+
+
+Capgemini : 29/11/2023 : 11am 
+------------------------------------------
+1. SOLID Priciple example
+2. 
+int[] array={3,8,9,1,2,3};   - 1,2,3,3,8,9
+
+//find the maximum 3rd array  using without funciton & java 8
+3.int[] array1={1,2,3,4,5,6};
+	int[] array2={4,5,6};
+	
+	//find the duplicate numbers 
+	
+4. Optional -> realtime example
+5.  2 funtionl interface and 2 dafault methods, how implements to class 
+
+
+
+Mphasis: 29/11/2023 : 10am
+------------------------------------------
+1. Microservice archieture compare to monolithic archieture
+2. Which design pattern in micrpservices
+3. Api Gateway in micorservices
+	Security, Authentication, authiorzation, Resfresh Token, rate limit, Oauth, JWT, resilience, eureka server
+4. 	
+
+
+
+
+
+IntraEdge : 28/11/2023
+---------------------------------------
+1.Which screanior prefer Microserivce , Which scenario prefer Monolithic
+2. Microserivce one to another communiction, how to end point 
+3. Authentication vs authiorzation, Configuration in micorservices
+4. while your calling endpoint,which method will use, how to call the Endpoint 
+5. OOPS Concetps
+6. Exception 
+7. how to handle nullpointerexception, example
+8. String s="Hi iam from india, working in some company"; Reverse word in java 8
+
+
+try{
+
+String a;
+
+//system.out.println(s.lenth()); 
+if(a!=null){
+	system.out.println(s.lenth()); 
+	
+}
+}catch(Excetion e){
+e.printStack();
+}
+
+
+public class Employee {
+	int id;
+	String name;
+	String deptName;
+}
+List<Employee> list;
+ 
+Q. By Using streams, convert the given List<Employee> to Map<String, Set<Employee>>, 
+such that the key will be the deptName & value will be the set of Employees having that deptName
+Map<String, Set<User>> employeeListByDepartment=
+						userService.findAll().stream().
+						collect(Collectors.groupingBy(User::getArea,Collectors.toSet()));
+
+			Try with Resiurce ?
+					try(Employee e = new EMployee()) { 
+
+
+
+
+
+
+altimetrik :L1 External : 28/11/2023
+-------------------------------------
+1. Synchronized
+2. why string immutable?
+3.nofiy vs nofiyAll
+4.Exception vs error
+5.Findfirst vs findany
+56.Optional class
+7.Depencency injection
+8. Authentication vs authiorzation
+9.redis cache
+10.Junit mockito
+11.monolithic vs micorservices
+12. Radis cache
+13. apache kafka
+
+
+
+
+
+
+
+
+OECConnection : External : 24/11/2023
+----------------------------------
+1. SessionFactory ? how to implantation
+2.Design Pattern what ? why ? types?
+3.ApplicationContext
+4.lisenter
+5.action class?
+6. dofilter
+7.What is repository class
+8.Cascade in hbernate ? type?
+9.deafault cache mechanism in hibernate
+10. thread sleep vs wait
+11.CurrentModificationException
+12. Sorting Custom sorted by Age
+13. try{
+	return 1;
+	}catch(){
+	return 2;
+	}finally{
+	reurn 3;
+	}
+
+excepted output: Return 3
+
+14. 	String a="123abc"
+	String b="123";
+	String c=a-b;
+	
+What ouptut: Compiletime Exception
+
+
 
 
 --------------------------------------
-1. 1stcache Hibenrate 
+1. 1st level cache Hibenrate? purpose  
 2. 2nd cache Hibernate 
 3. get() vs load() hibenrate
 4. SerialUID
@@ -35,7 +194,7 @@
 	If possible - how to can database management
 	
 11. Microserivce architecture
-12. Optioonal Class through database all level
+12. Optioonal Class through database all levelnn
 13. NoSQL Advantage over RDBMS
 13. Autowired over Qualified when use?
 14. Bean life cycle 
@@ -46,6 +205,7 @@
 19. transist 
 19. thread safetly
 20. hibenrate vs jbdc
+21. Ajax in JSF ? How to hanlder the JSF 
 
 
 
