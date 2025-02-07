@@ -2247,3 +2247,40 @@ ZemosoLabs Date:10/06/2023  video call
 
 
 
+
+
+
+==============================
+
+Date: 07/02/2025
+
+Company :  Zemoso Labs
+========================
+
+1. Microserivce
+2. monolithic to micorservices -> what channage faced?
+3. Best REST API design Tools 
+4. Microserivce communication
+5. Spring Securrity -> authiorzation & authncation
+6. IOC VS Depencency Injection
+7. Database : Query Optimzation Techinque 
+8. Stored Procdure vs SQL 
+9. How to find pairs in an array whose sum is equal to the given number?
+
+    Example - if the given array is (2,6,3,9,11) and the given number is 9,
+    output would be (6,3)
+	
+	
+	 private static void findPairSum(int[] arr, int target) {
+
+        int n = arr.length;
+        for(int i=0;i<n;i++){
+            for(int j=i+1; j<n; j++){
+                if(arr[i] + arr[j] == target){
+                    System.out.println("("+arr[i]+","+arr[j]+")");
+                }
+            }
+        }
+    }
+	
+10. 

@@ -145,6 +145,14 @@ which is one memory is threadsafe? Stack or Heap
 Heap memory is also not as threaded-safe as Stack-memory because data stored in Heap-memory are visible to all threads.
 The stack is threadsafe (each thread will have its own stack) but the heap is not threadsafe unless guarded with synchronisation through your code.
 
+How are String Immutable?
+
+A String in Java that is specified as immutable, as the content shared storage in a single pool to minimize creating a copy of the same value. 
+String class and all wrapper classes in Java that include Boolean, Character, Byte, Short, Integer, Long, Float, and Double are immutable. 
+A user is free to create immutable classes of their own.
+
+
+
 
 String to StringBuffer  why?
 ------------------
@@ -445,11 +453,13 @@ Component is a class-level annotation. It is used to denote a class as a Compone
 
 Difference between @Component and @Bean Annotations
 ----------------
-@Component is used to auto-detect and auto-configure beans using classpath scanning. There’s an implicit one-to-one mapping between the annotated class and the bean (i.e. one bean per class).
+@Component is used to auto-detect and auto-configure beans using classpath scanning. There’s an implicit 
+one-to-one mapping between the annotated class and the bean (i.e. one bean per class).
 
 @Bean is used to declare a single bean, rather than automatically letting Spring do it for us.
 
- @Component is a class-level annotation whereas @Bean is a method-level annotation and, by default, the name of the method serves as the bean name.
+ @Component is a class-level annotation whereas @Bean is a method-level annotation and, by default, 
+ the name of the method serves as the bean name.
  
  
  @componentscan in spring boot application
@@ -463,7 +473,8 @@ Difference between @Component and @Bean Annotations
  (e.g. beans, controllers, services, repositories, etc.) within a specified package or set of packages.
 
 When you use @ComponentScan, Spring will scan the specified package(s) for classes annotated with @Component 
-(or any of its specialisations, such as @Controller, @Service, or @Repository) and automatically create instances of these classes as beans in the Spring container. These beans can then be injected into other beans or components using dependency injection.
+(or any of its specialisations, such as @Controller, @Service, or @Repository) and automatically create instances of these classes as beans in the Spring container. 
+These beans can then be injected into other beans or components using dependency injection.
 
 Spring Boot @SpringBootApplication annotation is used to mark a configuration class that declares one or 
 more @Bean methods and also triggers auto-configuration and component scanning. It's same as declaring a class with @Configuration,
@@ -834,7 +845,7 @@ Functional interface:
  Before Java 8, if a new method was introduced in an interface then all the implementing classes used to break. 
  
 
-Multithreading in Java
+Multithreading in Java :
 Multithreading in Java is a process of executing multiple threads simultaneously.
 
 
@@ -848,3 +859,165 @@ we use multithreading than multiprocessing because threads use a shared memory a
  A thread is a lightweight subprocess, the smallest unit of processing. It is a separate path of execution.
 
 Threads are independent. If there occurs exception in one thread, it doesn't affect other threads. It uses a shared memory area.
+
+
+Threads can be created by using two mechanisms : 
+
+	Extending the Thread class 
+		class that extends the java.lang.Thread class
+		 This class overrides the run() method available in the Thread class. 
+		 A thread begins its life inside run() method. We create an object of our new class and call start() method to start the execution of a thread. Start() invokes the run() method on the Thread object
+	
+	
+	Implementing the Runnable Interface
+
+
+
+Thread Class vs Runnable Interface 
+
+If we extend the Thread class, our class cannot extend any other class because Java doesn’t support multiple inheritance. But, if we implement the Runnable interface, our class can still extend other base classes.
+We can achieve basic functionality of a thread by extending Thread class because it provides some inbuilt methods like yield(), interrupt() etc. that are not available in Runnable interface.
+Using runnable will give you an object that can be shared amongst multiple threads. 
+
+
+
+
+class MultithreadingDemo extends Thread {
+    public void run()
+    {
+        try {
+            // Displaying the thread that is running
+            System.out.println(
+                "Thread " + Thread.currentThread().getId()
+                + " is running");
+        }
+        catch (Exception e) {
+            // Throwing an exception
+            System.out.println("Exception is caught");
+        }
+    }
+}
+ 
+// Main Class
+public class Multithread {
+    public static void main(String[] args)
+    {
+        int n = 8; // Number of threads
+        for (int i = 0; i < n; i++) {
+            MultithreadingDemo object
+                = new MultithreadingDemo();
+            object.start();
+        }
+    }
+}
+
+
+---------------------------------------
+
+Jenkins is an open source continuous integration/continuous delivery and deployment (CI/CD) automation software DevOps tool written in the 
+Java programming language. It is used to implement CI/CD workflows, called pipelines.
+
+It's used to automate the parts of software development related to building, 
+testing, and deploying. Jenkins is a server-based system that runs in servlet containers such as Apache Tomcat
+
+
+====================
+Interfaces in Java
+
+The interface in Java is a mechanism to achieve abstraction. There can be only abstract methods in the Java interface, 
+not the method body. It is used to achieve abstraction and multiple inheritances in Java using Interface.
+
+Uses of Interfaces in Java are mentioned below:
+
+It is used to achieve total abstraction.
+Since java does not support multiple inheritances in the case of class, by using an interface it can achieve multiple inheritances.
+Any class can extend only 1 class, but can any class implement an infinite number of interfaces.
+It is also used to achieve loose coupling.
+Interfaces are used to implement abstraction. 
+
+
+
+https://www.mycompiler.io/view/CGP6H82h5G0
+
+
+=========================
+
+hibernate mapping :
+
+
+Hibernate mappings are a key feature of Hibernate that establish relationships between two database tables as attributes in your model.
+ This allows you to easily navigate the associations in your model and criteria queries. 
+ Hibernate supports four types of mappings: one-to-one, one-to-many, many-to-many, and collection mapping
+ 
+ Hibernate – Collection Mapping
+	 java.util.List
+	java.util.Set
+	java.util.SortedSet
+	java.util.Map
+	java.util.SortedMap
+	java.util.Collection
+	
+=============================================
+How to create simple flow  REST API in spring boot Interview question
+
+https://spring.io/guides/tutorials/rest
+
+
+what is mapping in rest api
+
+Mapping in a REST API in Spring Boot refers to the process of associating HTTP requests with specific handler methods in a controller class. This is done using the @RequestMapping annotation. The @RequestMapping annotation can be applied to both the class and method level.
+
+
+Using @PathVariable
+
+	@PathVariable annotation is used to extract data from the URL path. 
+It allows you to define placeholders in your request mapping URL and bind those placeholders to method parameters.
+
+@RestController
+@RequestMapping("/users") 
+public class UserController { 
+  
+    @GetMapping("/{userId}") 
+    public ResponseEntity<User> getUserDetails(@PathVariable Long userId) { 
+        // Implementation to fetch user details based on the provided userId 
+        // ... 
+        return ResponseEntity.ok(user); 
+    } 
+} 
+
+
+Using @RequestParam
+
+	@RequestParam annotation is used to extract data from the query parameters in the request URL.
+	
+
+@RestController
+@RequestMapping("/users") 
+public class UserController { 
+  
+    @GetMapping("/search") 
+    public ResponseEntity<List<User>> searchUsers(@RequestParam("name") String name) { 
+        // Implementation to search users based on the provided name 
+        // ... 
+        return ResponseEntity.ok(users); 
+    } 
+} 
+
+
+@RequestBody
+@RequestBody is mainly used with CRUD Operations to read the request body
+
+@PostMapping("/addStudent")
+public void AddStudent(@RequestBody Student student) {
+  // body
+}
+
+@ResponseBody
+@ResponseBody is typically used with GET methods to write the response body content.
+
+@GetMapping("/getStudent")
+@ResponseBody
+public Student getStudent()
+{
+    return student;
+}
