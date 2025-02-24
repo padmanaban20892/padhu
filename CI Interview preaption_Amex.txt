@@ -42,3 +42,13 @@ str.chars().mapToObj(c-> (char)c).        filter(c-> str.indexOf(c) == str.lastI
 6. Indexing  - Btree, what DS used indexing 
 
 7. 
+
+
+
+
+------------------------
+Concurry Colletions
+Thread concepts 
+Indexing concepts 
+Microservices Design pattern
+Spring boot confiuration -> connection more than 2 DB 

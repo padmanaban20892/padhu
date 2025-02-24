@@ -1,0 +1,80 @@
+
+Date: 14/02/2025   Extrnal : Syncrption
+-----------------
+
+//chennai, mubai, banglore, goa,
+
+//filter -> Longest charater in length 
+using Java 8
+
+
+
+1. Customer Expetion  program
+
+/******************************************************************************
+
+                            Online Java Compiler.
+                Code, Compile, Run and Debug java program online.
+Write your code in this editor and press "Run" button to execute it.
+
+*******************************************************************************/
+
+public class Main
+{
+	public static void main(String[] args) {
+	//	System.out.println("Hello World");
+		
+	    try{
+	        valiateAge(17);
+	    }catch(InvalidAgeException e){
+	        System.err.print("Exception Message : "+e.getMessage());
+	    }
+		
+	}
+	
+	public static void valiateAge(int age) throws InvalidAgeException {
+	     if(age < 18) {
+	         throw new InvalidAgeException("Age must be 18 or above");
+	     }
+	}
+	
+	
+}
+
+class InvalidAgeException extends Exception {
+    
+    public InvalidAgeException(String mesg) {
+        super(mesg);
+    }
+}
+
+
+
+2. Spring framweork anonation
+3. Exception hierachy 
+4. Multithread concept
+5. Callable vs Runnable interface
+6. Feactures vs wait, wait vs join 
+7. Sold prinpce
+8. Java 8 features
+9. map vs flatmap -> stream works
+10. SPring Security JWT -> atoucation vs auzation
+11. Exception herachy 
+12. HashMap vs concurent HashMap 
+13. Find the Longest Char in string, Max charater in String 
+
+==================================================
+TCS : 22/02/2025
+=========================
+1. Reactive Microservices
+2. Webclinet vs RestTemplate
+3. why use webclient
+4. 2 endpoint, 1 endpoint calling response to 2 endpoint input : how to hanlde the webclinet in Reactive microservices  =>zipwith webflux
+5. webclient use .block() or not 
+6. Exception -> how to handle  exception in webclient 
+7. webcleint -> advantage  & disadvantage
+8. Spruing security -> how to work, how to hanlde
+8. JWT -> Encode/Encryptiom, why siguature part is Enocde/Encrytion 
+10. JWT why need Encrytion part 
+11. Spring surity Filter chain ->
+12. webclient -> default exception throws
