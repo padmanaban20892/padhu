@@ -1,0 +1,44 @@
+
+
+//find 5th highest salary in employee table 
+
+
+select * from ((select * from employee order by salary desc limit 6,1 ) as employeeSal) Order By employeeSal.salary ASC limit 1;
+
+
+select * from employee order by salary desc limit 6,1 
+
+
+//employee table -> id, name, depart id, expyears 
+Department -> id, depart name, DepartmentHOD
+
+
+output -> e.id, e.name,d.departName, D.departHod
+
+
+select e.id, e.name,d.departName, D.departHod from Employee e inner join Department d on e.departid = d.id
+
+
+===============================
+feedback --> Preparion CL in AMex 
+==================================
+
+1.
+
+latest version in Jdk 8
+
+
+
+str.chars().mapToObj(c-> (char)c).        filter(c-> str.indexOf(c) == str.lastIndexOf(c)).skip(2).findFirst();
+
+2. design pattern in java, Microservices 
+
+3. SOLD principle 
+
+4. spring boot config
+
+5. Microservice 
+
+6. Indexing  - Btree, what DS used indexing 
+
+7. 
